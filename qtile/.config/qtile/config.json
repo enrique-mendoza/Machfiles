@@ -1,0 +1,9 @@
+{
+  "bar": "decorated",
+  "colorscheme": "catppuccin",
+  "terminal": {
+    "main": "",
+    "floating": ""
+  },
+  "wallpaper": "~/Pictures/wallpapers/24.png"
+}
