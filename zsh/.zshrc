@@ -117,6 +117,9 @@ alias l.="exa -a | egrep '^\.'"
 # Lazygit
 alias lg="lazygit"
 
+# Battery status
+alias cbst="upower -i $(upower -e | grep BAT)" 
+
 neofetch
 
 export PATH="$HOME/.local/bin":$PATH
