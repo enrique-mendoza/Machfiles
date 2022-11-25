@@ -149,5 +149,6 @@ configuration {
 /*  me-accept-entry: "MouseDPrimary";*/
 /*  me-accept-custom: "Control+MouseDPrimary";*/
 }
-@theme "/usr/share/rofi/themes/solarized_alternate.rasi"
+//@theme "/usr/share/rofi/themes/solarized_alternate.rasi"
 /*  window { fullscreen: true; } */
+@theme "/usr/share/rofi/themes/solarized.rasi"
