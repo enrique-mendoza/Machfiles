@@ -12,7 +12,11 @@ import:
   # - ~/.config/alacritty/colorscheme/catppuccin.yml
   # - ~/.config/alacritty/colorscheme/gruvbox_material.yml
   # - ~/.config/alacritty/colorscheme/material_ocean.yml
-  - ~/.config/alacritty/colorscheme/one_darker.yml
+  # - ~/.config/alacritty/colorscheme/one_darker.yml
+  # - ~/.config/alacritty/colorscheme/tokyonight_day.yml
+  # - ~/.config/alacritty/colorscheme/tokyonight_moon.yml
+  - ~/.config/alacritty/colorscheme/tokyonight_night.yml
+  # - ~/.config/alacritty/colorscheme/tokyonight_storm.yml
 
 # Any items in the `env` entry below will be added as
 # environment variables. Some entries may override variables
