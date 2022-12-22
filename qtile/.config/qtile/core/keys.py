@@ -62,7 +62,7 @@ for key in [
   ([mod, alt], 's', lazy.spawn('kill -9 -1')),
 
   # Browser
-  ([mod], 'b', lazy.spawn('brave')),
+  ([mod], 'b', lazy.spawn(config['browser'])),
   ([mod, alt], 'f', lazy.spawn('firefox')),
 
   # Terminal
