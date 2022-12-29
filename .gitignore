@@ -1,0 +1,7 @@
+# Files
+config.json
+default_config.py
+dev.py
+
+# Folders
+__pycache__
