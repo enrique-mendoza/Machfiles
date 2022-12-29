@@ -71,11 +71,11 @@ ZSH_THEME="robbyrussell"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
-  aliases
-  git
-  nvm
-  zsh-autosuggestions
-  zsh-syntax-highlighting
+	aliases
+	git
+	nvm
+	zsh-autosuggestions
+	zsh-syntax-highlighting
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -118,20 +118,19 @@ alias l.="exa -a | egrep '^\.'"
 alias lg="lazygit"
 
 # Battery status
-alias cbst="upower -i $(upower -e | grep BAT)" 
+alias cbst="upower -i $(upower -e | grep BAT)"
 
 neofetch
 
 export PATH="$HOME/.local/bin":$PATH
 
 export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"                   # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion" # This loads nvm bash_completion
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
-
 
 # Load Angular CLI autocompletion.
 source <(ng completion script)

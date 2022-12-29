@@ -1,8 +1,14 @@
-<h1 id="top" align="center"> Machfiles 🐶 </h1>
+<h1 id="top" align="center">Machfiles 🐶</h1>
 
-![preview](./.screenshots/preview.png)
+## [Qtile](https://github.com/enrique-mendoza/Machfiles/tree/main/qtile/.config/qtile)
+
+![preview](./.screenshots/qtile.png)
 
 <p align="center">Credits to <a href="https://github.com/jx11r/qtile">@jx11r</a></p>
+
+## [Hypr](https://github.com/enrique-mendoza/Machfiles/tree/main/hypr/.config/hypr)
+
+![preview](./.screenshots/hypr.png)
 
 ## Installation
 

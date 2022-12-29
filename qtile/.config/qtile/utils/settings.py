@@ -10,7 +10,7 @@ settings = {
     'main': '',
     'floating': '',
   },
-  'wallpaper': '~/Pictures/wallpapers/wp.jpg',
+  'wallpaper': '~/Pictures/wallpapers/23.png',
 }
 
 try:
