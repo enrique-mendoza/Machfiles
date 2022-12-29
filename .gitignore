@@ -2,6 +2,7 @@
 config.json
 default_config.py
 dev.py
+state.yml
 
 # Folders
 __pycache__
