@@ -106,7 +106,10 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-# custom aliases
+# Battery status
+alias cbst="upower -i $(upower -e | grep BAT)"
+
+# Custom aliases
 alias ls="exa --icons --color=always --group-directories-first"
 alias lst="exa --icons --color=always --tree --level=2 --long"
 alias ll="exa -alF --icons --color=always --group-directories-first"
@@ -114,11 +117,11 @@ alias la="exa -a --icons --color=always --group-directories-first"
 alias l="exa -F --icons --color=always --group-directories-first"
 alias l.="exa -a | egrep '^\.'"
 
+# Kitty
+alias icat="kitty +kitten icat"
+
 # Lazygit
 alias lg="lazygit"
-
-# Battery status
-alias cbst="upower -i $(upower -e | grep BAT)"
 
 neofetch
 
