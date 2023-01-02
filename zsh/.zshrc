@@ -73,6 +73,9 @@ ZSH_THEME="robbyrussell"
 plugins=(
 	aliases
 	git
+	git-extras
+	git-flow
+	git-flow-completion
 	nvm
 	zsh-autosuggestions
 	zsh-syntax-highlighting
