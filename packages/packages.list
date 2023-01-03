@@ -24,6 +24,8 @@ firefox
 flameshot
 flex
 geeqie
+git-extras
+gitflow-avh
 groff
 grub
 htop
@@ -37,6 +39,7 @@ make
 nano
 neofetch
 neovim
+netbeans
 network-manager-applet
 notification-daemon
 nvidia
@@ -69,6 +72,7 @@ visual-studio-code-bin
 vlc
 volumeicon
 wget
+wmname
 xorg-xinit
 yay
 zip

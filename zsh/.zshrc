@@ -8,7 +8,7 @@ export ZSH=$HOME/.oh-my-zsh
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="robbyrussell"
+ZSH_THEME="awesomepanda"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -112,7 +112,17 @@ source $ZSH/oh-my-zsh.sh
 # Battery status
 alias cbst="upower -i $(upower -e | grep BAT)"
 
-# Custom aliases
+# Colorize grep output (good for log files)
+alias grep="grep --color=auto"
+alias egrep="egrep --color=auto"
+alias fgrep="fgrep --color=auto"
+
+# Confirm before overwriting something
+alias cp="cp -i"
+alias mv="mv -i"
+alias rm="rm -i"
+
+# Custom lists
 alias ls="exa --icons --color=always --group-directories-first"
 alias lst="exa --icons --color=always --tree --level=2 --long"
 alias ll="exa -alF --icons --color=always --group-directories-first"
@@ -120,11 +130,24 @@ alias la="exa -a --icons --color=always --group-directories-first"
 alias l="exa -F --icons --color=always --group-directories-first"
 alias l.="exa -a | egrep '^\.'"
 
+# Easier to read disk
+alias df="df -h"     # human-readable sizes
+alias free="free -m" # show sizes in MB
+
+# Get top process eating memory
+alias psmem="ps auxf | sort -nr -k 4 | head -5"
+
+# Get top process eating cpu ##
+alias pscpu="ps auxf | sort -nr -k 3 | head -5"
+
 # Kitty
 alias icat="kitty +kitten icat"
 
 # Lazygit
 alias lg="lazygit"
+
+# List packages
+alias lpps="pacman -Qet | awk '{print $1}'"
 
 neofetch
 
