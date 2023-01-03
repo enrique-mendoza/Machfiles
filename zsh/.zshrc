@@ -74,9 +74,9 @@ plugins=(
 	aliases
 	git
 	git-extras
-	git-flow
 	git-flow-completion
 	nvm
+	spring
 	zsh-autosuggestions
 	zsh-syntax-highlighting
 )
