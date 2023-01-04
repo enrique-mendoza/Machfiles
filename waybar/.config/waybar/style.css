@@ -1,0 +1,165 @@
+/* General */
+* {
+  /* `otf-font-awesome` is required to be installed for icons */
+  border: none;
+  font-family: 'SauceCodePro NF', 'JetBrainsMono NF', 'Roboto Mono Medium',
+    'Ubuntu Nerd Font';
+  font-size: 12.5px;
+  margin: 0;
+  padding: 0;
+}
+
+#window {
+  color: #64727d;
+}
+
+/* Window */
+window#waybar {
+  background-color: rgba(0, 0, 0, 0.3);
+  color: #ffffff;
+  transition-duration: 0.5s;
+  transition-property: background-color;
+}
+
+window#waybar.hidden {
+  opacity: 0.2;
+}
+
+/* Workspaces */
+#workspaces {
+  background-color: rgba(0, 0, 0, 0.15);
+  border-radius: 10px;
+}
+
+#workspaces button {
+  background-color: transparent;
+  color: #a9a9a9;
+  /* Avoid rounded borders under each workspace name */
+  border: none;
+  border-radius: 0;
+  /* Use box-shadow instead of border so the text isn't offset */
+  box-shadow: inset 0 -3px transparent;
+  padding: 0 10px;
+}
+
+/* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
+#workspaces button:hover {
+  border-radius: 10px;
+  background: rgba(0, 0, 0, 0.2);
+  color: #ffffff;
+}
+
+#workspaces button.focused {
+  color: #ffffff;
+}
+
+#workspaces button.active {
+  color: #ffffff;
+}
+
+#workspaces button.urgent {
+  background-color: #eb4d4b;
+}
+
+/* Modules */
+#disk,
+#network,
+#pulseaudio {
+  color: #ffffff;
+  padding: 0 8px;
+}
+
+#clock {
+  padding-right: 10px;
+}
+
+#battery {
+  padding: 0 3px;
+}
+
+#window,
+#workspaces {
+  margin: 0 4px;
+}
+
+/* If workspaces is the leftmost module, omit left margin */
+.modules-left > widget:first-child > #workspaces {
+  margin-left: 0;
+}
+
+/* If workspaces is the rightmost module, omit right margin */
+.modules-right > widget:last-child > #workspaces {
+  margin-right: 0;
+}
+
+/* Custom Launcher Modules */
+#custom-launcher {
+  padding-left: 10px;
+  color: #ff7a93;
+}
+
+#custom-launcher:hover {
+  background: rgba(0, 0, 0, 0.2);
+  box-shadow: None;
+}
+
+/* Clock Modules */
+#clock:hover {
+  background: rgba(0, 0, 0, 0.2);
+  box-shadow: None;
+}
+
+/* Battery Module */
+#battery {
+  color: #a3be8c;
+}
+
+#battery.charging,
+#battery.plugged {
+  color: #26a65b;
+}
+
+@keyframes blink {
+  to {
+    color: #000000;
+    background-color: #ffffff;
+  }
+}
+
+#battery.critical:not(.charging) {
+  animation-direction: alternate;
+  animation-duration: 0.5s;
+  animation-iteration-count: infinite;
+  animation-name: blink;
+  animation-timing-function: linear;
+  background-color: #f53c3c;
+  color: #ffffff;
+}
+
+label:focus {
+  background-color: #000000;
+}
+
+/* Network Modules */
+#network {
+  padding: 2.5px;
+}
+
+#network:hover {
+  background: rgba(0, 0, 0, 0.2);
+  box-shadow: None;
+}
+
+#network.disconnected {
+  background-color: #f53c3c;
+}
+
+/* Pulseaudio Modules */
+#pulseaudio:hover {
+  background: rgba(0, 0, 0, 0.2);
+  box-shadow: None;
+}
+
+#pulseaudio.muted {
+  color: #f53c3c;
+}
