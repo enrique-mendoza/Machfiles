@@ -1,0 +1,95 @@
+{
+  // LEFT MODULES
+  // https://github.com/Alexays/Waybar/wiki/Module:-Custom
+  "custom/launcher": {
+    "format": " ", //  ,  , 
+    "on-click": "wofi --show drun"
+  },
+
+  // https://github.com/Alexays/Waybar/wiki/Module:-Workspaces
+  "wlr/workspaces": {
+    "format": "{icon}",
+    "on-click": "activate",
+    "sort-by-number": true
+  },
+
+  // https://github.com/Alexays/Waybar/wiki/Module:-PulseAudio
+  "pulseaudio": {
+    // "scroll-step": 1, // %, can be a float
+    "format": "{icon} {volume}%",
+    "format-bluetooth": "{icon} {volume}% {format_source}",
+    "format-bluetooth-muted": " {icon} {format_source}",
+    "format-muted": "婢",
+    // "format-source": " {volume}%",
+    // "format-source-muted": "",
+    "format-icons": {
+      "headphone": "",
+      "hands-free": "",
+      "headset": "",
+      "phone": "",
+      "portable": "",
+      "car": "",
+      "default": ["", "", ""]
+    },
+    "on-click": "pavucontrol"
+  },
+
+  // https://github.com/Alexays/Waybar/wiki/Module:-Custom#pacman
+  "custom/pacman": {
+    "format": " {}",
+    "interval": 3600, // every hour
+    "exec": "checkupdates | wc -l", // # of updates
+    "exec-if": "exit 0", // always run; consider advanced run conditions
+    "on-click": "termite -e 'sudo pacman -Syu'; pkill -SIGRTMIN+8 waybar", // update system
+    "signal": 8
+  },
+
+  // CENTER MODULES
+  "hyprland/window": {
+    "format": "{}"
+  },
+
+  // RIGHT MODULES
+  // https://github.com/Alexays/Waybar/wiki/Module:-Network
+  "network": {
+    // "interface": "wlp2*", // (Optional) To force the use of this interface
+    "format-wifi": "直 {signalStrength}%",
+    "format-ethernet": "",
+    "format-disconnected": "睊",
+    "format-alt": "{ifname}: {ipaddr}/{cidr}"
+  },
+
+  // https://github.com/Alexays/Waybar/wiki/Module:-Battery
+  "battery": {
+    "states": {
+      // "good": 95,
+      "warning": 30,
+      "critical": 15
+    },
+    "format": "{icon} {capacity}%",
+    "format-charging": " {capacity}% ",
+    "format-plugged": " {capacity}%",
+    "format-alt": "{icon} {time} ",
+    // "format-good": "", // An empty format will hide the module
+    // "format-full": "",
+    "format-icons": ["", "", "", "", ""]
+  },
+
+  // https://github.com/Alexays/Waybar/wiki/Module:-Memory
+  "memory": {
+    "format": "﬙ {}%"
+  },
+
+  // https://github.com/Alexays/Waybar/wiki/Module:-Disk
+  "disk": {
+    "interval": 30,
+    "format": " {free}",
+    "path": "/home"
+  },
+
+  // https://github.com/Alexays/Waybar/wiki/Module:-Clock
+  "clock": {
+    "format": "<span color='#ffffff'> </span>{:%A - %I:%M %p}",
+    "format-alt": "<span color='#ffffff'> </span>{:%B %d, %Y }"
+  }
+}

@@ -1,94 +1,30 @@
-{
-  "layer": "top",
+[
+  {
+    "layer": "top",
+    "output": ["eDP-1"],
+    "include": [
+      "~/.config/waybar/default-modules.json"
+    ],
 
-  "height": 30,
-  "spacing": 4,
+    "height": 30,
+    "spacing": 4,
 
-  "modules-left": ["custom/launcher", "wlr/workspaces", "pulseaudio"],
-  // "modules-center": ["hyprland/window"],
-  "modules-right": ["network", "battery", "memory", "disk", "clock"],
-
-  // LEFT MODULES
-  // https://github.com/Alexays/Waybar/wiki/Module:-Custom
-  "custom/launcher": {
-    "format": " ", //  ,  ,   
-    "on-click": "wofi --show drun",
+    "modules-left": ["custom/launcher", "wlr/workspaces", "pulseaudio", "custom/pacman"],
+    // "modules-center": ["hyprland/window"],
+    "modules-right": ["network", "battery", "memory", "disk", "clock"],
   },
+  {
+    "layer": "top",
+    "output": ["HDMI-A-2"],
+    "include": [
+      "~/.config/waybar/default-modules.json"
+    ],
 
-  // https://github.com/Alexays/Waybar/wiki/Module:-Workspaces
-  "wlr/workspaces": {
-    "format": "{icon}",
-    "on-click": "activate",
-    "sort-by-number": true
-  },
+    "height": 30,
+    "spacing": 4,
 
-  // https://github.com/Alexays/Waybar/wiki/Module:-PulseAudio
-  "pulseaudio": {
-      // "scroll-step": 1, // %, can be a float
-      "format": "{icon} {volume}%",
-      "format-bluetooth": "{icon} {volume}% {format_source}",
-      "format-bluetooth-muted": " {icon} {format_source}",
-      "format-muted": "婢",
-      // "format-source": " {volume}%",
-      // "format-source-muted": "",
-      "format-icons": {
-          "headphone": "",
-          "hands-free": "",
-          "headset": "",
-          "phone": "",
-          "portable": "",
-          "car": "",
-          "default": ["", "", ""]
-      },
-      "on-click": "pavucontrol"
+    "modules-left": ["custom/launcher", "wlr/workspaces", "pulseaudio"],
+    // "modules-center": ["hyprland/window"],
+    "modules-right": ["clock"],
   },
-
-  // CENTER MODULES
-  "hyprland/window": {
-    "format": "{}",
-  },
-
-  // RIGHT MODULES
-  // https://github.com/Alexays/Waybar/wiki/Module:-Network
-  "network": {
-      // "interface": "wlp2*", // (Optional) To force the use of this interface
-      "format-wifi": "直 {signalStrength}%",
-      "format-ethernet": "",
-      "format-disconnected": "睊",
-      "format-alt": "{ifname}: {ipaddr}/{cidr}"
-  },
-
-  // https://github.com/Alexays/Waybar/wiki/Module:-Battery
-  "battery": {
-      "states": {
-          // "good": 95,
-          "warning": 30,
-          "critical": 15
-      },
-      "format": "{icon} {capacity}%",
-      "format-charging": " {capacity}% ",
-      "format-plugged": " {capacity}%",
-      "format-alt": "{icon} {time} ",
-      // "format-good": "", // An empty format will hide the module
-      // "format-full": "",
-      "format-icons": ["", "", "", "", ""]
-  },
-
-  // https://github.com/Alexays/Waybar/wiki/Module:-Memory
-  "memory": {
-      "format": "﬙ {}%"
-  },
-
-  // https://github.com/Alexays/Waybar/wiki/Module:-Disk
-  "disk": {
-      "interval": 30,
-      "format": " {free}",
-      "path": "/home"
-  },
-
-  // https://github.com/Alexays/Waybar/wiki/Module:-Clock
-  "clock": {
-      "format": "<span color='#ffffff'> </span>{:%A - %I:%M %p}",
-      "format-alt": "<span color='#ffffff'> </span>{:%B %d, %Y }"
-  },
-}
+]
