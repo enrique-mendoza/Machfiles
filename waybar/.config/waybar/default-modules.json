@@ -91,7 +91,7 @@
 
   // https://github.com/Alexays/Waybar/wiki/Module:-Clock
   "clock": {
-    "format": "<span color='#ffffff'> </span>{:%A - %I:%M %p}",
+    "format": "<span color='#ffffff'> </span>{:%A - %H:%M %p}",
     "format-alt": "<span color='#ffffff'> </span>{:%B %d, %Y }"
   }
 }
