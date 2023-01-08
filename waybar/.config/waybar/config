@@ -11,7 +11,7 @@
 
     "modules-left": ["custom/launcher", "wlr/workspaces", "pulseaudio", "custom/pacman"],
     // "modules-center": ["hyprland/window"],
-    "modules-right": ["network", "battery", "memory", "disk", "clock"],
+    "modules-right": ["battery", "network", "memory", "disk", "clock"],
   },
   {
     "layer": "top",

@@ -63,9 +63,9 @@ window#waybar.hidden {
 }
 
 /* Modules */
+#custom-pacman,
 #disk,
 #network,
-#custom-pacman,
 #pulseaudio {
   color: #ffffff;
   padding: 0 8px;
@@ -97,7 +97,8 @@ window#waybar.hidden {
 /* Custom Launcher Modules */
 #custom-launcher {
   padding-left: 10px;
-  color: #ff7a93;
+  /* color: #ff7a93; */
+  font-size: 16px;
 }
 
 #custom-launcher:hover {
