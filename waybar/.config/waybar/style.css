@@ -68,15 +68,11 @@ window#waybar.hidden {
 #network,
 #pulseaudio {
   color: #ffffff;
-  padding: 0 8px;
+  padding: 0 6px;
 }
 
 #clock {
   padding-right: 10px;
-}
-
-#battery {
-  padding: 0 3px;
 }
 
 #window,
@@ -96,7 +92,9 @@ window#waybar.hidden {
 
 /* Custom Launcher Modules */
 #custom-launcher {
+  /* padding-left: 10px; */
   padding-left: 10px;
+  padding-right: 6px;
   /* color: #ff7a93; */
   font-size: 16px;
 }
@@ -144,10 +142,6 @@ label:focus {
 }
 
 /* Network Modules */
-#network {
-  padding: 2.5px;
-}
-
 #network:hover {
   background: rgba(0, 0, 0, 0.2);
   box-shadow: None;
