@@ -5,10 +5,18 @@ cbatticon &
 export EDITOR="nvim"
 export TERMINAL="kitty"
 export BROWSER="brave"
+
 # Fixing java white screen error:
 # https://wiki.archlinux.org/title/java#Impersonate_another_window_manager
 # or:
 # export _JAVA_AWT_WM_NONREPARENTING=1
+
+export MOZ_X11_EGL=1
+
+if [ "$XDG_SESSION_TYPE" == "wayland" ]; then
+    export MOZ_DBUS_REMOTE=1
+    export MOZ_ENABLE_WAYLAND=1
+fi
 
 # Network
 nm-apple &
