@@ -39,7 +39,7 @@ luac.out
 *.x86_64
 *.hex
 
-lazygit/.config/lazygit
+lazygit/.config/lazygit/state.yml
 
 qtile/config.json
 qtile/dev.py
