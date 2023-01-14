@@ -52,6 +52,10 @@
     "when": "inQuickOpen"
   },
   {
+    "key": "ctrl+h",
+    "command": "workbench.files.action.focusFilesExplorer"
+  },
+  {
     "key": "tab",
     "command": "selectNextSuggestion",
     "when": "editorTextFocus && suggestWidgetMultipleSuggestions && suggestWidgetVisible"
@@ -223,6 +227,6 @@
   {
     "key": "space",
     "command": "whichkey.show",
-    "when": "vim.mode != 'Insert' && inputFocus"
+    "when": "vim.mode != 'Insert' && editorFocus || inWelcome && activeEditor == 'gettingStartedPage' || !hasPrevTabstop"
   }
 ]
