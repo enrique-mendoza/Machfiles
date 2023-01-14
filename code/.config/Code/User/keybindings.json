@@ -227,6 +227,6 @@
   {
     "key": "space",
     "command": "whichkey.show",
-    "when": "vim.mode != 'Insert' && editorFocus || inWelcome && activeEditor == 'gettingStartedPage' || !hasPrevTabstop"
+    "when": "vim.mode != 'Insert' && editorFocus || inWelcome && activeEditor == 'gettingStartedPage'"
   }
 ]
