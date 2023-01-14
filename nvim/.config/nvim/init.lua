@@ -1,20 +1,22 @@
-require('kike.base')
-require('kike.highlights')
-require('kike.maps')
-require('kike.bootstrap')
-require('kike.plugins')
-
-local has = vim.fn.has
-local is_mac = has "macunix"
-local is_win = has "win32"
-local is_lin = has "linux"
-
-if is_mac then
-  require('kike.macos')
-end
-if is_win then
-  require('kike.windows')
-end
-if is_lin then
-  require('kike.linux')
-end
+require "user.impatient"
+require "user.options"
+require "user.keymaps"
+require "user.plugins"
+require "user.autocommands"
+require "user.colorscheme"
+require "user.cmp"
+require "user.telescope"
+require "user.gitsigns"
+require "user.treesitter"
+require "user.autopairs"
+require "user.comment"
+require "user.nvim-tree"
+require "user.bufferline"
+require "user.lualine"
+require "user.toggleterm"
+require "user.project"
+require "user.illuminate"
+require "user.indentline"
+require "user.alpha"
+require "user.lsp"
+require "user.dap"

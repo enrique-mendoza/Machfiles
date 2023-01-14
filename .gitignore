@@ -1,8 +1,51 @@
-# Files
-config.json
-default_config.py
-dev.py
-state.yml
+# Compiled Lua sources
+luac.out
 
-# Folders
+# luarocks build files
+*.src.rock
+*.zip
+*.tar.gz
+
+# Object files
+*.o
+*.os
+*.ko
+*.obj
+*.elf
+
+# Precompiled Headers
+*.gch
+*.pch
+
+# Libraries
+*.lib
+*.a
+*.la
+*.lo
+*.def
+*.exp
+
+# Shared objects (inc. Windows DLLs)
+*.dll
+*.so
+*.so.*
+*.dylib
+
+# Executables
+*.exe
+*.out
+*.app
+*.i*86
+*.x86_64
+*.hex
+
+lazygit/.config/lazygit
+
+qtile/config.json
+qtile/dev.py
+
 __pycache__
+
+plugin/packer_compiled.lua
+java-debug/
+vscode-java-test/
