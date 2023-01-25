@@ -73,10 +73,7 @@ ZSH_THEME="awesomepanda"
 plugins=(
 	aliases
 	git
-	git-extras
-	git-flow-completion
 	nvm
-	spring
 	zsh-autosuggestions
 	zsh-syntax-highlighting
 )
@@ -110,7 +107,7 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 # Battery status
-alias cbst="upower -i $(upower -e | grep BAT)"
+# alias cbst="upower -i $(upower -e | grep BAT)"
 
 # Colorize grep output (good for log files)
 alias grep="grep --color=auto"
@@ -131,13 +128,10 @@ alias l="exa -F --icons --color=always --group-directories-first"
 alias l.="exa -a | egrep '^\.'"
 
 # Easier to read disk
-alias df="df -h"     # human-readable sizes
+alias df="df -h" # human-readable sizes
 alias free="free -m" # show sizes in MB
 
-# Get top process eating memory
-alias psmem="ps auxf | sort -nr -k 4 | head -5"
-
-# Get top process eating cpu ##
+# Get top process eating cpu
 alias pscpu="ps auxf | sort -nr -k 3 | head -5"
 
 # Kitty
@@ -152,6 +146,10 @@ alias lpps="pacman -Qet | awk '{print $1}'"
 neofetch
 
 export PATH="$HOME/.local/bin":$PATH
+
+# FNM 
+export PATH="/home/kike/.local/share/fnm:$PATH"
+eval "$(fnm env --use-on-cd)"
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"                   # This loads nvm

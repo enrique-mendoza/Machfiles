@@ -3,8 +3,8 @@
   "colorscheme": "catppuccin",
   "browser": "brave",
   "terminal": {
-    "main": "",
-    "floating": ""
+    "main": "kitty",
+    "floating": "kitty"
   },
   "wallpaper": "~/Pictures/wallpapers/23.png"
 }
