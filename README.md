@@ -1,6 +1,6 @@
 <h1 id="top" align="center">Machfiles 🐶</h1>
 
-![preview](./.screenshots/machfiles.png)
+![preview](./.screenshots/preview.png)
 
 ## Installation
 
