@@ -3,28 +3,28 @@
     "layer": "top",
     "output": ["eDP-1"],
     "include": [
-      "~/.config/waybar/default-modules.json"
+      "~/.config/waybar/modules/default-modules.json"
     ],
 
     "height": 30,
     "spacing": 4,
 
-    "modules-left": ["custom/launcher", "wlr/workspaces", "pulseaudio", "custom/pacman"],
+    "modules-left": ["custom/launcher", "wlr/workspaces"],
     // "modules-center": ["hyprland/window"],
-    "modules-right": ["battery", "network", "memory", "disk", "clock"],
+    "modules-right": ["hyprland/language", "pulseaudio", "battery", "network", "custom/separator", "memory", "custom/separator", "disk", "custom/separator", "clock"],
   },
   {
     "layer": "top",
     "output": ["HDMI-A-2"],
     "include": [
-      "~/.config/waybar/default-modules.json"
+      "~/.config/waybar/modules/default-modules.json"
     ],
 
     "height": 30,
     "spacing": 4,
 
-    "modules-left": ["custom/launcher", "wlr/workspaces", "pulseaudio"],
+    "modules-left": ["custom/launcher", "wlr/workspaces"],
     // "modules-center": ["hyprland/window"],
-    "modules-right": ["clock"],
+    "modules-right": ["hyprland/language", "pulseaudio", "battery", "network", "custom/separator", "clock"],
   },
 ]

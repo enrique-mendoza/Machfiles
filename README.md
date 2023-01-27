@@ -1,22 +1,6 @@
 <h1 id="top" align="center">Machfiles 🐶</h1>
 
-## Wayland
-
-### [Hyprland](https://github.com/enrique-mendoza/Machfiles/tree/main/hypr/.config/hypr)
-
-![preview](./.screenshots/hyprland.png)
-
-## X11
-
-### [Qtile](https://github.com/enrique-mendoza/Machfiles/tree/main/qtile/.config/qtile)
-
-![preview](./.screenshots/qtile.png)
-
-<p align="center">Credits to <a href="https://github.com/jx11r/qtile">@jx11r</a></p>
-
-### [Hypr](https://github.com/enrique-mendoza/Machfiles/tree/main/hypr/.config/hypr)
-
-![preview](./.screenshots/hypr.png)
+![preview](./.screenshots/machfiles.png)
 
 ## Installation
 
