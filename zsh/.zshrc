@@ -147,9 +147,11 @@ neofetch
 
 export PATH="$HOME/.local/bin":$PATH
 
+export CLASSPATH=$CLASSPATH:~/algs4/algs4.jar
+
 # FNM 
 export PATH="/home/kike/.local/share/fnm:$PATH"
-eval "$(fnm env --use-on-cd)"
+eval "`fnm env`"
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"                   # This loads nvm

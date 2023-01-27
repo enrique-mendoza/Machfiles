@@ -41,7 +41,7 @@ luac.out
 
 state.yml
 packer_compiled.lua
-__pycache__
+__pycache__/
 
 java-debug/
 vscode-java-test/

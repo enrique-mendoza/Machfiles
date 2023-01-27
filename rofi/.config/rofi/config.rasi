@@ -151,4 +151,5 @@ configuration {
 }
 //@theme "/usr/share/rofi/themes/solarized_alternate.rasi"
 /*  window { fullscreen: true; } */
-@theme "/usr/share/rofi/themes/solarized.rasi"
+//@theme "/usr/share/rofi/themes/solarized.rasi"
+@theme "/usr/share/rofi/themes/solarized_alternate.rasi"
