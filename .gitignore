@@ -42,6 +42,7 @@ luac.out
 state.yml
 packer_compiled.lua
 __pycache__/
+btop.log
 
 java-debug/
 vscode-java-test/
