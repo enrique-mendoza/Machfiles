@@ -1,4 +1,5 @@
 [
+  // Credits: https://github.com/linuxmobile/hyprland-dots
   {
     "layer": "top",
     "output": ["eDP-1"],
@@ -7,11 +8,11 @@
     ],
 
     "height": 30,
-    "spacing": 4,
+    // "spacing": 4,
 
-    "modules-left": ["custom/launcher", "wlr/workspaces"],
+    "modules-left": ["clock", "custom/weather", "wlr/workspaces"],
     // "modules-center": ["hyprland/window"],
-    "modules-right": ["hyprland/language", "pulseaudio", "battery", "network", "custom/separator", "memory", "custom/separator", "disk", "custom/separator", "clock"],
+    "modules-right": ["custom/updates", "hyprland/language", "battery", "network", "pulseaudio", "pulseaudio#microphone"],
   },
   {
     "layer": "top",
@@ -21,10 +22,10 @@
     ],
 
     "height": 30,
-    "spacing": 4,
+    // "spacing": 4,
 
-    "modules-left": ["custom/launcher", "wlr/workspaces"],
+    "modules-left": ["clock", "custom/weather", "wlr/workspaces"],
     // "modules-center": ["hyprland/window"],
-    "modules-right": ["hyprland/language", "pulseaudio", "battery", "network", "custom/separator", "clock"],
+    "modules-right": ["hyprland/language", "battery", "network", "pulseaudio", "pulseaudio#microphone"],
   },
 ]

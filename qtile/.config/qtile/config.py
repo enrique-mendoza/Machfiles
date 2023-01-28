@@ -1,3 +1,4 @@
+# Credits: https://github.com/jx11r/qtile
 from core import (
   floating_layout,
   groups,
