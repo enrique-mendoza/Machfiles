@@ -84,7 +84,8 @@
     "format-wifi": "直 {signalStrength}%",
     "format-ethernet": "",
     "format-disconnected": "睊",
-    "format-alt": "{ifname}: {ipaddr}/{cidr}"
+    // "format-alt": "{ifname}: {ipaddr}/{cidr}"
+    "format-alt": "直 {essid}"
   },
   // https://github.com/Alexays/Waybar/wiki/Module:-Battery
   "battery": {
@@ -99,7 +100,7 @@
     "format": "{icon} {capacity}%",
     "format-charging": "",
     "format-plugged": "",
-    "format-alt": "{icon}",
+    "format-alt": "{icon} {time}",
     // "format-good": "", // An empty format will hide the module
     // "format-full": "",
     // "format-icons": ["", "", "", "", ""]
