@@ -41,12 +41,21 @@ tooltip {
   padding: 0px 10px;
 }
 
+/* If Clock is the leftmost module, add left margin */
+.modules-left > widget:first-child > #clock {
+  margin-left: 5px;
+}
+
+/* If Microphone is the rightmost module, add right margin */
+.modules-right > widget:last-child > pulseaudio.microphone {
+  margin-right: 5px;
+}
+
 /* Module: Clock */
 #clock {
   border-radius: 10px 0px 0px 10px;
   border-right: 0px;
   color: #fab387;
-  margin-left: 5px;
 }
 
 /* Module: Custom Weather */
@@ -143,5 +152,4 @@ tooltip {
 #pulseaudio.microphone {
   border-radius: 0 10px 10px 0;
   color: #cba6f7;
-  margin-right: 5px;
 }
