@@ -5,28 +5,22 @@
   "editor.cursorBlinking": "solid",
   "editor.cursorSmoothCaretAnimation": true,
   "editor.formatOnSave": true,
-  "editor.fontFamily": "'Comic Code Ligatures', 'Comic Code','FiraCode NF', 'JetBrainsMono NF', 'Hack NF', 'UbuntuMono NF'",
+  "editor.fontFamily": "'FiraCode NF', 'JetBrainsMono NF', 'Hack NF', 'Comic Code Ligatures', 'Comic Code', 'UbuntuMono NF'",
   "editor.fontLigatures": true,
   "editor.fontSize": 16,
   "editor.guides.bracketPairs": "active",
-  "editor.lineNumbers": "relative",
+  "editor.lineNumbers": "on",
   "editor.minimap.enabled": false,
-  "editor.scrollbar.horizontal": "hidden",
-  "editor.scrollbar.vertical": "hidden",
+  "editor.scrollbar.horizontal": "visible",
+  "editor.scrollbar.vertical": "visible",
   "editor.smoothScrolling": true,
   "editor.snippetSuggestions": "bottom",
   "editor.suggestSelection": "first",
-  
-  "extensions.experimental.affinity": {
-    "asvetliakov.vscode-neovim": 1
-  },
-
   // Git
   "gitlens.codeLens.enabled": true,
   "gitlens.defaultDateShortFormat": null,
   "gitlens.hovers.annotations.over": "annotation",
   "gitlens.hovers.enabled": false,
-
   // Languages
   // Spring
   "boot-java.rewrite.reconcile": true,
@@ -34,7 +28,9 @@
   "[dart]": {
     "editor.formatOnSave": true,
     "editor.formatOnType": true,
-    "editor.rulers": [80],
+    "editor.rulers": [
+      80
+    ],
     "editor.selectionHighlight": false,
     "editor.suggest.snippetsPreventQuickSuggestions": false,
     "editor.suggestSelection": "first",
@@ -75,41 +71,30 @@
   "python.linting.pylintPath": "pylint_django",
   // TypeScript
   "typescript.suggest.completeFunctionCalls": true,
-  
   // Live Share
   "liveshare.presence": true,
   "liveshare.connectionMode": "relay",
-
   // Live Server
   "liveServer.settings.CustomBrowser": "firefox",
-
   // Options
   "diffEditor.wordWrap": "on",
   "search.showLineNumbers": true,
   "security.workspace.trust.untrustedFiles": "open",
   "window.menuBarVisibility": "toggle",
-
   // Redhat
   "redhat.telemetry.enabled": false,
-
   // Sync
   "settingsSync.ignoredExtensions": [],
   "sync.gist": "3158ec2da4ac2246c125b81351f25f73",
-
   // Terminal
   "terminal.integrated.cursorStyle": "line",
   "terminal.integrated.fontFamily": "'Comic Code', 'JetBrainsMono NFM', 'Hack NFM'",
   "terminal.integrated.gpuAcceleration": "off",
-
   // Vim
   "vim.leader": "<space>",
   "vim.useSystemClipboard": true,
   "vim.easymotion": true,
   "vim.surround": true,
-  "vim.normalModeKeyBindings": [],
-  "vim.handleKeys": {},
-  "vim.normalModeKeyBindingsNonRecursive": [],
-
   // Which key
   "whichkey.bindings": [
     {
@@ -1075,7 +1060,6 @@
   ],
   "whichkey.delay": 0,
   "whichkey.sortOrder": "alphabetically",
-
   // Workbench
   "workbench.activityBar.visible": false,
   "workbench.colorCustomizations": {
@@ -1086,7 +1070,7 @@
     "editorBracketHighlight.foreground3": "#F7C244",
     "editorBracketHighlight.foreground4": "#F07850",
     "editorBracketHighlight.foreground5": "#9CDD29",
-    "editorBracketHighlight.foreground6": "#C497D4"
+    "editorBracketHighlight.foreground6": "#C497D4",
   },
   "workbench.colorTheme": "Tokyo Night",
   "workbench.iconTheme": "vscode-icons",

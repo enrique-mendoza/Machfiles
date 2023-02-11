@@ -43,12 +43,12 @@ tooltip {
 
 /* If Clock is the leftmost module, add left margin */
 .modules-left > widget:first-child > #clock {
-  margin-left: 5px;
+  margin-left: 20px; /* Alt: 5px */
 }
 
 /* If Microphone is the rightmost module, add right margin */
 .modules-right > widget:last-child > #pulseaudio.microphone {
-  margin-right: 5px;
+  margin-right: 20px; /* Alt: 5px */
 }
 
 /* Module: Clock */
