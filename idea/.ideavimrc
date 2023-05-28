@@ -155,6 +155,8 @@ nmap <leader>lu <Action>(ShowUsages)
 
 nmap <leader>lh <Action>(HighlightUsagesInFile)
 
+nmap <leader>cp <Action>(ShowColorPicker)
+nmap <leader>qf <Action>(ShowIntentionActions)
 nmap <leader>qp <Action>(QuickPreview)
 nmap <leader>qd <Action>(QuickDefinition)
 nmap <leader>qt <Action>(QuickTypeDefinition)
