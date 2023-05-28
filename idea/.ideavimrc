@@ -33,7 +33,7 @@ set highlightedyank
 " ██║     ███████╗╚██████╔╝╚██████╔╝██║██║ ╚████║███████║    ███████║███████╗   ██║      ██║   ██║██║ ╚████║╚██████╔╝███████║
 " ╚═╝     ╚══════╝ ╚═════╝  ╚═════╝ ╚═╝╚═╝  ╚═══╝╚══════╝    ╚══════╝╚══════╝   ╚═╝      ╚═╝   ╚═╝╚═╝  ╚═══╝ ╚═════╝ ╚══════╝
 
-let g:highlightedyank_highlight_duration = "1000"
+let g:highlightedyank_highlight_duration = "100"
 let g:highlightedyank_highlight_color = "rgba(64, 72, 89, 155)"
 
 " ███╗   ███╗ █████╗ ██████╗ ███████╗
@@ -84,6 +84,9 @@ nmap <leader>vn <Action>(NextSplitter)
 nmap <leader>vp <Action>(PrevSplitter)
 nmap <leader>vu <action>(Unsplit)
 nmap <leader>bc <Action>(ChangeSplitOrientation)
+
+nmap <C-j> <Action>(EditorScrollDownAndMove)
+nmap <C-k> <Action>(EditorScrollUpAndMove)
 
 nmap <leader>bd <Action>(CloseEditor)
 nmap <leader>ba <Action>(CloseAllEditors)
