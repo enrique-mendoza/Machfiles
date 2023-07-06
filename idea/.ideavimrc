@@ -23,7 +23,7 @@ set scrolloff=5
 " ██║     ███████╗╚██████╔╝╚██████╔╝██║██║ ╚████║███████║
 " ╚═╝     ╚══════╝ ╚═════╝  ╚═════╝ ╚═╝╚═╝  ╚═══╝╚══════╝
 
-set NERDtree
+set NERDTree
 set highlightedyank
 
 " ██████╗ ██╗     ██╗   ██╗ ██████╗ ██╗███╗   ██╗███████╗    ███████╗███████╗████████╗████████╗██╗███╗   ██╗ ██████╗ ███████╗
@@ -44,6 +44,8 @@ let g:highlightedyank_highlight_color = "rgba(64, 72, 89, 155)"
 " ╚═╝     ╚═╝╚═╝  ╚═╝╚═╝     ╚══════╝
 
 let mapleader=" "
+
+map <leader>e :NERDTree<CR>
 
 " Don't use Ex mode, use Q for formatting
 " map Q gq
@@ -117,7 +119,6 @@ nmap <leader>dW <Action>(Debugger.AddToWatch)
 " ██╗ Explorer
 " ╚═╝
 
-map <leader>e <Action>(ActivateProjectToolWindow)
 
 " ██╗ Introduce
 " ╚═╝
