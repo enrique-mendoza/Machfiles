@@ -208,6 +208,7 @@ nmap <leader>;s <Action>(ShowProjectStructureSettings)
 " ╚═╝
 
 map <Leader>wa <Action>(NavBarToolBar)
+map <Leader>wc <Action>(ChooseRunConfiguration)
 map <Leader>we <Action>(ViewToolButtons)
 map <leader>wd <Action>(ActivateDebugToolWindow)
 map <leader>wr <Action>(ActivateRunToolWindow)
