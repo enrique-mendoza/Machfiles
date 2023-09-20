@@ -207,10 +207,13 @@ nmap <leader>;s <Action>(ShowProjectStructureSettings)
 " ██╗ Window
 " ╚═╝
 
+map <Leader>wa <Action>(NavBarToolBar)
+map <Leader>we <Action>(ViewToolButtons)
 map <leader>wd <Action>(ActivateDebugToolWindow)
 map <leader>wr <Action>(ActivateRunToolWindow)
 map <Leader>wt <Action>(ActivateUnitTestsToolWindow)
-map <Leader>wT <Action>(ActivateTODOToolWindow)
+map <Leader>wT <Action>(NavbarPopupMenu)
+map <Leader>ws <Action>(ViewStatusBar)
 
 " ██╗ Zen Mode
 " ╚═╝
