@@ -45,7 +45,7 @@ let g:highlightedyank_highlight_color = "rgba(64, 72, 89, 155)"
 
 let mapleader=" "
 
-map <leader>e :NERDTree<CR>
+map <leader>nt :NERDTree<CR>
 
 " Don't use Ex mode, use Q for formatting
 " map Q gq
@@ -119,6 +119,7 @@ nmap <leader>dW <Action>(Debugger.AddToWatch)
 " ██╗ Explorer
 " ╚═╝
 
+map <leader>e <Action>(HideAllWindows)
 
 " ██╗ Introduce
 " ╚═╝
@@ -202,6 +203,14 @@ nmap <leader>su <Action>(FindUsages)
 
 map <leader>; <Action>(ShowSettings)
 nmap <leader>;s <Action>(ShowProjectStructureSettings)
+
+" ██╗ Window
+" ╚═╝
+
+map <leader>wd <Action>(ActivateDebugToolWindow)
+map <leader>wr <Action>(ActivateRunToolWindow)
+map <Leader>wt <Action>(ActivateUnitTestsToolWindow)
+map <Leader>wT <Action>(ActivateTODOToolWindow)
 
 " ██╗ Zen Mode
 " ╚═╝
