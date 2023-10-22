@@ -5,11 +5,11 @@
     "command": "actions.findWithSelection"
   },
   {
-    "key": "ctrl+e",
+    "key": "ctrl+l",
     "command": "-actions.findWithSelection"
   },
   {
-    "key": "ctrl+e",
+    "key": "ctrl+h",
     "command": "workbench.view.explorer"
   },
   {
@@ -50,10 +50,6 @@
     "key": "ctrl+j",
     "command": "workbench.action.quickOpenNavigateNext",
     "when": "inQuickOpen"
-  },
-  {
-    "key": "ctrl+h",
-    "command": "workbench.files.action.focusFilesExplorer"
   },
   {
     "key": "tab",
@@ -158,7 +154,7 @@
   {
     "key": "ctrl+j",
     "command": "-editor.action.insertLineAfter",
-    "when": "editorTextFocus && vim.ctrlKeysInsert && !vim.recording && vim.mode == 'Insert'"
+    "when": "editorTextFocus && neovim.ctrlKeysInsert && !neovim.recording && neovim.mode == 'insert'"
   },
   {
     "key": "alt+j",
@@ -176,7 +172,7 @@
   {
     "key": "shift+k",
     "command": "editor.action.showHover",
-    "when": "editorTextFocus && vim.mode != 'Insert'"
+    "when": "editorTextFocus && neovim.mode != 'insert'"
   },
   {
     "key": "ctrl+k ctrl+i",
@@ -187,11 +183,6 @@
     "key": "shift+tab",
     "command": "-acceptAlternativeSelectedSuggestion",
     "when": "suggestWidgetVisible && textInputFocus && textInputFocus"
-  },
-  {
-    "key": "ctrl+f",
-    "command": "-vscode-neovim.ctrl-f",
-    "when": "editorTextFocus && vim.ctrlKeysNormal && vim.init && vim.mode != 'Insert'"
   },
   {
     "key": "shift+delete",
@@ -228,5 +219,10 @@
     "key": "space",
     "command": "whichkey.show",
     "when": "vim.mode != 'Insert' && editorFocus || inWelcome && activeEditor == 'gettingStartedPage'"
+  },
+  {
+    "key": "backspace",
+    "command": "whichkey.undoKey",
+    "when": "whichkeyVisible"
   }
 ]

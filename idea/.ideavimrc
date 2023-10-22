@@ -1,11 +1,12 @@
 " Examples: https://jb.gg/share-ideavimrc
+" NOTE. ASCII Banner Font: ANSI Shadow
 
-" ██████╗ ██████╗ ████████╗██╗ ██████╗ ███╗   ██╗███████╗
-" ██╔═══██╗██╔══██╗╚══██╔══╝██║██╔═══██╗████╗  ██║██╔════╝
-" ██║   ██║██████╔╝   ██║   ██║██║   ██║██╔██╗ ██║███████╗
-" ██║   ██║██╔═══╝    ██║   ██║██║   ██║██║╚██╗██║╚════██║
-" ╚██████╔╝██║        ██║   ██║╚██████╔╝██║ ╚████║███████║
-"  ╚═════╝ ╚═╝        ╚═╝   ╚═╝ ╚═════╝ ╚═╝  ╚═══╝╚══════╝
+"    ██████╗ ██████╗ ████████╗██╗ ██████╗ ███╗   ██╗███████╗
+"   ██╔═══██╗██╔══██╗╚══██╔══╝██║██╔═══██╗████╗  ██║██╔════╝
+"   ██║   ██║██████╔╝   ██║   ██║██║   ██║██╔██╗ ██║███████╗
+"   ██║   ██║██╔═══╝    ██║   ██║██║   ██║██║╚██╗██║╚════██║
+"   ╚██████╔╝██║        ██║   ██║╚██████╔╝██║ ╚████║███████║
+"    ╚═════╝ ╚═╝        ╚═╝   ╚═╝ ╚═════╝ ╚═╝  ╚═══╝╚══════╝
 
 set autoindent
 set clipboard+=unnamed
@@ -16,207 +17,341 @@ set smartcase
 set smartindent
 set scrolloff=5
 
-" ██████╗ ██╗     ██╗   ██╗ ██████╗ ██╗███╗   ██╗███████╗
-" ██╔══██╗██║     ██║   ██║██╔════╝ ██║████╗  ██║██╔════╝
-" ██████╔╝██║     ██║   ██║██║  ███╗██║██╔██╗ ██║███████╗
-" ██╔═══╝ ██║     ██║   ██║██║   ██║██║██║╚██╗██║╚════██║
-" ██║     ███████╗╚██████╔╝╚██████╔╝██║██║ ╚████║███████║
-" ╚═╝     ╚══════╝ ╚═════╝  ╚═════╝ ╚═╝╚═╝  ╚═══╝╚══════╝
+set noerrorbells
+set visualbell
+
+"   ██████╗ ██╗     ██╗   ██╗ ██████╗ ██╗███╗   ██╗███████╗
+"   ██╔══██╗██║     ██║   ██║██╔════╝ ██║████╗  ██║██╔════╝
+"   ██████╔╝██║     ██║   ██║██║  ███╗██║██╔██╗ ██║███████╗
+"   ██╔═══╝ ██║     ██║   ██║██║   ██║██║██║╚██╗██║╚════██║
+"   ██║     ███████╗╚██████╔╝╚██████╔╝██║██║ ╚████║███████║
+"   ╚═╝     ╚══════╝ ╚═════╝  ╚═════╝ ╚═╝╚═╝  ╚═══╝╚══════╝
 
 set NERDTree
-set highlightedyank
 
-" ██████╗ ██╗     ██╗   ██╗ ██████╗ ██╗███╗   ██╗███████╗    ███████╗███████╗████████╗████████╗██╗███╗   ██╗ ██████╗ ███████╗
-" ██╔══██╗██║     ██║   ██║██╔════╝ ██║████╗  ██║██╔════╝    ██╔════╝██╔════╝╚══██╔══╝╚══██╔══╝██║████╗  ██║██╔════╝ ██╔════╝
-" ██████╔╝██║     ██║   ██║██║  ███╗██║██╔██╗ ██║███████╗    ███████╗█████╗     ██║      ██║   ██║██╔██╗ ██║██║  ███╗███████╗
-" ██╔═══╝ ██║     ██║   ██║██║   ██║██║██║╚██╗██║╚════██║    ╚════██║██╔══╝     ██║      ██║   ██║██║╚██╗██║██║   ██║╚════██║
-" ██║     ███████╗╚██████╔╝╚██████╔╝██║██║ ╚████║███████║    ███████║███████╗   ██║      ██║   ██║██║ ╚████║╚██████╔╝███████║
-" ╚═╝     ╚══════╝ ╚═════╝  ╚═════╝ ╚═╝╚═╝  ╚═══╝╚══════╝    ╚══════╝╚══════╝   ╚═╝      ╚═╝   ╚═╝╚═╝  ╚═══╝ ╚═════╝ ╚══════╝
+set highlightedyank
 
 let g:highlightedyank_highlight_duration = "100"
 let g:highlightedyank_highlight_color = "rgba(64, 72, 89, 155)"
 
-" ███╗   ███╗ █████╗ ██████╗ ███████╗
-" ████╗ ████║██╔══██╗██╔══██╗██╔════╝
-" ██╔████╔██║███████║██████╔╝███████╗
-" ██║╚██╔╝██║██╔══██║██╔═══╝ ╚════██║
-" ██║ ╚═╝ ██║██║  ██║██║     ███████║
-" ╚═╝     ╚═╝╚═╝  ╚═╝╚═╝     ╚══════╝
+set which-key
+
+set notimeout
+
+let g:WhichKey_ShowVimActions = "true"
+let g:WhichKey_FontFamily = "JetBrainsMono Nerd Font"
+let g:WhichKey_FontSize = 18
+let g:WhichKey_ShowTypedSequence = "false"
+
+"   ███╗   ███╗ █████╗ ██████╗ ███████╗
+"   ████╗ ████║██╔══██╗██╔══██╗██╔════╝
+"   ██╔████╔██║███████║██████╔╝███████╗
+"   ██║╚██╔╝██║██╔══██║██╔═══╝ ╚════██║
+"   ██║ ╚═╝ ██║██║  ██║██║     ███████║
+"   ╚═╝     ╚═╝╚═╝  ╚═╝╚═╝     ╚══════╝
+
+""" Map leader to space ---------------------
 
 let mapleader=" "
 
-map <leader>nt :NERDTree<CR>
+map <leader>e :NERDTree<CR>
 
-" Don't use Ex mode, use Q for formatting
-" map Q gq
-
-" ███╗   ███╗ █████╗ ██████╗ ███████╗    ██╗██████╗ ███████╗ █████╗      █████╗  ██████╗████████╗██╗ ██████╗ ███╗   ██╗███████╗
-" ████╗ ████║██╔══██╗██╔══██╗██╔════╝    ██║██╔══██╗██╔════╝██╔══██╗    ██╔══██╗██╔════╝╚══██╔══╝██║██╔═══██╗████╗  ██║██╔════╝
-" ██╔████╔██║███████║██████╔╝███████╗    ██║██║  ██║█████╗  ███████║    ███████║██║        ██║   ██║██║   ██║██╔██╗ ██║███████╗
-" ██║╚██╔╝██║██╔══██║██╔═══╝ ╚════██║    ██║██║  ██║██╔══╝  ██╔══██║    ██╔══██║██║        ██║   ██║██║   ██║██║╚██╗██║╚════██║
-" ██║ ╚═╝ ██║██║  ██║██║     ███████║    ██║██████╔╝███████╗██║  ██║    ██║  ██║╚██████╗   ██║   ██║╚██████╔╝██║ ╚████║███████║
-" ╚═╝     ╚═╝╚═╝  ╚═╝╚═╝     ╚══════╝    ╚═╝╚═════╝ ╚══════╝╚═╝  ╚═╝    ╚═╝  ╚═╝ ╚═════╝   ╚═╝   ╚═╝ ╚═════╝ ╚═╝  ╚═══╝╚══════╝
-
-" ██╗ Buffers/Editors
-" ╚═╝
-
-nmap <leader>bb <Action>(TabList)
-
-map <leader>1 <Action>(GoToTab1)
-map <leader>2 <Action>(GoToTab2)
-map <leader>3 <Action>(GoToTab3)
-map <leader>4 <Action>(GoToTab4)
-map <leader>5 <Action>(GoToTab5)
-map <leader>6 <Action>(GoToTab6)
-map <leader>7 <Action>(GoToTab7)
-map <leader>8 <Action>(GoToTab8)
-map <leader>9 <Action>(GoToTab9)
-
-nmap <leader>bn <Action>(NextTab)
-nmap <leader>bp <Action>(PreviousTab)
-
-nmap <leader>bh <Action>(MoveTabLeft)
-nmap <leader>bj <Action>(MoveTabDown)
-nmap <leader>bk <Action>(MoveTabUp)
-nmap <leader>bl <Action>(MoveTabRight)
-
-map <leader>h <Action>(SplitHorizontally)
-map <leader>v <Action>(SplitVertically)
-nmap <leader>vn <Action>(NextSplitter)
-nmap <leader>vp <Action>(PrevSplitter)
-nmap <leader>vu <action>(Unsplit)
-nmap <leader>bc <Action>(ChangeSplitOrientation)
-
-nmap <C-j> <Action>(EditorScrollDownAndMove)
-nmap <C-k> <Action>(EditorScrollUpAndMove)
-
-nmap <leader>bd <Action>(CloseEditor)
-nmap <leader>ba <Action>(CloseAllEditors)
-nmap <leader>bo <Action>(CloseAllEditorsButActive)
-
-nmap <leader>bu <Action>(ReopenClosedTab)
-
-" ██╗ Comments
-" ╚═╝
+"   ██╗██████╗ ███████╗ █████╗      █████╗  ██████╗████████╗██╗ ██████╗ ███╗   ██╗███████╗
+"   ██║██╔══██╗██╔════╝██╔══██╗    ██╔══██╗██╔════╝╚══██╔══╝██║██╔═══██╗████╗  ██║██╔════╝
+"   ██║██║  ██║█████╗  ███████║    ███████║██║        ██║   ██║██║   ██║██╔██╗ ██║███████╗
+"   ██║██║  ██║██╔══╝  ██╔══██║    ██╔══██║██║        ██║   ██║██║   ██║██║╚██╗██║╚════██║
+"   ██║██████╔╝███████╗██║  ██║    ██║  ██║╚██████╗   ██║   ██║╚██████╔╝██║ ╚████║███████║
+"   ╚═╝╚═════╝ ╚══════╝╚═╝  ╚═╝    ╚═╝  ╚═╝ ╚═════╝   ╚═╝   ╚═╝ ╚═════╝ ╚═╝  ╚═══╝╚══════╝
 
 map <leader>/ <Action>(CommentByLineComment)
 
-" ██╗ Debug
-" ╚═╝
+map <leader>h <Action>(SplitHorizontally)
+map <leader>v <Action>(SplitVertically)
 
-nmap <leader>d <Action>(Debug)
-nmap <leader>db <Action>(ToggleLineBreakpoint)
-nmap <leader>dv <Action>(ViewBreakpoints)
-nmap <leader>dr <Action>(Debugger.RemoveAllBreakpointsInFile)
-nmap <leader>dR <Action>(Debugger.RemoveAllBreakpoints)
-nmap <leader>di <Action>(StepInto)
-nmap <leader>do <Action>(StepOut)
-nmap <leader>ds <Action>(StepOver)
-nmap <leader>de <Action>(Debugger.EvaluateInConsole)
-nmap <leader>dm <Action>(XDebugger.MuteBreakpoints)
-nmap <leader>dW <Action>(Debugger.AddToWatch)
+map <leader>u <action>(Unsplit)
+map <leader>sp <Action>(ChangeSplitOrientation)
 
-" ██╗ Explorer
-" ╚═╝
+map <leader>z <Action>(ToggleZenMode)
 
-map <leader>e <Action>(HideAllWindows)
+"   ██╗██████╗ ███████╗ █████╗      █████╗  ██████╗████████╗██╗ ██████╗ ███╗   ██╗███████╗       ██████╗ ██╗   ██╗███████╗███████╗███████╗██████╗ ███████╗       ██╗       ███████╗██████╗ ██╗████████╗ ██████╗ ██████╗ ███████╗
+"   ██║██╔══██╗██╔════╝██╔══██╗    ██╔══██╗██╔════╝╚══██╔══╝██║██╔═══██╗████╗  ██║██╔════╝██╗    ██╔══██╗██║   ██║██╔════╝██╔════╝██╔════╝██╔══██╗██╔════╝       ██║       ██╔════╝██╔══██╗██║╚══██╔══╝██╔═══██╗██╔══██╗██╔════╝
+"   ██║██║  ██║█████╗  ███████║    ███████║██║        ██║   ██║██║   ██║██╔██╗ ██║███████╗╚═╝    ██████╔╝██║   ██║█████╗  █████╗  █████╗  ██████╔╝███████╗    ████████╗    █████╗  ██║  ██║██║   ██║   ██║   ██║██████╔╝███████╗
+"   ██║██║  ██║██╔══╝  ██╔══██║    ██╔══██║██║        ██║   ██║██║   ██║██║╚██╗██║╚════██║██╗    ██╔══██╗██║   ██║██╔══╝  ██╔══╝  ██╔══╝  ██╔══██╗╚════██║    ██╔═██╔═╝    ██╔══╝  ██║  ██║██║   ██║   ██║   ██║██╔══██╗╚════██║
+"   ██║██████╔╝███████╗██║  ██║    ██║  ██║╚██████╗   ██║   ██║╚██████╔╝██║ ╚████║███████║╚═╝    ██████╔╝╚██████╔╝██║     ██║     ███████╗██║  ██║███████║    ██████║      ███████╗██████╔╝██║   ██║   ╚██████╔╝██║  ██║███████║
+"   ╚═╝╚═════╝ ╚══════╝╚═╝  ╚═╝    ╚═╝  ╚═╝ ╚═════╝   ╚═╝   ╚═╝ ╚═════╝ ╚═╝  ╚═══╝╚══════╝       ╚═════╝  ╚═════╝ ╚═╝     ╚═╝     ╚══════╝╚═╝  ╚═╝╚══════╝    ╚═════╝      ╚══════╝╚═════╝ ╚═╝   ╚═╝    ╚═════╝ ╚═╝  ╚═╝╚══════╝
 
-" ██╗ Introduce
-" ╚═╝
+map <leader>bn <Action>(NextTab)
+map <leader>bp <Action>(PreviousTab)
 
-nmap <leader>ic <Action>(IntroduceConstant)
-nmap <leader>if <Action>(IntroduceField)
-nmap <leader>ip <Action>(IntroduceParameter)
-nmap <leader>iP <Action>(IntroduceParameterObject)
-nmap <leader>iv <Action>(IntroduceVariable)
+map <leader>bh <Action>(MoveTabLeft)
+map <leader>bj <Action>(MoveTabDown)
+map <leader>bk <Action>(MoveTabUp)
+map <leader>bl <Action>(MoveTabRight)
 
-" ██╗ Find
-" ╚═╝
+map <leader>bo <Action>(MoveEditorToOppositeTabGroup)
 
-map <leader>f <Action>(Find)
+map <leader>bd <Action>(CloseEditor)
+map <leader>ba <Action>(CloseAllEditors)
+map <leader>bm <Action>(CloseAllEditorsButActive)
 
-" ██╗ LSP
-" ╚═╝
+nmap <leader>bu <Action>(ReopenClosedTab)
 
-nmap <leader>lr <Action>(RenameElement)
-nmap <leader>lf <Action>(ReformatCode)
-nmap <leader>lF <Action>(RenameFile)
-nmap <leader>li <Action>(OptimizeImports)
+map <leader>b. <Action>(NextSplitter)
+map <leader>b, <Action>(PrevSplitter)
 
-nmap <leader>lb <Action>(ToggleBookmark)
+"   ██╗██████╗ ███████╗ █████╗      █████╗  ██████╗████████╗██╗ ██████╗ ███╗   ██╗███████╗       ██████╗ ███████╗██████╗ ██╗   ██╗ ██████╗
+"   ██║██╔══██╗██╔════╝██╔══██╗    ██╔══██╗██╔════╝╚══██╔══╝██║██╔═══██╗████╗  ██║██╔════╝██╗    ██╔══██╗██╔════╝██╔══██╗██║   ██║██╔════╝
+"   ██║██║  ██║█████╗  ███████║    ███████║██║        ██║   ██║██║   ██║██╔██╗ ██║███████╗╚═╝    ██║  ██║█████╗  ██████╔╝██║   ██║██║  ███╗
+"   ██║██║  ██║██╔══╝  ██╔══██║    ██╔══██║██║        ██║   ██║██║   ██║██║╚██╗██║╚════██║██╗    ██║  ██║██╔══╝  ██╔══██╗██║   ██║██║   ██║
+"   ██║██████╔╝███████╗██║  ██║    ██║  ██║╚██████╗   ██║   ██║╚██████╔╝██║ ╚████║███████║╚═╝    ██████╔╝███████╗██████╔╝╚██████╔╝╚██████╔╝
+"   ╚═╝╚═════╝ ╚══════╝╚═╝  ╚═╝    ╚═╝  ╚═╝ ╚═════╝   ╚═╝   ╚═╝ ╚═════╝ ╚═╝  ╚═══╝╚══════╝       ╚═════╝ ╚══════╝╚═════╝  ╚═════╝  ╚═════╝
 
-nmap <leader>ga <Action>(GotoAction)
-nmap <leader>gc <Action>(GotoClass)
-nmap <leader>gd <Action>(GotoDeclaration)
-nmap <leader>gf <Action>(GotoFile)
-nmap <leader>gi <Action>(GotoImplementation)
-nmap <leader>gl <Action>(GotoLine)
-nmap <leader>gs <Action>(GotoSymbol)
+map <leader>dd <Action>(Debug)
+map <leader>db <Action>(ToggleLineBreakpoint)
+map <leader>dr <Action>(Debugger.RemoveAllBreakpointsInFile)
+map <leader>dR <Action>(Debugger.RemoveAllBreakpoints)
+map <leader>di <Action>(StepInto)
+map <leader>do <Action>(StepOut)
+map <leader>ds <Action>(StepOver)
+map <leader>de <Action>(Debugger.EvaluationDialogPopup)
+map <leader>dm <Action>(XDebugger.MuteBreakpoints)
 
-nmap <leader>lu <Action>(ShowUsages)
+"   ██╗██████╗ ███████╗ █████╗      █████╗  ██████╗████████╗██╗ ██████╗ ███╗   ██╗███████╗       ██╗███╗   ██╗████████╗██████╗  ██████╗ ██████╗ ██╗   ██╗ ██████╗███████╗
+"   ██║██╔══██╗██╔════╝██╔══██╗    ██╔══██╗██╔════╝╚══██╔══╝██║██╔═══██╗████╗  ██║██╔════╝██╗    ██║████╗  ██║╚══██╔══╝██╔══██╗██╔═══██╗██╔══██╗██║   ██║██╔════╝██╔════╝
+"   ██║██║  ██║█████╗  ███████║    ███████║██║        ██║   ██║██║   ██║██╔██╗ ██║███████╗╚═╝    ██║██╔██╗ ██║   ██║   ██████╔╝██║   ██║██║  ██║██║   ██║██║     █████╗
+"   ██║██║  ██║██╔══╝  ██╔══██║    ██╔══██║██║        ██║   ██║██║   ██║██║╚██╗██║╚════██║██╗    ██║██║╚██╗██║   ██║   ██╔══██╗██║   ██║██║  ██║██║   ██║██║     ██╔══╝
+"   ██║██████╔╝███████╗██║  ██║    ██║  ██║╚██████╗   ██║   ██║╚██████╔╝██║ ╚████║███████║╚═╝    ██║██║ ╚████║   ██║   ██║  ██║╚██████╔╝██████╔╝╚██████╔╝╚██████╗███████╗
+"   ╚═╝╚═════╝ ╚══════╝╚═╝  ╚═╝    ╚═╝  ╚═╝ ╚═════╝   ╚═╝   ╚═╝ ╚═════╝ ╚═╝  ╚═══╝╚══════╝       ╚═╝╚═╝  ╚═══╝   ╚═╝   ╚═╝  ╚═╝ ╚═════╝ ╚═════╝  ╚═════╝  ╚═════╝╚══════╝
 
-nmap <leader>lh <Action>(HighlightUsagesInFile)
+map <leader>ic <Action>(IntroduceConstant)
+map <leader>if <Action>(IntroduceField)
+map <leader>ip <Action>(IntroduceParameter)
+map <leader>iP <Action>(IntroduceParameterObject)
+map <leader>iv <Action>(IntroduceVariable)
 
-nmap <leader>cp <Action>(ShowColorPicker)
-nmap <leader>qf <Action>(ShowIntentionActions)
-nmap <leader>qp <Action>(QuickPreview)
-nmap <leader>qd <Action>(QuickDefinition)
-nmap <leader>qt <Action>(QuickTypeDefinition)
-nmap <leader>qj <Action>(QuickJavDoc)
-nmap <leader>ed <Action>(ShowErrorDescription)
+"   ██╗██████╗ ███████╗ █████╗      █████╗  ██████╗████████╗██╗ ██████╗ ███╗   ██╗███████╗       ███╗   ███╗ █████╗ ██╗   ██╗███████╗███╗   ██╗
+"   ██║██╔══██╗██╔════╝██╔══██╗    ██╔══██╗██╔════╝╚══██╔══╝██║██╔═══██╗████╗  ██║██╔════╝██╗    ████╗ ████║██╔══██╗██║   ██║██╔════╝████╗  ██║
+"   ██║██║  ██║█████╗  ███████║    ███████║██║        ██║   ██║██║   ██║██╔██╗ ██║███████╗╚═╝    ██╔████╔██║███████║██║   ██║█████╗  ██╔██╗ ██║
+"   ██║██║  ██║██╔══╝  ██╔══██║    ██╔══██║██║        ██║   ██║██║   ██║██║╚██╗██║╚════██║██╗    ██║╚██╔╝██║██╔══██║╚██╗ ██╔╝██╔══╝  ██║╚██╗██║
+"   ██║██████╔╝███████╗██║  ██║    ██║  ██║╚██████╗   ██║   ██║╚██████╔╝██║ ╚████║███████║╚═╝    ██║ ╚═╝ ██║██║  ██║ ╚████╔╝ ███████╗██║ ╚████║
+"   ╚═╝╚═════╝ ╚══════╝╚═╝  ╚═╝    ╚═╝  ╚═╝ ╚═════╝   ╚═╝   ╚═╝ ╚═════╝ ╚═╝  ╚═══╝╚══════╝       ╚═╝     ╚═╝╚═╝  ╚═╝  ╚═══╝  ╚══════╝╚═╝  ╚═══╝
 
-nmap <leader>mo <Action>(OverrideMethods)
-nmap <leader>mi <Action>(ImplementMethods)
+map <leader>Ja <Action>(Maven.DownloadAllSources)
+map <leader>Jd <Action>(QuickJavaDoc)
+map <leader>Jr <Action>(Maven.RunBuild)
 
-nmap <leader>mj <Action>(MoveStatementDown)
-nmap <leader>mk <Action>(MoveStatementUp)
+"   ██╗██████╗ ███████╗ █████╗      █████╗  ██████╗████████╗██╗ ██████╗ ███╗   ██╗███████╗       ███╗   ███╗ █████╗ ██████╗ ██╗  ██╗
+"   ██║██╔══██╗██╔════╝██╔══██╗    ██╔══██╗██╔════╝╚══██╔══╝██║██╔═══██╗████╗  ██║██╔════╝██╗    ████╗ ████║██╔══██╗██╔══██╗██║ ██╔╝
+"   ██║██║  ██║█████╗  ███████║    ███████║██║        ██║   ██║██║   ██║██╔██╗ ██║███████╗╚═╝    ██╔████╔██║███████║██████╔╝█████╔╝
+"   ██║██║  ██║██╔══╝  ██╔══██║    ██╔══██║██║        ██║   ██║██║   ██║██║╚██╗██║╚════██║██╗    ██║╚██╔╝██║██╔══██║██╔══██╗██╔═██╗
+"   ██║██████╔╝███████╗██║  ██║    ██║  ██║╚██████╗   ██║   ██║╚██████╔╝██║ ╚████║███████║╚═╝    ██║ ╚═╝ ██║██║  ██║██║  ██║██║  ██╗
+"   ╚═╝╚═════╝ ╚══════╝╚═╝  ╚═╝    ╚═╝  ╚═╝ ╚═════╝   ╚═╝   ╚═╝ ╚═════╝ ╚═╝  ╚═══╝╚══════╝       ╚═╝     ╚═╝╚═╝  ╚═╝╚═╝  ╚═╝╚═╝  ╚═╝
 
-" ██╗ Maven
-" ╚═╝
+map <leader>mt <Action>(ToggleBookmark)
 
-nmap <leader>ma <Action>(Maven.DownloadAllSources)
-nmap <leader>mr <Action>(Maven.RunBuild)
+"   ██╗██████╗ ███████╗ █████╗      █████╗  ██████╗████████╗██╗ ██████╗ ███╗   ██╗███████╗       ██╗     ███████╗██████╗
+"   ██║██╔══██╗██╔════╝██╔══██╗    ██╔══██╗██╔════╝╚══██╔══╝██║██╔═══██╗████╗  ██║██╔════╝██╗    ██║     ██╔════╝██╔══██╗
+"   ██║██║  ██║█████╗  ███████║    ███████║██║        ██║   ██║██║   ██║██╔██╗ ██║███████╗╚═╝    ██║     ███████╗██████╔╝
+"   ██║██║  ██║██╔══╝  ██╔══██║    ██╔══██║██║        ██║   ██║██║   ██║██║╚██╗██║╚════██║██╗    ██║     ╚════██║██╔═══╝
+"   ██║██████╔╝███████╗██║  ██║    ██║  ██║╚██████╗   ██║   ██║╚██████╔╝██║ ╚████║███████║╚═╝    ███████╗███████║██║
+"   ╚═╝╚═════╝ ╚══════╝╚═╝  ╚═╝    ╚═╝  ╚═╝ ╚═════╝   ╚═╝   ╚═╝ ╚═════╝ ╚═╝  ╚═══╝╚══════╝       ╚══════╝╚══════╝╚═╝
 
-" ██╗ Open
-" ╚═╝
+map <leader>l; <Action>(RenameElement)
+map <leader>la <Action>(ShowIntentionActions)
+map <leader>lc <Action>(OptimizeImports)
+map <leader>ld <Action>(QuickDefinition)
+map <leader>le <Action>(ShowErrorDescription)
+map <leader>lf <Action>(RenameFile)
+map <leader>lh <Action>(HighlightUsagesInFile)
+map <leader>li <Action>(ImplementMethods)
+map <leader>lj <Action>(MoveStatementDown)
+map <leader>lk <Action>(MoveStatementUp)
+map <leader>lo <Action>(OverrideMethods)
+map <leader>lp <Action>(QuickPreview)
+map <leader>lr <Action>(ReformatCode)
+map <leader>lt <Action>(QuickTypeDefinition)
+map <leader>lu <Action>(ShowUsages)
 
-nmap <leader>of <Action>(OpenFile)
+map <leader>pa <Action>(GotoAction)
+map <leader>pc <Action>(GotoClass)
+map <leader>pd <Action>(GotoDeclaration)
+map <leader>pf <Action>(GotoFile)
+map <leader>pi <Action>(GotoImplementation)
+map <leader>ps <Action>(GotoSymbol)
 
-" ██╗ Project
-" ╚═╝
+"   ██╗██████╗ ███████╗ █████╗      █████╗  ██████╗████████╗██╗ ██████╗ ███╗   ██╗███████╗        ██████╗ ██████╗ ███████╗███╗   ██╗
+"   ██║██╔══██╗██╔════╝██╔══██╗    ██╔══██╗██╔════╝╚══██╔══╝██║██╔═══██╗████╗  ██║██╔════╝██╗    ██╔═══██╗██╔══██╗██╔════╝████╗  ██║
+"   ██║██║  ██║█████╗  ███████║    ███████║██║        ██║   ██║██║   ██║██╔██╗ ██║███████╗╚═╝    ██║   ██║██████╔╝█████╗  ██╔██╗ ██║
+"   ██║██║  ██║██╔══╝  ██╔══██║    ██╔══██║██║        ██║   ██║██║   ██║██║╚██╗██║╚════██║██╗    ██║   ██║██╔═══╝ ██╔══╝  ██║╚██╗██║
+"   ██║██████╔╝███████╗██║  ██║    ██║  ██║╚██████╗   ██║   ██║╚██████╔╝██║ ╚████║███████║╚═╝    ╚██████╔╝██║     ███████╗██║ ╚████║
+"   ╚═╝╚═════╝ ╚══════╝╚═╝  ╚═╝    ╚═╝  ╚═╝ ╚═════╝   ╚═╝   ╚═╝ ╚═════╝ ╚═╝  ╚═══╝╚══════╝        ╚═════╝ ╚═╝     ╚══════╝╚═╝  ╚═══╝
 
-nmap <leader>pc <Action>(CompileProject)
-nmap <leader>pr <Action>(Run)
-nmap <leader>pc <Action>(RunClass)
-nmap <leader>pre <Action>(Rerun)
-nmap <leader>ps <Action>(Stop)
+map <leader>o <Action>(OpenFile)
 
-" ██╗ Search
-" ╚═╝
+"   ██╗██████╗ ███████╗ █████╗      █████╗  ██████╗████████╗██╗ ██████╗ ███╗   ██╗███████╗       ███████╗███████╗ █████╗ ██████╗  ██████╗██╗  ██╗
+"   ██║██╔══██╗██╔════╝██╔══██╗    ██╔══██╗██╔════╝╚══██╔══╝██║██╔═══██╗████╗  ██║██╔════╝██╗    ██╔════╝██╔════╝██╔══██╗██╔══██╗██╔════╝██║  ██║
+"   ██║██║  ██║█████╗  ███████║    ███████║██║        ██║   ██║██║   ██║██╔██╗ ██║███████╗╚═╝    ███████╗█████╗  ███████║██████╔╝██║     ███████║
+"   ██║██║  ██║██╔══╝  ██╔══██║    ██╔══██║██║        ██║   ██║██║   ██║██║╚██╗██║╚════██║██╗    ╚════██║██╔══╝  ██╔══██║██╔══██╗██║     ██╔══██║
+"   ██║██████╔╝███████╗██║  ██║    ██║  ██║╚██████╗   ██║   ██║╚██████╔╝██║ ╚████║███████║╚═╝    ███████║███████╗██║  ██║██║  ██║╚██████╗██║  ██║
+"   ╚═╝╚═════╝ ╚══════╝╚═╝  ╚═╝    ╚═╝  ╚═╝ ╚═════╝   ╚═╝   ╚═╝ ╚═════╝ ╚═╝  ╚═══╝╚══════╝       ╚══════╝╚══════╝╚═╝  ╚═╝╚═╝  ╚═╝ ╚═════╝╚═╝  ╚═╝
 
-nmap <leader>se <Action>(SearchEverywhere)
-nmap <leader>sp <Action>(FindInPath)
-nmap <leader>su <Action>(FindUsages)
+map <leader>se <Action>(SearchEverywhere)
+map <leader>sf <Action>(Find)
+map <leader>sp <Action>(FindInPath)
+map <leader>su <Action>(FindUsages)
 
-" ██╗ Settings
-" ╚═╝
+"   ██╗██████╗ ███████╗ █████╗      █████╗  ██████╗████████╗██╗ ██████╗ ███╗   ██╗███████╗       ███████╗██╗  ██╗ ██████╗ ██╗    ██╗
+"   ██║██╔══██╗██╔════╝██╔══██╗    ██╔══██╗██╔════╝╚══██╔══╝██║██╔═══██╗████╗  ██║██╔════╝██╗    ██╔════╝██║  ██║██╔═══██╗██║    ██║
+"   ██║██║  ██║█████╗  ███████║    ███████║██║        ██║   ██║██║   ██║██╔██╗ ██║███████╗╚═╝    ███████╗███████║██║   ██║██║ █╗ ██║
+"   ██║██║  ██║██╔══╝  ██╔══██║    ██╔══██║██║        ██║   ██║██║   ██║██║╚██╗██║╚════██║██╗    ╚════██║██╔══██║██║   ██║██║███╗██║
+"   ██║██████╔╝███████╗██║  ██║    ██║  ██║╚██████╗   ██║   ██║╚██████╔╝██║ ╚████║███████║╚═╝    ███████║██║  ██║╚██████╔╝╚███╔███╔╝
+"   ╚═╝╚═════╝ ╚══════╝╚═╝  ╚═╝    ╚═╝  ╚═╝ ╚═════╝   ╚═╝   ╚═╝ ╚═════╝ ╚═╝  ╚═══╝╚══════╝       ╚══════╝╚═╝  ╚═╝ ╚═════╝  ╚══╝╚══╝
 
-map <leader>; <Action>(ShowSettings)
-nmap <leader>;s <Action>(ShowProjectStructureSettings)
+map <leader>ws <Action>(ShowSettings)
+map <leader>wp <Action>(ShowProjectStructureSettings)
 
-" ██╗ Window
-" ╚═╝
+"   ██╗██████╗ ███████╗ █████╗      █████╗  ██████╗████████╗██╗ ██████╗ ███╗   ██╗███████╗       ████████╗ ██████╗  ██████╗ ██╗     ███████╗
+"   ██║██╔══██╗██╔════╝██╔══██╗    ██╔══██╗██╔════╝╚══██╔══╝██║██╔═══██╗████╗  ██║██╔════╝██╗    ╚══██╔══╝██╔═══██╗██╔═══██╗██║     ██╔════╝
+"   ██║██║  ██║█████╗  ███████║    ███████║██║        ██║   ██║██║   ██║██╔██╗ ██║███████╗╚═╝       ██║   ██║   ██║██║   ██║██║     ███████╗
+"   ██║██║  ██║██╔══╝  ██╔══██║    ██╔══██║██║        ██║   ██║██║   ██║██║╚██╗██║╚════██║██╗       ██║   ██║   ██║██║   ██║██║     ╚════██║
+"   ██║██████╔╝███████╗██║  ██║    ██║  ██║╚██████╗   ██║   ██║╚██████╔╝██║ ╚████║███████║╚═╝       ██║   ╚██████╔╝╚██████╔╝███████╗███████║
+"   ╚═╝╚═════╝ ╚══════╝╚═╝  ╚═╝    ╚═╝  ╚═╝ ╚═════╝   ╚═╝   ╚═╝ ╚═════╝ ╚═╝  ╚═══╝╚══════╝          ╚═╝    ╚═════╝  ╚═════╝ ╚══════╝╚══════╝
 
 map <Leader>wa <Action>(NavBarToolBar)
 map <Leader>wc <Action>(ChooseRunConfiguration)
-map <Leader>we <Action>(ViewToolButtons)
 map <leader>wd <Action>(ActivateDebugToolWindow)
 map <leader>wr <Action>(ActivateRunToolWindow)
 map <Leader>wt <Action>(ActivateUnitTestsToolWindow)
 map <Leader>wT <Action>(NavbarPopupMenu)
-map <Leader>ws <Action>(ViewStatusBar)
 
-" ██╗ Zen Mode
-" ╚═╝
+"   ██╗██████╗ ███████╗ █████╗      █████╗  ██████╗████████╗██╗ ██████╗ ███╗   ██╗███████╗       ██╗   ██╗██╗    ████████╗ ██████╗  ██████╗  ██████╗ ██╗     ███████╗███████╗
+"   ██║██╔══██╗██╔════╝██╔══██╗    ██╔══██╗██╔════╝╚══██╔══╝██║██╔═══██╗████╗  ██║██╔════╝██╗    ██║   ██║██║    ╚══██╔══╝██╔═══██╗██╔════╝ ██╔════╝ ██║     ██╔════╝██╔════╝
+"   ██║██║  ██║█████╗  ███████║    ███████║██║        ██║   ██║██║   ██║██╔██╗ ██║███████╗╚═╝    ██║   ██║██║       ██║   ██║   ██║██║  ███╗██║  ███╗██║     █████╗  ███████╗
+"   ██║██║  ██║██╔══╝  ██╔══██║    ██╔══██║██║        ██║   ██║██║   ██║██║╚██╗██║╚════██║██╗    ██║   ██║██║       ██║   ██║   ██║██║   ██║██║   ██║██║     ██╔══╝  ╚════██║
+"   ██║██████╔╝███████╗██║  ██║    ██║  ██║╚██████╗   ██║   ██║╚██████╔╝██║ ╚████║███████║╚═╝    ╚██████╔╝██║       ██║   ╚██████╔╝╚██████╔╝╚██████╔╝███████╗███████╗███████║
+"   ╚═╝╚═════╝ ╚══════╝╚═╝  ╚═╝    ╚═╝  ╚═╝ ╚═════╝   ╚═╝   ╚═╝ ╚═════╝ ╚═╝  ╚═══╝╚══════╝        ╚═════╝ ╚═╝       ╚═╝    ╚═════╝  ╚═════╝  ╚═════╝ ╚══════╝╚══════╝╚══════╝
 
-map <leader>z <Action>(ToggleZenMode)
+map <Leader>ue <Action>(ViewToolButtons)
+map <Leader>us <Action>(ViewStatusBar)
+
+"   ██╗██████╗ ███████╗ █████╗      █████╗  ██████╗████████╗██╗ ██████╗ ███╗   ██╗███████╗       ██╗    ██╗██╗███╗   ██╗██████╗  ██████╗ ██╗    ██╗
+"   ██║██╔══██╗██╔════╝██╔══██╗    ██╔══██╗██╔════╝╚══██╔══╝██║██╔═══██╗████╗  ██║██╔════╝██╗    ██║    ██║██║████╗  ██║██╔══██╗██╔═══██╗██║    ██║
+"   ██║██║  ██║█████╗  ███████║    ███████║██║        ██║   ██║██║   ██║██╔██╗ ██║███████╗╚═╝    ██║ █╗ ██║██║██╔██╗ ██║██║  ██║██║   ██║██║ █╗ ██║
+"   ██║██║  ██║██╔══╝  ██╔══██║    ██╔══██║██║        ██║   ██║██║   ██║██║╚██╗██║╚════██║██╗    ██║███╗██║██║██║╚██╗██║██║  ██║██║   ██║██║███╗██║
+"   ██║██████╔╝███████╗██║  ██║    ██║  ██║╚██████╗   ██║   ██║╚██████╔╝██║ ╚████║███████║╚═╝    ╚███╔███╔╝██║██║ ╚████║██████╔╝╚██████╔╝╚███╔███╔╝
+"   ╚═╝╚═════╝ ╚══════╝╚═╝  ╚═╝    ╚═╝  ╚═╝ ╚═════╝   ╚═╝   ╚═╝ ╚═════╝ ╚═╝  ╚═══╝╚══════╝        ╚══╝╚══╝ ╚═╝╚═╝  ╚═══╝╚═════╝  ╚═════╝  ╚══╝╚══╝
+
+map <leader>t <Action>(TabList)
+
+" Source: https://github.com/TheBlob42/idea-which-key
+
+"   ██╗    ██╗██╗  ██╗██╗ ██████╗██╗  ██╗    ██╗  ██╗███████╗██╗   ██╗
+"   ██║    ██║██║  ██║██║██╔════╝██║  ██║    ██║ ██╔╝██╔════╝╚██╗ ██╔╝
+"   ██║ █╗ ██║███████║██║██║     ███████║    █████╔╝ █████╗   ╚████╔╝
+"   ██║███╗██║██╔══██║██║██║     ██╔══██║    ██╔═██╗ ██╔══╝    ╚██╔╝
+"   ╚███╔███╔╝██║  ██║██║╚██████╗██║  ██║    ██║  ██╗███████╗   ██║
+"    ╚══╝╚══╝ ╚═╝  ╚═╝╚═╝ ╚═════╝╚═╝  ╚═╝    ╚═╝  ╚═╝╚══════╝   ╚═╝
+
+"" Descriptions ---------------------
+
+let g:WhichKeyDesc_leader = "<leader> Leader"
+
+let g:WhichKeyDesc_comment_by_line_comment = "<leader>/ Comment"
+
+let g:WhichKeyDesc_java = "<leader>J Java"
+let g:WhichKeyDesc_maven_download_all_sources = "<leader>Ja Maven Download All Sources"
+let g:WhichKeyDesc_maven_download_run_build = "<leader>Jr Maven Run Build"
+let g:WhichKeyDesc_quick_javadoc = "<leader>Jd Quick Javadoc"
+
+let g:WhichKeyDesc_buffers_editors = "<leader>b Buffers & Editors"
+let g:WhichKeyDesc_next_splitter = "<leader>b. Next Splitter"
+let g:WhichKeyDesc_prev_splitter = "<leader>b, Prev Splitter"
+let g:WhichKeyDesc_next_tab = "<leader>bn Next Tab"
+let g:WhichKeyDesc_prev_tab = "<leader>bp Prev Tab"
+let g:WhichKeyDesc_move_tab_left = "<leader>bh Move Tab Into Left Group"
+let g:WhichKeyDesc_move_tab_down = "<leader>bj Move Tab Into Below Group"
+let g:WhichKeyDesc_move_tab_up = "<leader>bk Move Tab Into Above Group"
+let g:WhichKeyDesc_move_tab_right = "<leader>bl Move Tab Into Right Group"
+let g:WhichKeyDesc_close_all_editors = "<leader>ba Close All Editors"
+let g:WhichKeyDesc_close_editor = "<leader>bd Close Active Editor"
+let g:WhichKeyDesc_close_all_editors_but_active = "<leader>bm Close Others Editors"
+let g:WhichKeyDesc_move_editor_to_opposite_tab_group = "<leader>bo Move Editor To Opposite Tab Group"
+let g:WhichKeyDesc_reopen_closed_tab = "<leader>bu Reopen Closed Editor"
+
+let g:WhichKeyDesc_debug = "<leader>d Debug"
+let g:WhichKeyDesc_remove_all_breakpoints = "<leader>dR Remove All Breakpoints"
+let g:WhichKeyDesc_toggle_line_breakpoint = "<leader>db Toggle Line Breakpoints"
+let g:WhichKeyDesc_run_debug = "<leader>dd Start Debug"
+let g:WhichKeyDesc_evaluation_dialog_popup = "<leader>de Evaluation Dialog Popup"
+let g:WhichKeyDesc_step_into = "<leader>di Step Into"
+let g:WhichKeyDesc_mute_all_breakpoints = "<leader>dm Mute All Breakpoints"
+let g:WhichKeyDesc_step_out = "<leader>do Step Out"
+let g:WhichKeyDesc_remove_all_breakpoints_in_file = "<leader>dr Remove All Breakpoints In File"
+let g:WhichKeyDesc_step_over = "<leader>ds Step Over"
+
+let g:WhichKeyDesc_toggle_explorer = "<leader>e Toggle Explorer"
+
+let g:WhichKeyDesc_split_horizontally = "<leader>h Split Horizontally"
+
+let g:WhichKeyDesc_introduce = "<leader>i Introduce"
+let g:WhichKeyDesc_introduce_parameter_object = "<leader>iP Parameter Object"
+let g:WhichKeyDesc_introduce_constant = "<leader>ic Constant"
+let g:WhichKeyDesc_introduce_field = "<leader>if Field"
+let g:WhichKeyDesc_introduce_parameter = "<leader>ip Parameter"
+let g:WhichKeyDesc_introduce_variable = "<leader>iv Variable"
+
+let g:WhichKeyDesc_lsp = "<leader>l LSP"
+let g:WhichKeyDesc_rename_element = "<leader>l; Rename Element"
+let g:WhichKeyDesc_show_intention_actions = "<leader>la Intention Actions"
+let g:WhichKeyDesc_optimize_imports = "<leader>lc Optimize Imports"
+let g:WhichKeyDesc_quick_definition = "<leader>ld Definition"
+let g:WhichKeyDesc_show_error_description = "<leader>le Error Description"
+let g:WhichKeyDesc_rename_file = "<leader>lf Rename File"
+let g:WhichKeyDesc_highlight_usages_in_file = "<leader>lh Highlight Usages In File"
+let g:WhichKeyDesc_implement_methods = "<leader>li Implement Methods"
+let g:WhichKeyDesc_move_statement_down = "<leader>lj Move Statement Down"
+let g:WhichKeyDesc_move_statement_up = "<leader>lk Move Statement Up"
+let g:WhichKeyDesc_override_methods = "<leader>lo Override Methods"
+let g:WhichKeyDesc_quick_preview = "<leader>lp Preview"
+let g:WhichKeyDesc_reformat_code = "<leader>lr Refactor"
+let g:WhichKeyDesc_quick_type_definition = "<leader>lt Type Definition"
+let g:WhichKeyDesc_show_usages = "<leader>lu Usage
+
+let g:WhichKeyDesc_mark = "<leader>m Mark"
+let g:WhichKeyDesc_toggle_bookmark = "<leader>mt Toggle Bookmark"
+
+let g:WhichKeyDesc_open = "<leader>o Open"
+
+let g:WhichKeyDesc_peek = "<leader>p Peek"
+let g:WhichKeyDesc_goto_action = "<leader>pa Action"
+let g:WhichKeyDesc_goto_class = "<leader>pc Class"
+let g:WhichKeyDesc_goto_declaration = "<leader>pd Declaration"
+let g:WhichKeyDesc_goto_file = "<leader>pf File"
+let g:WhichKeyDesc_goto_implementation = "<leader>pi Implementation"
+let g:WhichKeyDesc_goto_symbol = "<leader>ps Symbol"
+
+let g:WhichKeyDesc_search = "<leader>s Search"
+let g:WhichKeyDesc_search_everywhere = "<leader>se Everywhere"
+let g:WhichKeyDesc_find = "<leader>sf In File"
+let g:WhichKeyDesc_find_in_path = "<leader>spIn Path"
+let g:WhichKeyDesc_find_usages = "<leader>su Usages"
+
+let g:WhichKeyDesc_tab_list = "<leader>t Tab List"
+
+let g:WhichKeyDesc_ui_toggles = "<leader>u UI Toggles"
+let g:WhichKeyDesc_view_tool_buttons = "<leader>ue Toggle Tool Buttons"
+let g:WhichKeyDesc_view_status_bar = "<leader>us Toggle Status Bar"
+
+let g:WhichKeyDesc_split_vertically = "<leader>v Split Vertically"
+
+let g:WhichKeyDesc_window = "<leader>w Window"
+let g:WhichKeyDesc_navbar_popup_menu = "<leader>wT NavBar Menu"
+let g:WhichKeyDesc_navbar_tool_bar = "<leader>wa NavBar"
+let g:WhichKeyDesc_choose_run_configuration = "<leader>wc Run Configuration"
+let g:WhichKeyDesc_activate_debug_tool_window = "<leader>wd Debug"
+let g:WhichKeyDesc_show_project_structure_settings = "<leader>wp Project Structure Settings"
+let g:WhichKeyDesc_activate_run_tool_window = "<leader>wr Run"
+let g:WhichKeyDesc_show_settings = "<leader>ws Settings"
+let g:WhichKeyDesc_activate_unit_tests_tool_window = "<leader>wt Unit Tests"
+
+let g:WhichKeyDesc_zen_mode = "<leader>z Zen Mode"
