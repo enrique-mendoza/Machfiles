@@ -318,7 +318,7 @@ let g:WhichKeyDesc_override_methods = "<leader>lo Override Methods"
 let g:WhichKeyDesc_quick_preview = "<leader>lp Preview"
 let g:WhichKeyDesc_reformat_code = "<leader>lr Refactor"
 let g:WhichKeyDesc_quick_type_definition = "<leader>lt Type Definition"
-let g:WhichKeyDesc_show_usages = "<leader>lu Usage
+let g:WhichKeyDesc_show_usages = "<leader>lu Usage"
 
 let g:WhichKeyDesc_mark = "<leader>m Mark"
 let g:WhichKeyDesc_toggle_bookmark = "<leader>mt Toggle Bookmark"
