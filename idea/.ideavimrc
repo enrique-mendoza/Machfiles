@@ -83,8 +83,8 @@ map <leader>z <Action>(ToggleZenMode)
 "   ██║██████╔╝███████╗██║  ██║    ██║  ██║╚██████╗   ██║   ██║╚██████╔╝██║ ╚████║███████║╚═╝    ██████╔╝╚██████╔╝██║     ██║     ███████╗██║  ██║███████║    ██████║      ███████╗██████╔╝██║   ██║   ╚██████╔╝██║  ██║███████║
 "   ╚═╝╚═════╝ ╚══════╝╚═╝  ╚═╝    ╚═╝  ╚═╝ ╚═════╝   ╚═╝   ╚═╝ ╚═════╝ ╚═╝  ╚═══╝╚══════╝       ╚═════╝  ╚═════╝ ╚═╝     ╚═╝     ╚══════╝╚═╝  ╚═╝╚══════╝    ╚═════╝      ╚══════╝╚═════╝ ╚═╝   ╚═╝    ╚═════╝ ╚═╝  ╚═╝╚══════╝
 
-map <leader>bn <Action>(NextTab)
-map <leader>bp <Action>(PreviousTab)
+map <leader>> <Action>(NextTab)
+map <leader>< <Action>(PreviousTab)
 
 map <leader>bh <Action>(MoveTabLeft)
 map <leader>bj <Action>(MoveTabDown)
@@ -99,8 +99,8 @@ map <leader>bm <Action>(CloseAllEditorsButActive)
 
 nmap <leader>bu <Action>(ReopenClosedTab)
 
-map <leader>b. <Action>(NextSplitter)
-map <leader>b, <Action>(PrevSplitter)
+map <leader>. <Action>(NextSplitter)
+map <leader>, <Action>(PrevSplitter)
 
 "   ██╗██████╗ ███████╗ █████╗      █████╗  ██████╗████████╗██╗ ██████╗ ███╗   ██╗███████╗       ██████╗ ███████╗██████╗ ██╗   ██╗ ██████╗
 "   ██║██╔══██╗██╔════╝██╔══██╗    ██╔══██╗██╔════╝╚══██╔══╝██║██╔═══██╗████╗  ██║██╔════╝██╗    ██╔══██╗██╔════╝██╔══██╗██║   ██║██╔════╝
@@ -267,10 +267,10 @@ let g:WhichKeyDesc_maven_download_run_build = "<leader>Jr Maven Run Build"
 let g:WhichKeyDesc_quick_javadoc = "<leader>Jd Quick Javadoc"
 
 let g:WhichKeyDesc_buffers_editors = "<leader>b Buffers & Editors"
-let g:WhichKeyDesc_next_splitter = "<leader>b. Next Splitter"
-let g:WhichKeyDesc_prev_splitter = "<leader>b, Prev Splitter"
-let g:WhichKeyDesc_next_tab = "<leader>bn Next Tab"
-let g:WhichKeyDesc_prev_tab = "<leader>bp Prev Tab"
+let g:WhichKeyDesc_next_splitter = "<leader>. Next Splitter"
+let g:WhichKeyDesc_prev_splitter = "<leader>, Prev Splitter"
+let g:WhichKeyDesc_next_tab = "<leader>> Next Tab"
+let g:WhichKeyDesc_prev_tab = "<leader>< Prev Tab"
 let g:WhichKeyDesc_move_tab_left = "<leader>bh Move Tab Into Left Group"
 let g:WhichKeyDesc_move_tab_down = "<leader>bj Move Tab Into Below Group"
 let g:WhichKeyDesc_move_tab_up = "<leader>bk Move Tab Into Above Group"
