@@ -42,6 +42,9 @@ let g:WhichKey_ShowVimActions = "true"
 let g:WhichKey_FontFamily = "JetBrainsMono Nerd Font"
 let g:WhichKey_FontSize = 18
 let g:WhichKey_ShowTypedSequence = "false"
+let g:WhichKey_KeyStyle = "bold"
+let g:WhichKey_PrefixStyle = "italic"
+let g:WhichKey_CommandStyle = "italic"
 
 "   ███╗   ███╗ █████╗ ██████╗ ███████╗
 "   ████╗ ████║██╔══██╗██╔══██╗██╔════╝
