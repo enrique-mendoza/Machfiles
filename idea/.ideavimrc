@@ -336,7 +336,7 @@ let g:WhichKeyDesc_goto_symbol = "<leader>ps Symbol"
 let g:WhichKeyDesc_search = "<leader>s Search"
 let g:WhichKeyDesc_search_everywhere = "<leader>se Everywhere"
 let g:WhichKeyDesc_find = "<leader>sf In File"
-let g:WhichKeyDesc_find_in_path = "<leader>spIn Path"
+let g:WhichKeyDesc_find_in_path = "<leader>sp In Path"
 let g:WhichKeyDesc_find_usages = "<leader>su Usages"
 
 let g:WhichKeyDesc_tab_list = "<leader>t Tab List"
