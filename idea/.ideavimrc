@@ -119,6 +119,34 @@ map <leader>ds <Action>(StepOver)
 map <leader>de <Action>(Debugger.EvaluationDialogPopup)
 map <leader>dm <Action>(XDebugger.MuteBreakpoints)
 
+"   ██╗██████╗ ███████╗ █████╗      █████╗  ██████╗████████╗██╗ ██████╗ ███╗   ██╗███████╗        ██████╗ ██╗████████╗
+"   ██║██╔══██╗██╔════╝██╔══██╗    ██╔══██╗██╔════╝╚══██╔══╝██║██╔═══██╗████╗  ██║██╔════╝██╗    ██╔════╝ ██║╚══██╔══╝
+"   ██║██║  ██║█████╗  ███████║    ███████║██║        ██║   ██║██║   ██║██╔██╗ ██║███████╗╚═╝    ██║  ███╗██║   ██║
+"   ██║██║  ██║██╔══╝  ██╔══██║    ██╔══██║██║        ██║   ██║██║   ██║██║╚██╗██║╚════██║██╗    ██║   ██║██║   ██║
+"   ██║██████╔╝███████╗██║  ██║    ██║  ██║╚██████╗   ██║   ██║╚██████╔╝██║ ╚████║███████║╚═╝    ╚██████╔╝██║   ██║
+"   ╚═╝╚═════╝ ╚══════╝╚═╝  ╚═╝    ╚═╝  ╚═╝ ╚═════╝   ╚═╝   ╚═╝ ╚═════╝ ╚═╝  ╚═══╝╚══════╝        ╚═════╝ ╚═╝   ╚═╝
+
+map <leader>gB <Action>(EditorGutterVcsPopupMenu)
+map <leader>gC <Action>(Git.CompareWithBranch)
+map <leader>gF <Action>(Git.Pull)
+map <leader>gH <Action>(Vcs.ShowTabbedFileHistory)
+map <leader>gR <Action>(Git.ResolveConflicts)
+map <leader>gU <Action>(Vcs.RollbackChangedLines)
+map <leader>ga <Action>(Git.Add)
+map <leader>gb <Action>(Git.Branches)
+map <leader>gc <Action>(ActivateCommitToolWindow)
+map <leader>gd <Action>(GitDeleteBranchAction)
+map <leader>gf <Action>(Git.Fetch)
+map <leader>gh <Action>(ActivateVersionControlToolWindow)
+map <leader>gi <Action>(Git.Init)
+map <leader>gm <Action>(Git.Merge)
+map <leader>gn <Action>(Git.CreateNewBranch)
+map <leader>gp <Action>(Vcs.PushUpToCommit)
+map <leader>gr <Action>(Git.Reset)
+map <leader>gs <Action>(Git.Stash)
+map <leader>gu <Action>(Git.Unstash)
+map <leader>gy <Action>(VcsShowCurrentChangeMarker)
+
 "   ██╗██████╗ ███████╗ █████╗      █████╗  ██████╗████████╗██╗ ██████╗ ███╗   ██╗███████╗       ██╗███╗   ██╗████████╗██████╗  ██████╗ ██████╗ ██╗   ██╗ ██████╗███████╗
 "   ██║██╔══██╗██╔════╝██╔══██╗    ██╔══██╗██╔════╝╚══██╔══╝██║██╔═══██╗████╗  ██║██╔════╝██╗    ██║████╗  ██║╚══██╔══╝██╔══██╗██╔═══██╗██╔══██╗██║   ██║██╔════╝██╔════╝
 "   ██║██║  ██║█████╗  ███████║    ███████║██║        ██║   ██║██║   ██║██╔██╗ ██║███████╗╚═╝    ██║██╔██╗ ██║   ██║   ██████╔╝██║   ██║██║  ██║██║   ██║██║     █████╗
@@ -150,6 +178,9 @@ map <leader>Jr <Action>(Maven.RunBuild)
 "   ██║██████╔╝███████╗██║  ██║    ██║  ██║╚██████╗   ██║   ██║╚██████╔╝██║ ╚████║███████║╚═╝    ██║ ╚═╝ ██║██║  ██║██║  ██║██║  ██╗
 "   ╚═╝╚═════╝ ╚══════╝╚═╝  ╚═╝    ╚═╝  ╚═╝ ╚═════╝   ╚═╝   ╚═╝ ╚═════╝ ╚═╝  ╚═══╝╚══════╝       ╚═╝     ╚═╝╚═╝  ╚═╝╚═╝  ╚═╝╚═╝  ╚═╝
 
+map <leader>mj <Action>(GotoNextBookmark)
+map <leader>mk <Action>(GotoPreviousBookmark)
+map <leader>ms <Action>(ShowBookmarks)
 map <leader>mt <Action>(ToggleBookmark)
 
 "   ██╗██████╗ ███████╗ █████╗      █████╗  ██████╗████████╗██╗ ██████╗ ███╗   ██╗███████╗       ██╗     ███████╗██████╗
@@ -225,7 +256,7 @@ map <Leader>wc <Action>(ChooseRunConfiguration)
 map <leader>wd <Action>(ActivateDebugToolWindow)
 map <leader>wr <Action>(ActivateRunToolWindow)
 map <Leader>wt <Action>(ActivateUnitTestsToolWindow)
-map <Leader>wT <Action>(NavbarPopupMenu)
+map <leader>wT <Action>(NavbarPopupMenu)
 
 "   ██╗██████╗ ███████╗ █████╗      █████╗  ██████╗████████╗██╗ ██████╗ ███╗   ██╗███████╗       ██╗   ██╗██╗    ████████╗ ██████╗  ██████╗  ██████╗ ██╗     ███████╗███████╗
 "   ██║██╔══██╗██╔════╝██╔══██╗    ██╔══██╗██╔════╝╚══██╔══╝██║██╔═══██╗████╗  ██║██╔════╝██╗    ██║   ██║██║    ╚══██╔══╝██╔═══██╗██╔════╝ ██╔════╝ ██║     ██╔════╝██╔════╝
@@ -234,8 +265,9 @@ map <Leader>wT <Action>(NavbarPopupMenu)
 "   ██║██████╔╝███████╗██║  ██║    ██║  ██║╚██████╗   ██║   ██║╚██████╔╝██║ ╚████║███████║╚═╝    ╚██████╔╝██║       ██║   ╚██████╔╝╚██████╔╝╚██████╔╝███████╗███████╗███████║
 "   ╚═╝╚═════╝ ╚══════╝╚═╝  ╚═╝    ╚═╝  ╚═╝ ╚═════╝   ╚═╝   ╚═╝ ╚═════╝ ╚═╝  ╚═══╝╚══════╝        ╚═════╝ ╚═╝       ╚═╝    ╚═════╝  ╚═════╝  ╚═════╝ ╚══════╝╚══════╝╚══════╝
 
-map <Leader>ue <Action>(ViewToolButtons)
-map <Leader>us <Action>(ViewStatusBar)
+map <leader>uc <Action>(ChangeColorScheme)
+map <leader>ue <Action>(ViewToolButtons)
+map <leader>us <Action>(ViewStatusBar)
 
 "   ██╗██████╗ ███████╗ █████╗      █████╗  ██████╗████████╗██╗ ██████╗ ███╗   ██╗███████╗       ██╗    ██╗██╗███╗   ██╗██████╗  ██████╗ ██╗    ██╗
 "   ██║██╔══██╗██╔════╝██╔══██╗    ██╔══██╗██╔════╝╚══██╔══╝██║██╔═══██╗████╗  ██║██╔════╝██╗    ██║    ██║██║████╗  ██║██╔══██╗██╔═══██╗██║    ██║
@@ -292,6 +324,28 @@ let g:WhichKeyDesc_step_out = "<leader>do Step Out"
 let g:WhichKeyDesc_remove_all_breakpoints_in_file = "<leader>dr Remove All Breakpoints In File"
 let g:WhichKeyDesc_step_over = "<leader>ds Step Over"
 
+let g:WhichKeyDesc_git = "<leader>g Git"
+let g:WhichKeyDesc_editor_gutter_vcs_popup_menu = "<leader>gB Git Blame"
+let g:WhichKeyDesc_git_compare_with_branch = "<leader>gC Compare With Branch"
+let g:WhichKeyDesc_git_pull = "<leader>gF Pull"
+let g:WhichKeyDesc_vcs_show_tabbed_file_history = "<leader>gH File History"
+let g:WhichKeyDesc_git_resolve_conflicts = "<leader>gR Resolve Conflicts"
+let g:WhichKeyDesc_vcs_rollback_changed_lines = "<leader>gU Rollback Changed Line"
+let g:WhichKeyDesc_git_add = "<leader>ga Add"
+let g:WhichKeyDesc_git_branches = "<leader>gb Checkout"
+let g:WhichKeyDesc_activate_commit_tool_window = "<leader>gc Commit"
+let g:WhichKeyDesc_git_delete_branch_action = "<leader>gd Delete Branch"
+let g:WhichKeyDesc_git_fetch = "<leader>gf Fetch"
+let g:WhichKeyDesc_activate_version_control_tool_window = "<leader>gh History"
+let g:WhichKeyDesc_git_init = "<leader>gi Init"
+let g:WhichKeyDesc_git_merge = "<leader>gm Merge"
+let g:WhichKeyDesc_git_create_new_branch = "<leader>gn Create New Branch"
+let g:WhichKeyDesc_git_push_up_to_commit = "<leader>gp Push"
+let g:WhichKeyDesc_git_reset = "<leader>gr Reset"
+let g:WhichKeyDesc_git_stash = "<leader>gs Stash"
+let g:WhichKeyDesc_git_unstash = "<leader>gu Unstash"
+let g:WhichKeyDesc_vcs_show_current_change_marker = "<leader>gy Show Current Change In Line"
+
 let g:WhichKeyDesc_toggle_explorer = "<leader>e Toggle Explorer"
 
 let g:WhichKeyDesc_split_horizontally = "<leader>h Split Horizontally"
@@ -321,6 +375,9 @@ let g:WhichKeyDesc_quick_type_definition = "<leader>lt Type Definition"
 let g:WhichKeyDesc_show_usages = "<leader>lu Usage"
 
 let g:WhichKeyDesc_mark = "<leader>m Mark"
+let g:WhichKeyDesc_goto_next_bookmark = "<leader>mj Next Bookmark"
+let g:WhichKeyDesc_goto_previous_bookmark = "<leader>mk Prev Bookmark"
+let g:WhichKeyDesc_show_bookmark = "<leader>ms Show Bookmarks"
 let g:WhichKeyDesc_toggle_bookmark = "<leader>mt Toggle Bookmark"
 
 let g:WhichKeyDesc_open = "<leader>o Open"
@@ -342,6 +399,7 @@ let g:WhichKeyDesc_find_usages = "<leader>su Usages"
 let g:WhichKeyDesc_tab_list = "<leader>t Tab List"
 
 let g:WhichKeyDesc_ui_toggles = "<leader>u UI Toggles"
+let g:WhichKeyDesc_change_color_schema = "<leader>uc Select Theme"
 let g:WhichKeyDesc_view_tool_buttons = "<leader>ue Toggle Tool Buttons"
 let g:WhichKeyDesc_view_status_bar = "<leader>us Toggle Status Bar"
 
