@@ -67,4 +67,4 @@ source "$HOME/.config/zsh/exports.zsh"
 source "$HOME/.config/zsh/completion.zsh"
 source ~/.config/zsh/themes/catppuccin_mocha-zsh-syntax-highlighting.zsh
 
-neofetch
+# neofetch
