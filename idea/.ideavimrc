@@ -9,14 +9,13 @@
 "    ╚═════╝ ╚═╝        ╚═╝   ╚═╝ ╚═════╝ ╚═╝  ╚═══╝╚══════╝
 
 set autoindent
-set clipboard+=unnamed
+set clipboard+=unnamedplus
 set hlsearch
 set ignorecase
 set incsearch
 set smartcase
 set smartindent
 set scrolloff=5
-
 set noerrorbells
 set visualbell
 
@@ -28,23 +27,21 @@ set visualbell
 "   ╚═╝     ╚══════╝ ╚═════╝  ╚═════╝ ╚═╝╚═╝  ╚═══╝╚══════╝
 
 set NERDTree
-
 set highlightedyank
 
 let g:highlightedyank_highlight_duration = "100"
 let g:highlightedyank_highlight_color = "rgba(64, 72, 89, 155)"
 
 set which-key
-
 set notimeout
 
-let g:WhichKey_ShowVimActions = "true"
+let g:WhichKey_CommandStyle = "bold"
 let g:WhichKey_FontFamily = "JetBrainsMono Nerd Font"
-let g:WhichKey_FontSize = 18
-let g:WhichKey_ShowTypedSequence = "false"
+let g:WhichKey_FontSize = 17
 let g:WhichKey_KeyStyle = "bold"
-let g:WhichKey_PrefixStyle = "italic"
-let g:WhichKey_CommandStyle = "italic"
+let g:WhichKey_ShowTypedSequence = "false"
+let g:WhichKey_ShowVimActions = "true"
+let g:WhichKey_PrefixStyle = "bold"
 
 "   ███╗   ███╗ █████╗ ██████╗ ███████╗
 "   ████╗ ████║██╔══██╗██╔══██╗██╔════╝
@@ -55,9 +52,9 @@ let g:WhichKey_CommandStyle = "italic"
 
 """ Map leader to space ---------------------
 
-let mapleader=" "
+let g:WhichKeyDesc_leader = "<leader> Leader"
 
-map <leader>e :NERDTree<CR>
+let mapleader=" "
 
 "   ██╗██████╗ ███████╗ █████╗      █████╗  ██████╗████████╗██╗ ██████╗ ███╗   ██╗███████╗
 "   ██║██╔══██╗██╔════╝██╔══██╗    ██╔══██╗██╔════╝╚══██╔══╝██║██╔═══██╗████╗  ██║██╔════╝
@@ -66,70 +63,111 @@ map <leader>e :NERDTree<CR>
 "   ██║██████╔╝███████╗██║  ██║    ██║  ██║╚██████╗   ██║   ██║╚██████╔╝██║ ╚████║███████║
 "   ╚═╝╚═════╝ ╚══════╝╚═╝  ╚═╝    ╚═╝  ╚═╝ ╚═════╝   ╚═╝   ╚═╝ ╚═════╝ ╚═╝  ╚═══╝╚══════╝
 
-map <leader>/ <Action>(CommentByLineComment)
+"" Descriptions and maps ---------------------
 
-map <leader>h <Action>(SplitHorizontally)
-map <leader>v <Action>(SplitVertically)
+let g:WhichKeyDesc_prev_splitter = "<leader>, Previous Splitter"
+let g:WhichKeyDesc_next_splitter = "<leader>. Next Splitter"
+let g:WhichKeyDesc_comment_by_line_comment = "<leader>/ Comment Toggle"
+let g:WhichKeyDesc_prev_tab = "<leader>< Previous Tab"
+let g:WhichKeyDesc_next_tab = "<leader>> Next Tab"
+let g:WhichKeyDesc_close_editor = "<leader>c Close Buffer"
+let g:WhichKeyDesc_explorer = "<leader>e Explorer"
+let g:WhichKeyDesc_search_everywhere = "<leader>f Find"
+let g:WhichKeyDesc_split_horizontally = "<leader>h Split Horizontally"
+let g:WhichKeyDesc_open = "<leader>o Open File"
+let g:WhichKeyDesc_split_vertically = "<leader>v Split Vertically"
+let g:WhichKeyDesc_change_split_orientation = "<leader>y Change Split Orientation"
+let g:WhichKeyDesc_unsplit = "<leader>z Unsplit"
 
-map <leader>u <action>(Unsplit)
-map <leader>sp <Action>(ChangeSplitOrientation)
-
-map <leader>z <Action>(ToggleZenMode)
-
-"   ██╗██████╗ ███████╗ █████╗      █████╗  ██████╗████████╗██╗ ██████╗ ███╗   ██╗███████╗       ██████╗ ██╗   ██╗███████╗███████╗███████╗██████╗ ███████╗       ██╗       ███████╗██████╗ ██╗████████╗ ██████╗ ██████╗ ███████╗
-"   ██║██╔══██╗██╔════╝██╔══██╗    ██╔══██╗██╔════╝╚══██╔══╝██║██╔═══██╗████╗  ██║██╔════╝██╗    ██╔══██╗██║   ██║██╔════╝██╔════╝██╔════╝██╔══██╗██╔════╝       ██║       ██╔════╝██╔══██╗██║╚══██╔══╝██╔═══██╗██╔══██╗██╔════╝
-"   ██║██║  ██║█████╗  ███████║    ███████║██║        ██║   ██║██║   ██║██╔██╗ ██║███████╗╚═╝    ██████╔╝██║   ██║█████╗  █████╗  █████╗  ██████╔╝███████╗    ████████╗    █████╗  ██║  ██║██║   ██║   ██║   ██║██████╔╝███████╗
-"   ██║██║  ██║██╔══╝  ██╔══██║    ██╔══██║██║        ██║   ██║██║   ██║██║╚██╗██║╚════██║██╗    ██╔══██╗██║   ██║██╔══╝  ██╔══╝  ██╔══╝  ██╔══██╗╚════██║    ██╔═██╔═╝    ██╔══╝  ██║  ██║██║   ██║   ██║   ██║██╔══██╗╚════██║
-"   ██║██████╔╝███████╗██║  ██║    ██║  ██║╚██████╗   ██║   ██║╚██████╔╝██║ ╚████║███████║╚═╝    ██████╔╝╚██████╔╝██║     ██║     ███████╗██║  ██║███████║    ██████║      ███████╗██████╔╝██║   ██║   ╚██████╔╝██║  ██║███████║
-"   ╚═╝╚═════╝ ╚══════╝╚═╝  ╚═╝    ╚═╝  ╚═╝ ╚═════╝   ╚═╝   ╚═╝ ╚═════╝ ╚═╝  ╚═══╝╚══════╝       ╚═════╝  ╚═════╝ ╚═╝     ╚═╝     ╚══════╝╚═╝  ╚═╝╚══════╝    ╚═════╝      ╚══════╝╚═════╝ ╚═╝   ╚═╝    ╚═════╝ ╚═╝  ╚═╝╚══════╝
-
-map <leader>> <Action>(NextTab)
 map <leader>< <Action>(PreviousTab)
+map <leader>> <Action>(NextTab)
+map <leader>/ <Action>(CommentByLineComment)
+map <leader>, <Action>(PrevSplitter)
+map <leader>. <Action>(NextSplitter)
+map <leader>c <Action>(CloseEditor)
+nnoremap <leader>e :NERDTree<CR>
+map <leader>f <Action>(SearchEverywhere)
+map <leader>h <Action>(SplitHorizontally)
+map <leader>o <Action>(OpenFile)
+map <leader>v <Action>(SplitVertically)
+map <leader>y <Action>(ChangeSplitOrientation)
+map <leader>z <action>(Unsplit)
 
+"" Buffers: descriptions and maps ---------------------
+
+let g:WhichKeyDesc_buffers_editors = "<leader>b Buffers & Editors"
+
+let g:WhichKeyDesc_close_all_editors = "<leader>ba Close All Editors"
+let g:WhichKeyDesc_close_all_editors_but_active = "<leader>bc Close Others Editors"
+let g:WhichKeyDesc_move_tab_left = "<leader>bh Move Tab Into Left Group"
+let g:WhichKeyDesc_move_tab_down = "<leader>bj Move Tab Into Below Group"
+let g:WhichKeyDesc_move_tab_up = "<leader>bk Move Tab Into Above Group"
+let g:WhichKeyDesc_move_tab_right = "<leader>bl Move Tab Into Right Group"
+let g:WhichKeyDesc_move_editor_to_opposite_tab_group = "<leader>bo Move Editor To Opposite Tab Group"
+let g:WhichKeyDesc_reopen_closed_tab = "<leader>br Reopen Closed Editor"
+
+map <leader>ba <Action>(CloseAllEditors)
+map <leader>bc <Action>(CloseAllEditorsButActive)
 map <leader>bh <Action>(MoveTabLeft)
 map <leader>bj <Action>(MoveTabDown)
 map <leader>bk <Action>(MoveTabUp)
 map <leader>bl <Action>(MoveTabRight)
-
 map <leader>bo <Action>(MoveEditorToOppositeTabGroup)
+map <leader>br <Action>(ReopenClosedTab)
 
-map <leader>bd <Action>(CloseEditor)
-map <leader>ba <Action>(CloseAllEditors)
-map <leader>bm <Action>(CloseAllEditorsButActive)
+"" Debug: descriptions and maps ---------------------
 
-nmap <leader>bu <Action>(ReopenClosedTab)
+let g:WhichKeyDesc_debug = "<leader>d Debug"
 
-map <leader>. <Action>(NextSplitter)
-map <leader>, <Action>(PrevSplitter)
+let g:WhichKeyDesc_remove_all_breakpoints = "<leader>dR Remove All Breakpoints"
+let g:WhichKeyDesc_step_into = "<leader>di Step Into"
+let g:WhichKeyDesc_mute_all_breakpoints = "<leader>dm Mute All Breakpoints"
+let g:WhichKeyDesc_run_debug = "<leader>ds Start"
+let g:WhichKeyDesc_step_over = "<leader>do Step Over"
+let g:WhichKeyDesc_pause = "<leader>dp Pause"
+let g:WhichKeyDesc_remove_all_breakpoints_in_file = "<leader>dr Remove All Breakpoints In File"
+let g:WhichKeyDesc_toggle_line_breakpoint = "<leader>dt Toggle Breakpoint"
+let g:WhichKeyDesc_step_out = "<leader>du Step Out"
 
-"   ██╗██████╗ ███████╗ █████╗      █████╗  ██████╗████████╗██╗ ██████╗ ███╗   ██╗███████╗       ██████╗ ███████╗██████╗ ██╗   ██╗ ██████╗
-"   ██║██╔══██╗██╔════╝██╔══██╗    ██╔══██╗██╔════╝╚══██╔══╝██║██╔═══██╗████╗  ██║██╔════╝██╗    ██╔══██╗██╔════╝██╔══██╗██║   ██║██╔════╝
-"   ██║██║  ██║█████╗  ███████║    ███████║██║        ██║   ██║██║   ██║██╔██╗ ██║███████╗╚═╝    ██║  ██║█████╗  ██████╔╝██║   ██║██║  ███╗
-"   ██║██║  ██║██╔══╝  ██╔══██║    ██╔══██║██║        ██║   ██║██║   ██║██║╚██╗██║╚════██║██╗    ██║  ██║██╔══╝  ██╔══██╗██║   ██║██║   ██║
-"   ██║██████╔╝███████╗██║  ██║    ██║  ██║╚██████╗   ██║   ██║╚██████╔╝██║ ╚████║███████║╚═╝    ██████╔╝███████╗██████╔╝╚██████╔╝╚██████╔╝
-"   ╚═╝╚═════╝ ╚══════╝╚═╝  ╚═╝    ╚═╝  ╚═╝ ╚═════╝   ╚═╝   ╚═╝ ╚═════╝ ╚═╝  ╚═══╝╚══════╝       ╚═════╝ ╚══════╝╚═════╝  ╚═════╝  ╚═════╝
-
-map <leader>dd <Action>(Debug)
-map <leader>db <Action>(ToggleLineBreakpoint)
-map <leader>dr <Action>(Debugger.RemoveAllBreakpointsInFile)
 map <leader>dR <Action>(Debugger.RemoveAllBreakpoints)
 map <leader>di <Action>(StepInto)
-map <leader>do <Action>(StepOut)
-map <leader>ds <Action>(StepOver)
-map <leader>de <Action>(Debugger.EvaluationDialogPopup)
 map <leader>dm <Action>(XDebugger.MuteBreakpoints)
+map <leader>do <Action>(StepOver)
+map <leader>dp <Action>(Pause)
+map <leader>dr <Action>(Debugger.RemoveAllBreakpointsInFile)
+map <leader>ds <Action>(Debug)
+map <leader>dt <Action>(ToggleLineBreakpoint)
+map <leader>du <Action>(StepOut)
 
-"   ██╗██████╗ ███████╗ █████╗      █████╗  ██████╗████████╗██╗ ██████╗ ███╗   ██╗███████╗        ██████╗ ██╗████████╗
-"   ██║██╔══██╗██╔════╝██╔══██╗    ██╔══██╗██╔════╝╚══██╔══╝██║██╔═══██╗████╗  ██║██╔════╝██╗    ██╔════╝ ██║╚══██╔══╝
-"   ██║██║  ██║█████╗  ███████║    ███████║██║        ██║   ██║██║   ██║██╔██╗ ██║███████╗╚═╝    ██║  ███╗██║   ██║
-"   ██║██║  ██║██╔══╝  ██╔══██║    ██╔══██║██║        ██║   ██║██║   ██║██║╚██╗██║╚════██║██╗    ██║   ██║██║   ██║
-"   ██║██████╔╝███████╗██║  ██║    ██║  ██║╚██████╗   ██║   ██║╚██████╔╝██║ ╚████║███████║╚═╝    ╚██████╔╝██║   ██║
-"   ╚═╝╚═════╝ ╚══════╝╚═╝  ╚═╝    ╚═╝  ╚═╝ ╚═════╝   ╚═╝   ╚═╝ ╚═════╝ ╚═╝  ╚═══╝╚══════╝        ╚═════╝ ╚═╝   ╚═╝
+"" Git: descriptions and maps ---------------------
+
+let g:WhichKeyDesc_git = "<leader>g Git"
+
+let g:WhichKeyDesc_editor_gutter_vcs_popup_menu = "<leader>gB Git Blame"
+let g:WhichKeyDesc_git_compare_with_branch = "<leader>gC Compare With Branch"
+let g:WhichKeyDesc_vcs_show_tabbed_file_history = "<leader>gH File History"
+let g:WhichKeyDesc_git_push_up_to_commit = "<leader>gP Push"
+let g:WhichKeyDesc_git_resolve_conflicts = "<leader>gR Resolve Conflicts"
+let g:WhichKeyDesc_vcs_rollback_changed_lines = "<leader>gU Rollback Changed Line"
+let g:WhichKeyDesc_git_add = "<leader>ga Add Files"
+let g:WhichKeyDesc_git_branches = "<leader>gb Checkout Branch"
+let g:WhichKeyDesc_activate_commit_tool_window = "<leader>gc Commit"
+let g:WhichKeyDesc_git_delete_branch_action = "<leader>gd Delete Branch"
+let g:WhichKeyDesc_git_fetch = "<leader>gf Fetch"
+let g:WhichKeyDesc_activate_version_control_tool_window = "<leader>gh History"
+let g:WhichKeyDesc_git_init = "<leader>gi Init New Repository"
+let g:WhichKeyDesc_git_merge = "<leader>gm Merge Branches"
+let g:WhichKeyDesc_git_create_new_branch = "<leader>gn Create New Branch"
+let g:WhichKeyDesc_git_pull = "<leader>gp Pull"
+let g:WhichKeyDesc_git_stash = "<leader>gs Stash Changes"
+let g:WhichKeyDesc_git_unstash = "<leader>gu Unstash Changes"
+let g:WhichKeyDesc_vcs_show_current_change_marker = "<leader>gy Show Current Change In Line"
+let g:WhichKeyDesc_git_reset = "<leader>gz Reset Changes"
 
 map <leader>gB <Action>(EditorGutterVcsPopupMenu)
 map <leader>gC <Action>(Git.CompareWithBranch)
-map <leader>gF <Action>(Git.Pull)
 map <leader>gH <Action>(Vcs.ShowTabbedFileHistory)
+map <leader>gP <Action>(Vcs.PushUpToCommit)
 map <leader>gR <Action>(Git.ResolveConflicts)
 map <leader>gU <Action>(Vcs.RollbackChangedLines)
 map <leader>ga <Action>(Git.Add)
@@ -141,70 +179,105 @@ map <leader>gh <Action>(ActivateVersionControlToolWindow)
 map <leader>gi <Action>(Git.Init)
 map <leader>gm <Action>(Git.Merge)
 map <leader>gn <Action>(Git.CreateNewBranch)
-map <leader>gp <Action>(Vcs.PushUpToCommit)
-map <leader>gr <Action>(Git.Reset)
+map <leader>gp <Action>(Git.Pull)
 map <leader>gs <Action>(Git.Stash)
 map <leader>gu <Action>(Git.Unstash)
 map <leader>gy <Action>(VcsShowCurrentChangeMarker)
+map <leader>gz <Action>(Git.Reset)
 
-"   ██╗██████╗ ███████╗ █████╗      █████╗  ██████╗████████╗██╗ ██████╗ ███╗   ██╗███████╗       ██╗███╗   ██╗████████╗██████╗  ██████╗ ██████╗ ██╗   ██╗ ██████╗███████╗
-"   ██║██╔══██╗██╔════╝██╔══██╗    ██╔══██╗██╔════╝╚══██╔══╝██║██╔═══██╗████╗  ██║██╔════╝██╗    ██║████╗  ██║╚══██╔══╝██╔══██╗██╔═══██╗██╔══██╗██║   ██║██╔════╝██╔════╝
-"   ██║██║  ██║█████╗  ███████║    ███████║██║        ██║   ██║██║   ██║██╔██╗ ██║███████╗╚═╝    ██║██╔██╗ ██║   ██║   ██████╔╝██║   ██║██║  ██║██║   ██║██║     █████╗
-"   ██║██║  ██║██╔══╝  ██╔══██║    ██╔══██║██║        ██║   ██║██║   ██║██║╚██╗██║╚════██║██╗    ██║██║╚██╗██║   ██║   ██╔══██╗██║   ██║██║  ██║██║   ██║██║     ██╔══╝
-"   ██║██████╔╝███████╗██║  ██║    ██║  ██║╚██████╗   ██║   ██║╚██████╔╝██║ ╚████║███████║╚═╝    ██║██║ ╚████║   ██║   ██║  ██║╚██████╔╝██████╔╝╚██████╔╝╚██████╗███████╗
-"   ╚═╝╚═════╝ ╚══════╝╚═╝  ╚═╝    ╚═╝  ╚═╝ ╚═════╝   ╚═╝   ╚═╝ ╚═════╝ ╚═╝  ╚═══╝╚══════╝       ╚═╝╚═╝  ╚═══╝   ╚═╝   ╚═╝  ╚═╝ ╚═════╝ ╚═════╝  ╚═════╝  ╚═════╝╚══════╝
+"" IntelliJ IDEA: descriptions and maps ---------------------
 
-map <leader>ic <Action>(IntroduceConstant)
-map <leader>if <Action>(IntroduceField)
-map <leader>ip <Action>(IntroduceParameter)
-map <leader>iP <Action>(IntroduceParameterObject)
-map <leader>iv <Action>(IntroduceVariable)
+let g:WhichKeyDesc_intellij = "<leader>i IntelliJ IDEA"
 
-"   ██╗██████╗ ███████╗ █████╗      █████╗  ██████╗████████╗██╗ ██████╗ ███╗   ██╗███████╗       ███╗   ███╗ █████╗ ██╗   ██╗███████╗███╗   ██╗
-"   ██║██╔══██╗██╔════╝██╔══██╗    ██╔══██╗██╔════╝╚══██╔══╝██║██╔═══██╗████╗  ██║██╔════╝██╗    ████╗ ████║██╔══██╗██║   ██║██╔════╝████╗  ██║
-"   ██║██║  ██║█████╗  ███████║    ███████║██║        ██║   ██║██║   ██║██╔██╗ ██║███████╗╚═╝    ██╔████╔██║███████║██║   ██║█████╗  ██╔██╗ ██║
-"   ██║██║  ██║██╔══╝  ██╔══██║    ██╔══██║██║        ██║   ██║██║   ██║██║╚██╗██║╚════██║██╗    ██║╚██╔╝██║██╔══██║╚██╗ ██╔╝██╔══╝  ██║╚██╗██║
-"   ██║██████╔╝███████╗██║  ██║    ██║  ██║╚██████╗   ██║   ██║╚██████╔╝██║ ╚████║███████║╚═╝    ██║ ╚═╝ ██║██║  ██║ ╚████╔╝ ███████╗██║ ╚████║
-"   ╚═╝╚═════╝ ╚══════╝╚═╝  ╚═╝    ╚═╝  ╚═╝ ╚═════╝   ╚═╝   ╚═╝ ╚═════╝ ╚═╝  ╚═══╝╚══════╝       ╚═╝     ╚═╝╚═╝  ╚═╝  ╚═══╝  ╚══════╝╚═╝  ╚═══╝
+let g:WhichKeyDesc_show_project_structure_settings = "<leader>ip Project Structure Settings"
+let g:WhichKeyDesc_show_settings = "<leader>is Settings"
 
-map <leader>Ja <Action>(Maven.DownloadAllSources)
-map <leader>Jd <Action>(QuickJavaDoc)
-map <leader>Jr <Action>(Maven.RunBuild)
+map <leader>is <Action>(ShowSettings)
+map <leader>ip <Action>(ShowProjectStructureSettings)
 
-"   ██╗██████╗ ███████╗ █████╗      █████╗  ██████╗████████╗██╗ ██████╗ ███╗   ██╗███████╗       ███╗   ███╗ █████╗ ██████╗ ██╗  ██╗
-"   ██║██╔══██╗██╔════╝██╔══██╗    ██╔══██╗██╔════╝╚══██╔══╝██║██╔═══██╗████╗  ██║██╔════╝██╗    ████╗ ████║██╔══██╗██╔══██╗██║ ██╔╝
-"   ██║██║  ██║█████╗  ███████║    ███████║██║        ██║   ██║██║   ██║██╔██╗ ██║███████╗╚═╝    ██╔████╔██║███████║██████╔╝█████╔╝
-"   ██║██║  ██║██╔══╝  ██╔══██║    ██╔══██║██║        ██║   ██║██║   ██║██║╚██╗██║╚════██║██╗    ██║╚██╔╝██║██╔══██║██╔══██╗██╔═██╗
-"   ██║██████╔╝███████╗██║  ██║    ██║  ██║╚██████╗   ██║   ██║╚██████╔╝██║ ╚████║███████║╚═╝    ██║ ╚═╝ ██║██║  ██║██║  ██║██║  ██╗
-"   ╚═╝╚═════╝ ╚══════╝╚═╝  ╚═╝    ╚═╝  ╚═╝ ╚═════╝   ╚═╝   ╚═╝ ╚═════╝ ╚═╝  ╚═══╝╚══════╝       ╚═╝     ╚═╝╚═╝  ╚═╝╚═╝  ╚═╝╚═╝  ╚═╝
+"" Java Development: descriptions and maps ---------------------
 
-map <leader>mj <Action>(GotoNextBookmark)
-map <leader>mk <Action>(GotoPreviousBookmark)
+let g:WhichKeyDesc_java = "<leader>j Java Development"
+
+let g:WhichKeyDesc_maven_download_all_sources = "<leader>jA Maven Download All Sources"
+let g:WhichKeyDesc_maven_download_run_build = "<leader>jR Maven Run Build"
+let g:WhichKeyDesc_generate = "<leader>ja Generate"
+let g:WhichKeyDesc_generate_constructor = "<leader>jc Generate Constructor"
+let g:WhichKeyDesc_quick_javadoc = "<leader>jd Quick Javadoc"
+let g:WhichKeyDesc_generate_getter = "<leader>jg Generate Getters"
+let g:WhichKeyDesc_implement_methods = "<leader>ji Implement Methods"
+let g:WhichKeyDesc_generate_getter_and_setter = "<leader>jm Generate Getters And Setters"
+let g:WhichKeyDesc_override_methods = "<leader>jo Override Methods"
+let g:WhichKeyDesc_generate_setter = "<leader>js Generate Setters"
+
+map <leader>jA <Action>(Maven.DownloadAllSources)
+map <leader>jR <Action>(Maven.RunBuild)
+map <leader>ja <Action>(Generate)
+map <leader>jc <Action>(GenerateConstructor)
+map <leader>jd <Action>(QuickJavaDoc)
+map <leader>jg <Action>(GenerateGetter)
+map <leader>ji <Action>(ImplementMethods)
+map <leader>jm <Action>(GenerateGetterAndSetter)
+map <leader>jo <Action>(OverrideMethods)
+map <leader>js <Action>(GenerateSetter)
+
+"" LSP: descriptions and maps ---------------------
+
+let g:WhichKeyDesc_lsp = "<leader>l LSP"
+
+let g:WhichKeyDesc_show_intention_actions = "<leader>la Code Actions"
+let g:WhichKeyDesc_quick_definition = "<leader>ld Definition"
+let g:WhichKeyDesc_show_error_description = "<leader>le Diagnostics"
+let g:WhichKeyDesc_reformat_code = "<leader>lf Format"
+let g:WhichKeyDesc_highlight_usages_in_file = "<leader>lh Highlight Usages In File"
+let g:WhichKeyDesc_show_hover_info = "<leader>li Show Hover Info"
+let g:WhichKeyDesc_move_statement_down = "<leader>lj Move Statement Down"
+let g:WhichKeyDesc_move_statement_up = "<leader>lk Move Statement Up"
+let g:WhichKeyDesc_optimize_imports = "<leader>lo Optimize Imports"
+let g:WhichKeyDesc_quick_preview = "<leader>lp Preview"
+let g:WhichKeyDesc_rename_element = "<leader>lr Rename"
+let g:WhichKeyDesc_quick_type_definition = "<leader>lt Type Definition"
+let g:WhichKeyDesc_show_usages = "<leader>lu Usage"
+
+map <leader>la <Action>(ShowIntentionActions)
+map <leader>ld <Action>(QuickTypeDefinition)
+map <leader>le <Action>(ShowErrorDescription)
+map <leader>lf <Action>(ReformatCode)
+map <leader>lh <Action>(HighlightUsagesInFile)
+map <leader>li <Action>(ShowHoverInfo)
+map <leader>lj <Action>(MoveStatementDown)
+map <leader>lk <Action>(MoveStatementUp)
+map <leader>lo <Action>(OptimizeImports)
+map <leader>lp <Action>(QuickPreview)
+map <leader>lr <Action>(RenameElement)
+map <leader>lt <Action>(QuickImplementations)
+map <leader>lu <Action>(ShowUsages)
+
+"" Bookmarks: descriptions and maps ---------------------
+
+let g:WhichKeyDesc_mark = "<leader>m Mark"
+
+let g:WhichKeyDesc_goto_next_bookmark = "<leader>mn Next Bookmark"
+let g:WhichKeyDesc_goto_previous_bookmark = "<leader>mp Previous Bookmark"
+let g:WhichKeyDesc_show_bookmark = "<leader>ms Show Bookmarks"
+let g:WhichKeyDesc_toggle_bookmark = "<leader>mt Toggle Bookmark"
+
+map <leader>mn <Action>(GotoNextBookmark)
+map <leader>mp <Action>(GotoPreviousBookmark)
 map <leader>ms <Action>(ShowBookmarks)
 map <leader>mt <Action>(ToggleBookmark)
 
-"   ██╗██████╗ ███████╗ █████╗      █████╗  ██████╗████████╗██╗ ██████╗ ███╗   ██╗███████╗       ██╗     ███████╗██████╗
-"   ██║██╔══██╗██╔════╝██╔══██╗    ██╔══██╗██╔════╝╚══██╔══╝██║██╔═══██╗████╗  ██║██╔════╝██╗    ██║     ██╔════╝██╔══██╗
-"   ██║██║  ██║█████╗  ███████║    ███████║██║        ██║   ██║██║   ██║██╔██╗ ██║███████╗╚═╝    ██║     ███████╗██████╔╝
-"   ██║██║  ██║██╔══╝  ██╔══██║    ██╔══██║██║        ██║   ██║██║   ██║██║╚██╗██║╚════██║██╗    ██║     ╚════██║██╔═══╝
-"   ██║██████╔╝███████╗██║  ██║    ██║  ██║╚██████╗   ██║   ██║╚██████╔╝██║ ╚████║███████║╚═╝    ███████╗███████║██║
-"   ╚═╝╚═════╝ ╚══════╝╚═╝  ╚═╝    ╚═╝  ╚═╝ ╚═════╝   ╚═╝   ╚═╝ ╚═════╝ ╚═╝  ╚═══╝╚══════╝       ╚══════╝╚══════╝╚═╝
+"" Peek: descriptions and maps ---------------------
 
-map <leader>l; <Action>(RenameElement)
-map <leader>la <Action>(ShowIntentionActions)
-map <leader>lc <Action>(OptimizeImports)
-map <leader>ld <Action>(QuickDefinition)
-map <leader>le <Action>(ShowErrorDescription)
-map <leader>lf <Action>(RenameFile)
-map <leader>lh <Action>(HighlightUsagesInFile)
-map <leader>li <Action>(ImplementMethods)
-map <leader>lj <Action>(MoveStatementDown)
-map <leader>lk <Action>(MoveStatementUp)
-map <leader>lo <Action>(OverrideMethods)
-map <leader>lp <Action>(QuickPreview)
-map <leader>lr <Action>(ReformatCode)
-map <leader>lt <Action>(QuickTypeDefinition)
-map <leader>lu <Action>(ShowUsages)
+let g:WhichKeyDesc_peek = "<leader>p Peek"
+
+let g:WhichKeyDesc_goto_action = "<leader>pa Action"
+let g:WhichKeyDesc_goto_class = "<leader>pc Class"
+let g:WhichKeyDesc_goto_declaration = "<leader>pd Declaration"
+let g:WhichKeyDesc_goto_file = "<leader>pf File"
+let g:WhichKeyDesc_goto_implementation = "<leader>pi Implementation"
+let g:WhichKeyDesc_goto_symbol = "<leader>ps Symbol"
+let g:WhichKeyDesc_goto_test = "<leader>pt Test"
 
 map <leader>pa <Action>(GotoAction)
 map <leader>pc <Action>(GotoClass)
@@ -212,207 +285,84 @@ map <leader>pd <Action>(GotoDeclaration)
 map <leader>pf <Action>(GotoFile)
 map <leader>pi <Action>(GotoImplementation)
 map <leader>ps <Action>(GotoSymbol)
+map <leader>pt <Action>(GotoTest)
 
-"   ██╗██████╗ ███████╗ █████╗      █████╗  ██████╗████████╗██╗ ██████╗ ███╗   ██╗███████╗        ██████╗ ██████╗ ███████╗███╗   ██╗
-"   ██║██╔══██╗██╔════╝██╔══██╗    ██╔══██╗██╔════╝╚══██╔══╝██║██╔═══██╗████╗  ██║██╔════╝██╗    ██╔═══██╗██╔══██╗██╔════╝████╗  ██║
-"   ██║██║  ██║█████╗  ███████║    ███████║██║        ██║   ██║██║   ██║██╔██╗ ██║███████╗╚═╝    ██║   ██║██████╔╝█████╗  ██╔██╗ ██║
-"   ██║██║  ██║██╔══╝  ██╔══██║    ██╔══██║██║        ██║   ██║██║   ██║██║╚██╗██║╚════██║██╗    ██║   ██║██╔═══╝ ██╔══╝  ██║╚██╗██║
-"   ██║██████╔╝███████╗██║  ██║    ██║  ██║╚██████╗   ██║   ██║╚██████╔╝██║ ╚████║███████║╚═╝    ╚██████╔╝██║     ███████╗██║ ╚████║
-"   ╚═╝╚═════╝ ╚══════╝╚═╝  ╚═╝    ╚═╝  ╚═╝ ╚═════╝   ╚═╝   ╚═╝ ╚═════╝ ╚═╝  ╚═══╝╚══════╝        ╚═════╝ ╚═╝     ╚══════╝╚═╝  ╚═══╝
+"" Run Configuration: descriptions and maps ---------------------
 
-map <leader>o <Action>(OpenFile)
+let g:WhichKeyDesc_run_options = "<leader>r Configuration & Tools"
 
-"   ██╗██████╗ ███████╗ █████╗      █████╗  ██████╗████████╗██╗ ██████╗ ███╗   ██╗███████╗       ███████╗███████╗ █████╗ ██████╗  ██████╗██╗  ██╗
-"   ██║██╔══██╗██╔════╝██╔══██╗    ██╔══██╗██╔════╝╚══██╔══╝██║██╔═══██╗████╗  ██║██╔════╝██╗    ██╔════╝██╔════╝██╔══██╗██╔══██╗██╔════╝██║  ██║
-"   ██║██║  ██║█████╗  ███████║    ███████║██║        ██║   ██║██║   ██║██╔██╗ ██║███████╗╚═╝    ███████╗█████╗  ███████║██████╔╝██║     ███████║
-"   ██║██║  ██║██╔══╝  ██╔══██║    ██╔══██║██║        ██║   ██║██║   ██║██║╚██╗██║╚════██║██╗    ╚════██║██╔══╝  ██╔══██║██╔══██╗██║     ██╔══██║
-"   ██║██████╔╝███████╗██║  ██║    ██║  ██║╚██████╗   ██║   ██║╚██████╔╝██║ ╚████║███████║╚═╝    ███████║███████╗██║  ██║██║  ██║╚██████╗██║  ██║
-"   ╚═╝╚═════╝ ╚══════╝╚═╝  ╚═╝    ╚═╝  ╚═╝ ╚═════╝   ╚═╝   ╚═╝ ╚═════╝ ╚═╝  ╚═══╝╚══════╝       ╚══════╝╚══════╝╚═╝  ╚═╝╚═╝  ╚═╝ ╚═════╝╚═╝  ╚═╝
+let g:WhichKeyDesc_activate_database_tool_window = "<leader>rb Database Tool"
+let g:WhichKeyDesc_choose_run_configuration = "<leader>rc Run Configuration"
+let g:WhichKeyDesc_activate_debug_tool_window = "<leader>rd Debug Tool"
+let g:WhichKeyDesc_run = "<leader>rr Run"
+let g:WhichKeyDesc_stop = "<leader>rs Stop"
+let g:WhichKeyDesc_activate_unit_tests_tool_window = "<leader>ru Unit Tests Tool"
+let g:WhichKeyDesc_navbar_tool_bar = "<leader>rw Run Widget"
+let g:WhichKeyDesc_activate_run_tool_window = "<leader>rx Run Tool"
 
-map <leader>se <Action>(SearchEverywhere)
-map <leader>sf <Action>(Find)
-map <leader>sp <Action>(FindInPath)
-map <leader>su <Action>(FindUsages)
+map <leader>rb <Action>(ActivateDatabaseToolWindow)
+map <Leader>rc <Action>(ChooseRunConfiguration)
+map <leader>rd <Action>(ActivateDebugToolWindow)
+map <leader>rr <Action>(Run)
+map <leader>rs <Action>(Stop)
+map <Leader>rw <Action>(NavBarToolBar)
+map <Leader>ru <Action>(ActivateUnitTestsToolWindow)
+map <leader>rx <Action>(ActivateRunToolWindow)
 
-"   ██╗██████╗ ███████╗ █████╗      █████╗  ██████╗████████╗██╗ ██████╗ ███╗   ██╗███████╗       ███████╗██╗  ██╗ ██████╗ ██╗    ██╗
-"   ██║██╔══██╗██╔════╝██╔══██╗    ██╔══██╗██╔════╝╚══██╔══╝██║██╔═══██╗████╗  ██║██╔════╝██╗    ██╔════╝██║  ██║██╔═══██╗██║    ██║
-"   ██║██║  ██║█████╗  ███████║    ███████║██║        ██║   ██║██║   ██║██╔██╗ ██║███████╗╚═╝    ███████╗███████║██║   ██║██║ █╗ ██║
-"   ██║██║  ██║██╔══╝  ██╔══██║    ██╔══██║██║        ██║   ██║██║   ██║██║╚██╗██║╚════██║██╗    ╚════██║██╔══██║██║   ██║██║███╗██║
-"   ██║██████╔╝███████╗██║  ██║    ██║  ██║╚██████╗   ██║   ██║╚██████╔╝██║ ╚████║███████║╚═╝    ███████║██║  ██║╚██████╔╝╚███╔███╔╝
-"   ╚═╝╚═════╝ ╚══════╝╚═╝  ╚═╝    ╚═╝  ╚═╝ ╚═════╝   ╚═╝   ╚═╝ ╚═════╝ ╚═╝  ╚═══╝╚══════╝       ╚══════╝╚═╝  ╚═╝ ╚═════╝  ╚══╝╚══╝
-
-map <leader>ws <Action>(ShowSettings)
-map <leader>wp <Action>(ShowProjectStructureSettings)
-
-"   ██╗██████╗ ███████╗ █████╗      █████╗  ██████╗████████╗██╗ ██████╗ ███╗   ██╗███████╗       ████████╗ ██████╗  ██████╗ ██╗     ███████╗
-"   ██║██╔══██╗██╔════╝██╔══██╗    ██╔══██╗██╔════╝╚══██╔══╝██║██╔═══██╗████╗  ██║██╔════╝██╗    ╚══██╔══╝██╔═══██╗██╔═══██╗██║     ██╔════╝
-"   ██║██║  ██║█████╗  ███████║    ███████║██║        ██║   ██║██║   ██║██╔██╗ ██║███████╗╚═╝       ██║   ██║   ██║██║   ██║██║     ███████╗
-"   ██║██║  ██║██╔══╝  ██╔══██║    ██╔══██║██║        ██║   ██║██║   ██║██║╚██╗██║╚════██║██╗       ██║   ██║   ██║██║   ██║██║     ╚════██║
-"   ██║██████╔╝███████╗██║  ██║    ██║  ██║╚██████╗   ██║   ██║╚██████╔╝██║ ╚████║███████║╚═╝       ██║   ╚██████╔╝╚██████╔╝███████╗███████║
-"   ╚═╝╚═════╝ ╚══════╝╚═╝  ╚═╝    ╚═╝  ╚═╝ ╚═════╝   ╚═╝   ╚═╝ ╚═════╝ ╚═╝  ╚═══╝╚══════╝          ╚═╝    ╚═════╝  ╚═════╝ ╚══════╝╚══════╝
-
-map <Leader>wa <Action>(NavBarToolBar)
-map <Leader>wc <Action>(ChooseRunConfiguration)
-map <leader>wd <Action>(ActivateDebugToolWindow)
-map <leader>wr <Action>(ActivateRunToolWindow)
-map <Leader>wt <Action>(ActivateUnitTestsToolWindow)
-map <leader>wT <Action>(NavbarPopupMenu)
-
-"   ██╗██████╗ ███████╗ █████╗      █████╗  ██████╗████████╗██╗ ██████╗ ███╗   ██╗███████╗       ██╗   ██╗██╗    ████████╗ ██████╗  ██████╗  ██████╗ ██╗     ███████╗███████╗
-"   ██║██╔══██╗██╔════╝██╔══██╗    ██╔══██╗██╔════╝╚══██╔══╝██║██╔═══██╗████╗  ██║██╔════╝██╗    ██║   ██║██║    ╚══██╔══╝██╔═══██╗██╔════╝ ██╔════╝ ██║     ██╔════╝██╔════╝
-"   ██║██║  ██║█████╗  ███████║    ███████║██║        ██║   ██║██║   ██║██╔██╗ ██║███████╗╚═╝    ██║   ██║██║       ██║   ██║   ██║██║  ███╗██║  ███╗██║     █████╗  ███████╗
-"   ██║██║  ██║██╔══╝  ██╔══██║    ██╔══██║██║        ██║   ██║██║   ██║██║╚██╗██║╚════██║██╗    ██║   ██║██║       ██║   ██║   ██║██║   ██║██║   ██║██║     ██╔══╝  ╚════██║
-"   ██║██████╔╝███████╗██║  ██║    ██║  ██║╚██████╗   ██║   ██║╚██████╔╝██║ ╚████║███████║╚═╝    ╚██████╔╝██║       ██║   ╚██████╔╝╚██████╔╝╚██████╔╝███████╗███████╗███████║
-"   ╚═╝╚═════╝ ╚══════╝╚═╝  ╚═╝    ╚═╝  ╚═╝ ╚═════╝   ╚═╝   ╚═╝ ╚═════╝ ╚═╝  ╚═══╝╚══════╝        ╚═════╝ ╚═╝       ╚═╝    ╚═════╝  ╚═════╝  ╚═════╝ ╚══════╝╚══════╝╚══════╝
-
-map <leader>uc <Action>(ChangeColorScheme)
-map <leader>ue <Action>(ViewToolButtons)
-map <leader>us <Action>(ViewStatusBar)
-
-"   ██╗██████╗ ███████╗ █████╗      █████╗  ██████╗████████╗██╗ ██████╗ ███╗   ██╗███████╗       ██╗    ██╗██╗███╗   ██╗██████╗  ██████╗ ██╗    ██╗
-"   ██║██╔══██╗██╔════╝██╔══██╗    ██╔══██╗██╔════╝╚══██╔══╝██║██╔═══██╗████╗  ██║██╔════╝██╗    ██║    ██║██║████╗  ██║██╔══██╗██╔═══██╗██║    ██║
-"   ██║██║  ██║█████╗  ███████║    ███████║██║        ██║   ██║██║   ██║██╔██╗ ██║███████╗╚═╝    ██║ █╗ ██║██║██╔██╗ ██║██║  ██║██║   ██║██║ █╗ ██║
-"   ██║██║  ██║██╔══╝  ██╔══██║    ██╔══██║██║        ██║   ██║██║   ██║██║╚██╗██║╚════██║██╗    ██║███╗██║██║██║╚██╗██║██║  ██║██║   ██║██║███╗██║
-"   ██║██████╔╝███████╗██║  ██║    ██║  ██║╚██████╗   ██║   ██║╚██████╔╝██║ ╚████║███████║╚═╝    ╚███╔███╔╝██║██║ ╚████║██████╔╝╚██████╔╝╚███╔███╔╝
-"   ╚═╝╚═════╝ ╚══════╝╚═╝  ╚═╝    ╚═╝  ╚═╝ ╚═════╝   ╚═╝   ╚═╝ ╚═════╝ ╚═╝  ╚═══╝╚══════╝        ╚══╝╚══╝ ╚═╝╚═╝  ╚═══╝╚═════╝  ╚═════╝  ╚══╝╚══╝
-
-map <leader>t <Action>(TabList)
-
-" Source: https://github.com/TheBlob42/idea-which-key
-
-"   ██╗    ██╗██╗  ██╗██╗ ██████╗██╗  ██╗    ██╗  ██╗███████╗██╗   ██╗
-"   ██║    ██║██║  ██║██║██╔════╝██║  ██║    ██║ ██╔╝██╔════╝╚██╗ ██╔╝
-"   ██║ █╗ ██║███████║██║██║     ███████║    █████╔╝ █████╗   ╚████╔╝
-"   ██║███╗██║██╔══██║██║██║     ██╔══██║    ██╔═██╗ ██╔══╝    ╚██╔╝
-"   ╚███╔███╔╝██║  ██║██║╚██████╗██║  ██║    ██║  ██╗███████╗   ██║
-"    ╚══╝╚══╝ ╚═╝  ╚═╝╚═╝ ╚═════╝╚═╝  ╚═╝    ╚═╝  ╚═╝╚══════╝   ╚═╝
-
-"" Descriptions ---------------------
-
-let g:WhichKeyDesc_leader = "<leader> Leader"
-
-let g:WhichKeyDesc_comment_by_line_comment = "<leader>/ Comment"
-
-let g:WhichKeyDesc_java = "<leader>J Java"
-let g:WhichKeyDesc_maven_download_all_sources = "<leader>Ja Maven Download All Sources"
-let g:WhichKeyDesc_maven_download_run_build = "<leader>Jr Maven Run Build"
-let g:WhichKeyDesc_quick_javadoc = "<leader>Jd Quick Javadoc"
-
-let g:WhichKeyDesc_buffers_editors = "<leader>b Buffers & Editors"
-let g:WhichKeyDesc_next_splitter = "<leader>. Next Splitter"
-let g:WhichKeyDesc_prev_splitter = "<leader>, Prev Splitter"
-let g:WhichKeyDesc_next_tab = "<leader>> Next Tab"
-let g:WhichKeyDesc_prev_tab = "<leader>< Prev Tab"
-let g:WhichKeyDesc_move_tab_left = "<leader>bh Move Tab Into Left Group"
-let g:WhichKeyDesc_move_tab_down = "<leader>bj Move Tab Into Below Group"
-let g:WhichKeyDesc_move_tab_up = "<leader>bk Move Tab Into Above Group"
-let g:WhichKeyDesc_move_tab_right = "<leader>bl Move Tab Into Right Group"
-let g:WhichKeyDesc_close_all_editors = "<leader>ba Close All Editors"
-let g:WhichKeyDesc_close_editor = "<leader>bd Close Active Editor"
-let g:WhichKeyDesc_close_all_editors_but_active = "<leader>bm Close Others Editors"
-let g:WhichKeyDesc_move_editor_to_opposite_tab_group = "<leader>bo Move Editor To Opposite Tab Group"
-let g:WhichKeyDesc_reopen_closed_tab = "<leader>bu Reopen Closed Editor"
-
-let g:WhichKeyDesc_debug = "<leader>d Debug"
-let g:WhichKeyDesc_remove_all_breakpoints = "<leader>dR Remove All Breakpoints"
-let g:WhichKeyDesc_toggle_line_breakpoint = "<leader>db Toggle Line Breakpoints"
-let g:WhichKeyDesc_run_debug = "<leader>dd Start Debug"
-let g:WhichKeyDesc_evaluation_dialog_popup = "<leader>de Evaluation Dialog Popup"
-let g:WhichKeyDesc_step_into = "<leader>di Step Into"
-let g:WhichKeyDesc_mute_all_breakpoints = "<leader>dm Mute All Breakpoints"
-let g:WhichKeyDesc_step_out = "<leader>do Step Out"
-let g:WhichKeyDesc_remove_all_breakpoints_in_file = "<leader>dr Remove All Breakpoints In File"
-let g:WhichKeyDesc_step_over = "<leader>ds Step Over"
-
-let g:WhichKeyDesc_git = "<leader>g Git"
-let g:WhichKeyDesc_editor_gutter_vcs_popup_menu = "<leader>gB Git Blame"
-let g:WhichKeyDesc_git_compare_with_branch = "<leader>gC Compare With Branch"
-let g:WhichKeyDesc_git_pull = "<leader>gF Pull"
-let g:WhichKeyDesc_vcs_show_tabbed_file_history = "<leader>gH File History"
-let g:WhichKeyDesc_git_resolve_conflicts = "<leader>gR Resolve Conflicts"
-let g:WhichKeyDesc_vcs_rollback_changed_lines = "<leader>gU Rollback Changed Line"
-let g:WhichKeyDesc_git_add = "<leader>ga Add"
-let g:WhichKeyDesc_git_branches = "<leader>gb Checkout"
-let g:WhichKeyDesc_activate_commit_tool_window = "<leader>gc Commit"
-let g:WhichKeyDesc_git_delete_branch_action = "<leader>gd Delete Branch"
-let g:WhichKeyDesc_git_fetch = "<leader>gf Fetch"
-let g:WhichKeyDesc_activate_version_control_tool_window = "<leader>gh History"
-let g:WhichKeyDesc_git_init = "<leader>gi Init"
-let g:WhichKeyDesc_git_merge = "<leader>gm Merge"
-let g:WhichKeyDesc_git_create_new_branch = "<leader>gn Create New Branch"
-let g:WhichKeyDesc_git_push_up_to_commit = "<leader>gp Push"
-let g:WhichKeyDesc_git_reset = "<leader>gr Reset"
-let g:WhichKeyDesc_git_stash = "<leader>gs Stash"
-let g:WhichKeyDesc_git_unstash = "<leader>gu Unstash"
-let g:WhichKeyDesc_vcs_show_current_change_marker = "<leader>gy Show Current Change In Line"
-
-let g:WhichKeyDesc_toggle_explorer = "<leader>e Toggle Explorer"
-
-let g:WhichKeyDesc_split_horizontally = "<leader>h Split Horizontally"
-
-let g:WhichKeyDesc_introduce = "<leader>i Introduce"
-let g:WhichKeyDesc_introduce_parameter_object = "<leader>iP Parameter Object"
-let g:WhichKeyDesc_introduce_constant = "<leader>ic Constant"
-let g:WhichKeyDesc_introduce_field = "<leader>if Field"
-let g:WhichKeyDesc_introduce_parameter = "<leader>ip Parameter"
-let g:WhichKeyDesc_introduce_variable = "<leader>iv Variable"
-
-let g:WhichKeyDesc_lsp = "<leader>l LSP"
-let g:WhichKeyDesc_rename_element = "<leader>l; Rename Element"
-let g:WhichKeyDesc_show_intention_actions = "<leader>la Intention Actions"
-let g:WhichKeyDesc_optimize_imports = "<leader>lc Optimize Imports"
-let g:WhichKeyDesc_quick_definition = "<leader>ld Definition"
-let g:WhichKeyDesc_show_error_description = "<leader>le Error Description"
-let g:WhichKeyDesc_rename_file = "<leader>lf Rename File"
-let g:WhichKeyDesc_highlight_usages_in_file = "<leader>lh Highlight Usages In File"
-let g:WhichKeyDesc_implement_methods = "<leader>li Implement Methods"
-let g:WhichKeyDesc_move_statement_down = "<leader>lj Move Statement Down"
-let g:WhichKeyDesc_move_statement_up = "<leader>lk Move Statement Up"
-let g:WhichKeyDesc_override_methods = "<leader>lo Override Methods"
-let g:WhichKeyDesc_quick_preview = "<leader>lp Preview"
-let g:WhichKeyDesc_reformat_code = "<leader>lr Refactor"
-let g:WhichKeyDesc_quick_type_definition = "<leader>lt Type Definition"
-let g:WhichKeyDesc_show_usages = "<leader>lu Usage"
-
-let g:WhichKeyDesc_mark = "<leader>m Mark"
-let g:WhichKeyDesc_goto_next_bookmark = "<leader>mj Next Bookmark"
-let g:WhichKeyDesc_goto_previous_bookmark = "<leader>mk Prev Bookmark"
-let g:WhichKeyDesc_show_bookmark = "<leader>ms Show Bookmarks"
-let g:WhichKeyDesc_toggle_bookmark = "<leader>mt Toggle Bookmark"
-
-let g:WhichKeyDesc_open = "<leader>o Open"
-
-let g:WhichKeyDesc_peek = "<leader>p Peek"
-let g:WhichKeyDesc_goto_action = "<leader>pa Action"
-let g:WhichKeyDesc_goto_class = "<leader>pc Class"
-let g:WhichKeyDesc_goto_declaration = "<leader>pd Declaration"
-let g:WhichKeyDesc_goto_file = "<leader>pf File"
-let g:WhichKeyDesc_goto_implementation = "<leader>pi Implementation"
-let g:WhichKeyDesc_goto_symbol = "<leader>ps Symbol"
+"" Search: descriptions and maps ---------------------
 
 let g:WhichKeyDesc_search = "<leader>s Search"
-let g:WhichKeyDesc_search_everywhere = "<leader>se Everywhere"
+
 let g:WhichKeyDesc_find = "<leader>sf In File"
 let g:WhichKeyDesc_find_in_path = "<leader>sp In Path"
+let g:WhichKeyDesc_switcher = "<leader>ss Switcher"
 let g:WhichKeyDesc_find_usages = "<leader>su Usages"
 
-let g:WhichKeyDesc_tab_list = "<leader>t Tab List"
+map <leader>sf <Action>(Find)
+map <leader>sp <Action>(FindInPath)
+map <leader>ss <Action>(Switcher)
+map <leader>su <Action>(FindUsages)
 
-let g:WhichKeyDesc_ui_toggles = "<leader>u UI Toggles"
-let g:WhichKeyDesc_change_color_schema = "<leader>uc Select Theme"
-let g:WhichKeyDesc_view_tool_buttons = "<leader>ue Toggle Tool Buttons"
+"" UI: descriptions and maps ---------------------
+
+let g:WhichKeyDesc_ui_toggles = "<leader>u UI"
+
+let g:WhichKeyDesc_change_color_schema = "<leader>uc Colorscheme & Others"
 let g:WhichKeyDesc_view_status_bar = "<leader>us Toggle Status Bar"
+let g:WhichKeyDesc_view_tool_buttons = "<leader>ut Toggle Tool Buttons"
 
-let g:WhichKeyDesc_split_vertically = "<leader>v Split Vertically"
+map <leader>uc <Action>(QuickChangeScheme)
+map <leader>us <Action>(ViewStatusBar)
+map <leader>ut <Action>(ViewToolButtons)
 
-let g:WhichKeyDesc_window = "<leader>w Window"
-let g:WhichKeyDesc_navbar_popup_menu = "<leader>wT NavBar Menu"
-let g:WhichKeyDesc_navbar_tool_bar = "<leader>wa NavBar"
-let g:WhichKeyDesc_choose_run_configuration = "<leader>wc Run Configuration"
-let g:WhichKeyDesc_activate_debug_tool_window = "<leader>wd Debug"
-let g:WhichKeyDesc_show_project_structure_settings = "<leader>wp Project Structure Settings"
-let g:WhichKeyDesc_activate_run_tool_window = "<leader>wr Run"
-let g:WhichKeyDesc_show_settings = "<leader>ws Settings"
-let g:WhichKeyDesc_activate_unit_tests_tool_window = "<leader>wt Unit Tests"
+"" View Modes: descriptions and maps ---------------------
 
-let g:WhichKeyDesc_zen_mode = "<leader>z Zen Mode"
+let g:WhichKeyDesc_view_modes = "<leader>v View Mode"
+
+let g:WhichKeyDesc_distraction_free_mode = "<leader>vf Distraction Free Mode"
+let g:WhichKeyDesc_zen_mode = "<leader>vz Zen Mode"
+
+map <leader>vf <Action>(ToggleDistractionFreeMode)
+map <leader>vz <Action>(ToggleZenMode)
+
+let g:WhichKeyDesc_extract_actions = "<leader>x Extract & Introduce"
+
+let g:WhichKeyDesc_inline = "<leader>xa Inline"
+let g:WhichKeyDesc_extract_class = "<leader>xc Extract Class"
+let g:WhichKeyDesc_introduce_field = "<leader>xf Introduce Field"
+let g:WhichKeyDesc_extract_interface = "<leader>xi Extract Interface"
+let g:WhichKeyDesc_extract_method = "<leader>xm Extract Method"
+let g:WhichKeyDesc_introduce_parameter = "<leader>xp Introduce Parameter"
+let g:WhichKeyDesc_extract_superclass = "<leader>xs Extract Superclass"
+let g:WhichKeyDesc_introduce_variable = "<leader>xv Introduce Variable"
+let g:WhichKeyDesc_introduce_constant = "<leader>xx Introduce Constant"
+
+map <Leader>xa <Action>(Inline)
+map <Leader>xc <Action>(ExtractClass)
+map <Leader>xf <Action>(IntroduceField)
+map <Leader>xi <Action>(ExtractInterface)
+map <Leader>xm <Action>(ExtractMethod)
+map <Leader>xp <Action>(IntroduceParameter)
+map <Leader>xs <Action>(ExtractSuperclass)
+map <Leader>xv <Action>(IntroduceVariable)
+map <Leader>xx <Action>(IntroduceConstant)
