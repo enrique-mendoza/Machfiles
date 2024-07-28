@@ -1,6 +1,19 @@
 lastupdatecheck: 0
 recentrepos:
-- /home/kike/Machfiles
+    - /home/kike/Machfiles
+    - /home/kike/code/work/infotec/projects/semarnat/funcionarios/funcionarios_backend
+    - /home/kike/code/work/infotec/projects/minas/ciudadanos/backend-ciudadano
+    - /home/kike/code/work/infotec/projects/sicom/funcionarios/backend-funcionario
+    - /home/kike/code/work/infotec/projects/sicom/ciudadanos/backend-ciudadano
 startuppopupversion: 0
-customcommandshistory: []
+lastversion: 0.43.1
+customcommandshistory:
+    - q
 hidecommandlog: false
+ignorewhitespaceindiffview: false
+diffcontextsize: 3
+renamesimilaritythreshold: 50
+localbranchsortorder: recency
+remotebranchsortorder: alphabetical
+gitlogorder: topo-order
+gitlogshowgraph: always
