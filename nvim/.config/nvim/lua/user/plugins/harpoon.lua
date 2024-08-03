@@ -9,14 +9,10 @@ local M = {
 function M.config()
   local keymap = vim.keymap.set
   local opts = { noremap = true, silent = true }
+  local harpoon = require("harpoon")
 
-  keymap("n", "<s-m>", "<cmd>lua require('user.plugins.harpoon').mark_file()<cr>", opts)
-  keymap("n", "<TAB>", "<cmd>lua require('harpoon.ui').toggle_quick_menu()<cr>", opts)
-end
-
-function M.mark_file()
-  require("harpoon.mark").add_file()
-  vim.notify "󱡅 Marked file"
+  keymap("n", "<s-m>", function () harpoon:list():add() vim.notify "󱡅 Marked file" end, opts)
+  keymap("n", "<TAB>", function() harpoon.ui:toggle_quick_menu(harpoon:list()) end, opts)
 end
 
 return M

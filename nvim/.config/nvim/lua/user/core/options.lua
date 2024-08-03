@@ -11,7 +11,7 @@ vim.opt.fillchars:append {
   stl = " ",
 }
 -- vim.opt.fileencoding = "utf-8" -- the encoding written to a file
-vim.opt.guifont = "GeistMono NerdFont:h17" -- the font used in graphical neovim applications
+vim.opt.guifont = "RecMonoCasual NerdFont:h17" -- the font used in graphical neovim applications
 vim.opt.ignorecase = true -- ignore case in search patterns
 vim.opt.hlsearch = true -- highlight all matches on previous search pattern
 vim.opt.laststatus = 3

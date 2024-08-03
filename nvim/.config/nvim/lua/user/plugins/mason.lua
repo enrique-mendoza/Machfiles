@@ -3,6 +3,7 @@ local M = {
   dependencies = {
     "williamboman/mason.nvim",
     "neovim/nvim-lspconfig",
+    "jay-babu/mason-nvim-dap.nvim",
   },
 }
 
@@ -11,14 +12,21 @@ M.execs = {
   "bashls",
   "cssls",
   "html",
+  "jdtls",
   "jsonls",
   "lua_ls",
   "pyright",
   "tsserver",
 }
 
+M.dap_execs = {
+  "java-debug-adapter",
+  "java-test",
+}
+
 function M.config()
   local wk = require "which-key"
+
   wk.add {
     { "<leader>lI", "<cmd>Mason<cr>", desc = "Mason Info" },
   }
@@ -30,6 +38,9 @@ function M.config()
   }
   require("mason-lspconfig").setup {
     ensure_installed = M.execs,
+  }
+  require("mason-nvim-dap").setup {
+    ensure_installed = M.dap_execs
   }
 end
 
