@@ -34,7 +34,7 @@
   editor = nvim
   ignorecase = false
 [credential]
-	helper = cache
+  helper = store
 [filter "lfs"]
   clean = git-lfs clean -- %f
   process = git-lfs filter-process
