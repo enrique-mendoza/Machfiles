@@ -83,3 +83,15 @@ vim.api.nvim_create_autocmd({ "CursorHold" }, {
     end
   end,
 })
+
+-- Switching between numbers and relative numbers
+vim.api.nvim_create_autocmd("InsertEnter", {
+  pattern = '*',
+  command = "set norelativenumber"
+})
+
+-- Turn off paste mode when leaving insert
+vim.api.nvim_create_autocmd("InsertLeave", {
+  pattern = '*',
+  command = "set nopaste relativenumber"
+})

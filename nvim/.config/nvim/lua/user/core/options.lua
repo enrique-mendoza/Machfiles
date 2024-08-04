@@ -52,15 +52,3 @@ vim.cmd [[set iskeyword+=-]]
 
 vim.g.netrw_banner = 0
 vim.g.netrw_mouse = 2
-
--- Switching between numbers and relative numbers
-vim.api.nvim_create_autocmd("InsertEnter", {
-  pattern = '*',
-  command = "set norelativenumber"
-})
-
--- Turn off paste mode when leaving insert
-vim.api.nvim_create_autocmd("InsertLeave", {
-  pattern = '*',
-  command = "set nopaste relativenumber"
-})
