@@ -3,7 +3,7 @@ local M = {
   event = { "BufReadPre", "BufNewFile" },
   dependencies = {
     {
-      "neovim/nvim-lspconfig",
+      "folke/neodev.nvim",
     },
   },
 }
