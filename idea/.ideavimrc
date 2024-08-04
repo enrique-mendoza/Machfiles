@@ -40,7 +40,7 @@ set notimeout
 
 let g:WhichKey_CommandStyle = "bold"
 let g:WhichKey_FontFamily = "JetBrainsMono Nerd Font"
-let g:WhichKey_FontSize = 17
+let g:WhichKey_FontSize = 16
 let g:WhichKey_KeyStyle = "bold"
 let g:WhichKey_ShowTypedSequence = "false"
 let g:WhichKey_ShowVimActions = "true"
@@ -340,13 +340,13 @@ map <leader>ut <Action>(ViewToolButtons)
 
 "" View Modes: descriptions and maps ---------------------
 
-let g:WhichKeyDesc_view_modes = "<leader>v View Mode"
+let g:WhichKeyDesc_view_modes = "<leader>w View Mode"
 
-let g:WhichKeyDesc_distraction_free_mode = "<leader>vf Distraction Free Mode"
-let g:WhichKeyDesc_zen_mode = "<leader>vz Zen Mode"
+let g:WhichKeyDesc_distraction_free_mode = "<leader>wf Distraction Free Mode"
+let g:WhichKeyDesc_zen_mode = "<leader>wz Zen Mode"
 
-map <leader>vf <Action>(ToggleDistractionFreeMode)
-map <leader>vz <Action>(ToggleZenMode)
+map <leader>wf <Action>(ToggleDistractionFreeMode)
+map <leader>wz <Action>(ToggleZenMode)
 
 let g:WhichKeyDesc_extract_actions = "<leader>x Extract & Introduce"
 
