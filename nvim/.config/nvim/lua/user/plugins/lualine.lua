@@ -8,16 +8,21 @@ local M = {
 function M.config()
   local icons = require "user.extras.icons"
 
+  local branch = {
+    "branch",
+    icon =""
+  }
+
   local diff = {
     "diff",
-    colored = false,
+    colored = true,
     symbols = { added = icons.git.LineAdded, modified = icons.git.LineModified, removed = icons.git.LineRemoved }, -- Changes the symbols used by the diff.
   }
 
   local diagnostics = {
     "diagnostics",
     sections = { "error", "warn" },
-    colored = false, -- Displays diagnostics status in color if set to true.
+    colored = true, -- Displays diagnostics status in color if set to true.
     always_visible = true, -- Show diagnostics even if there are none.
   }
 
@@ -43,6 +48,13 @@ function M.config()
     end,
   }
 
+  local mode = {
+    "mode",
+    icons_enabled = true,
+    icon = icons.misc.Neovim,
+    draw_empty = true
+  }
+
   require("lualine").setup {
     options = {
       -- component_separators = { left = "", right = "" },
@@ -52,6 +64,7 @@ function M.config()
       component_separators = { left = "", right = "" },
       section_separators = { left = "", right = "" },
       ignore_focus = { "NvimTree" },
+      theme = "tokyonight-night",
     },
     sections = {
       -- lualine_a = { {"branch", icon =""} },
@@ -61,11 +74,12 @@ function M.config()
       -- lualine_y = { "filetype" },
       -- lualine_z = { "progress" },
       -- lualine_a = { "mode" },
-      lualine_a = {},
-      lualine_b = { "branch" },
-      lualine_c = { diagnostics },
+      lualine_a = { mode },
+      -- lualine_b = { "branch" },
+      lualine_b = { branch },
+      lualine_c = { diff },
       -- lualine_x = { diff, "copilot", filetype },
-      lualine_x = { "copilot", filetype },
+      lualine_x = { diagnostics, "filetype" },
       lualine_y = { "progress" },
       lualine_z = {},
     },

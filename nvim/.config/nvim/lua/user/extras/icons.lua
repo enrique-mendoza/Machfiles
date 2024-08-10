@@ -154,5 +154,9 @@ return {
     Smiley = " ",
     Package = " ",
     CircuitBoard = " ",
+    Archlinux = "",
+    Archcraft = "",
+    Rocket = "󱓞",
+    Neovim = ""
   },
 }
