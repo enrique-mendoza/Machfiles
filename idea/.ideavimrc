@@ -22,6 +22,10 @@ set relativenumber
 
 vnoremap < <gv
 vnoremap > >gv
+nnoremap <s-h> ^
+nnoremap <s-l> g_
+vnoremap <s-h> ^
+vnoremap <s-l> g_
 
 "   ██████╗ ██╗     ██╗   ██╗ ██████╗ ██╗███╗   ██╗███████╗
 "   ██╔══██╗██║     ██║   ██║██╔════╝ ██║████╗  ██║██╔════╝
