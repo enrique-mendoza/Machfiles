@@ -52,7 +52,6 @@ function M.config()
         -- "--hidden",
         "--glob=!.git/",
       },
-
       mappings = {
         i = {
           ["<C-n>"] = actions.cycle_history_next,
@@ -78,7 +77,7 @@ function M.config()
       },
       find_files = {
         theme = "dropdown",
-        previewer = true,
+        previewer = false,
         path_display = filenameFirst,
       },
       buffers = {
