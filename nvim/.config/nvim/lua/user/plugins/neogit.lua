@@ -4,17 +4,7 @@ local M = {
 }
 
 function M.config()
-  local icons = require "user.extras.icons"
-
-  local wk = require "which-key"
-
-  wk.add {
-    {
-      "<leader>gg",
-      "<cmd>Neogit<CR>",
-      desc = "Neogit",
-    },
-  }
+  local icons = require("user.extras.icons")
 
   require("neogit").setup {
     disable_signs = false,

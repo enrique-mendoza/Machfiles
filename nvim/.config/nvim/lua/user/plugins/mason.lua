@@ -25,20 +25,16 @@ M.dap_execs = {
 }
 
 function M.config()
-  local wk = require "which-key"
-
-  wk.add {
-    { "<leader>lI", "<cmd>Mason<cr>", desc = "Mason Info" },
-  }
-
   require("mason").setup {
     ui = {
       border = "rounded",
     },
   }
+
   require("mason-lspconfig").setup {
     ensure_installed = M.execs,
   }
+
   require("mason-nvim-dap").setup {
     ensure_installed = M.dap_execs
   }

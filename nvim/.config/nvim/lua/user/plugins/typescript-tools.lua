@@ -5,7 +5,8 @@ local M = {
 }
 
 function M.config()
-  local lspconfig = require "user.plugins.lspconfig"
+  local lspconfig = require("user.plugins.lspconfig")
+
   require("typescript-tools").setup {
     on_attach = function(client, bufnr)
       lspconfig.on_attach(client, bufnr)
@@ -23,10 +24,8 @@ function M.config()
       include_completions_with_insert_text = true,
       -- code_lens = "all",
       -- disable_member_code_lens = true,
-
       -- described below
       -- tsserver_format_options = {},
-
       tsserver_file_preferences = {
         includeInlayParameterNameHints = "all", -- "none" | "literals" | "all";
         includeInlayParameterNameHintsWhenArgumentMatchesName = true,
@@ -36,13 +35,10 @@ function M.config()
         includeInlayPropertyDeclarationTypeHints = true,
         includeInlayFunctionLikeReturnTypeHints = true,
         includeInlayEnumMemberValueHints = true,
-
         includeCompletionsForModuleExports = true,
         quotePreference = "auto",
-
         -- autoImportFileExcludePatterns = { "node_modules/*", ".git/*" },
       },
-
       jsx_close_tag = {
         enable = true,
         filetypes = { "javascriptreact", "typescriptreact" },

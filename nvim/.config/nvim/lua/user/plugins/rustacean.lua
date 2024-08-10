@@ -7,7 +7,7 @@ local M = {
 }
 
 function M.config()
-  local lspconfig = require "user.plugins.lspconfig"
+  local lspconfig = require("user.plugins.lspconfig")
 
   vim.g.rustaceanvim = {
     tools = {},
@@ -15,9 +15,7 @@ function M.config()
       on_attach = function(client, bufnr)
         lspconfig.on_attach(client, bufnr)
       end,
-
       capabilities = lspconfig.common_capabilities(),
-
       settings = {
         ["rust-analyzer"] = {
           inlayHints = {

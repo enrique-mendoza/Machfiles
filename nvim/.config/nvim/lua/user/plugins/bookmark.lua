@@ -43,7 +43,7 @@ function M.config()
     highlight = "Constant",
   }
 
-  require("telescope").load_extension "bookmark"
+  require("telescope").load_extension("bookmark")
 end
 
 return M

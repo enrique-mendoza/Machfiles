@@ -14,7 +14,6 @@ function M.config()
       -- In which order to show file system entries
       sort = nil,
     },
-
     -- Module mappings created only inside explorer.
     -- Use `''` (empty string) to not create one.
     mappings = {
@@ -30,7 +29,6 @@ function M.config()
       trim_left = "<",
       trim_right = ">",
     },
-
     -- General options
     options = {
       -- Whether to delete permanently or move into module-specific trash
@@ -38,7 +36,6 @@ function M.config()
       -- Whether to use for editing directories
       use_as_default_explorer = false,
     },
-
     -- Customization of explorer windows
     windows = {
       -- Maximum number of windows to show side by side

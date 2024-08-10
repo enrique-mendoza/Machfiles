@@ -7,6 +7,7 @@ local M = {
 
 function M.config()
   local icons = require "user.extras.icons"
+
   local diff = {
     "diff",
     colored = false,
@@ -50,7 +51,6 @@ function M.config()
       -- section_separators = { left = "", right = "" },
       component_separators = { left = "", right = "" },
       section_separators = { left = "", right = "" },
-
       ignore_focus = { "NvimTree" },
     },
     sections = {

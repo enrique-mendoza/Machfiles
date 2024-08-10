@@ -7,7 +7,8 @@ local M = {
 }
 
 function M.config()
-  local builtin = require "statuscol.builtin"
+  local builtin = require("statuscol.builtin")
+
   local cfg = {
     setopt = true,
     relculright = true,
@@ -79,7 +80,6 @@ function M.config()
 
       -- refer to ./doc/example.lua for detail
     end,
-
     preview = {
       win_config = {
         border = { "", "─", "", "", "", "─", "", "" },

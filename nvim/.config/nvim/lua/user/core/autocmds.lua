@@ -1,3 +1,10 @@
+vim.cmd [[:amenu 10.100 mousemenu.Goto\ Definition <cmd>lua vim.lsp.buf.definition()<CR>]]
+vim.cmd [[:amenu 10.110 mousemenu.References <cmd>lua vim.lsp.buf.references()<CR>]]
+-- vim.cmd [[:amenu 10.120 mousemenu.-sep- *]]
+
+vim.cmd "set whichwrap+=<,>,[,],h,l"
+vim.cmd [[set iskeyword+=-]]
+
 vim.api.nvim_create_autocmd({ "BufWinEnter" }, {
   callback = function()
     vim.cmd "set formatoptions-=cro"

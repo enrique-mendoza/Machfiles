@@ -4,6 +4,7 @@ local M = {
 
 function M.config()
   vim.o.sessionoptions = "blank,buffers,curdir,folds,help,tabpages,winsize,winpos,terminal,localoptions"
+
   -- local opts = {
   --   auto_session_enabled = true,
   --   auto_save_enabled = nil,
@@ -30,6 +31,7 @@ function M.config()
   -- }
   --
   -- auto_session.setup(opts)
+
   require("auto-session").setup {
     log_level = vim.log.levels.ERROR,
     auto_session_suppress_dirs = { "~/", "~/Downloads", "/" },

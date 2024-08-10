@@ -1,5 +1,4 @@
 vim.opt.backup = false -- creates a backup file
-
 vim.opt.clipboard = "unnamedplus" -- allows neovim to access the system clipboard
 vim.opt.cmdheight = 1 -- more space in the neovim command line for displaying messages
 vim.opt.completeopt = { "menuone", "noselect" } -- mostly just for cmp
@@ -44,11 +43,7 @@ vim.opt.updatetime = 100 -- faster completion (4000ms default)
 vim.opt.wrap = false -- display lines as one long line
 vim.opt.writebackup = false -- if a file is being edited by another program (or was written to file while editing with another program), it is not allowed to be edited
 
--- colorcolumn = "80",
--- colorcolumn = "120",
-
-vim.cmd "set whichwrap+=<,>,[,],h,l"
-vim.cmd [[set iskeyword+=-]]
-
+vim.g.mapleader = " "
+vim.g.maplocalleader = " "
 vim.g.netrw_banner = 0
 vim.g.netrw_mouse = 2

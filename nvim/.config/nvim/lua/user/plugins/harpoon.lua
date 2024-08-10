@@ -1,9 +1,7 @@
 local M = {
-  "ThePrimeagen/harpoon",
-  event = "VeryLazy",
-  dependencies = {
-    { "nvim-lua/plenary.nvim" },
-  },
+    "ThePrimeagen/harpoon",
+    branch = "harpoon2",
+    dependencies = { "nvim-lua/plenary.nvim" }
 }
 
 function M.config()

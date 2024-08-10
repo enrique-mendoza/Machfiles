@@ -4,6 +4,7 @@ local M = {
   cmd = { "DiffviewOpen", "DiffviewClose", "DiffviewToggleFiles", "DiffviewFocusFiles" },
 }
 
-function M.config() end
+function M.config()
+end
 
 return M

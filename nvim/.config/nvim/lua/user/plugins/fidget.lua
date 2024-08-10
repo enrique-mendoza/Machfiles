@@ -9,7 +9,6 @@ function M.config()
         enable = true,
       },
     },
-
     notification = {
       window = {
         normal_hl = "CursorLineNr", -- Base highlight group in the notification window

@@ -7,21 +7,7 @@ local M = {
 }
 
 function M.config()
-  local wk = require "which-key"
-
-  wk.add {
-    {
-      "<leader>o",
-      "<cmd>Navbuddy<cr>",
-      desc = "Nav",
-      icon = {
-        icon = "",
-        color = "blue"
-      }
-    },
-  }
-
-  local navbuddy = require "nvim-navbuddy"
+  local navbuddy = require("nvim-navbuddy")
   -- local actions = require("nvim-navbuddy.actions")
   navbuddy.setup {
     window = {
