@@ -345,6 +345,10 @@ function M.config()
       "<leader>gd",
       "<cmd>Gitsigns diffthis HEAD<cr>",
       desc = "Git Diff",
+      icon = {
+        icon = " ",
+        color = "orange"
+      }
     },
     {
       "<leader>gg",
@@ -560,6 +564,30 @@ function M.config()
       "<cmd>Lazy update<cr>",
       desc = "Update",
     },
+    {
+      "<leader>s",
+      group = "Sessions",
+    },
+    {
+      "<leader>sa",
+      function() require("persistence").load() end,
+      desc = "Restore Session"
+    },
+    {
+      "<leader>sf",
+      function() require("persistence").select() end,
+      desc = "Find Session"
+    },
+    {
+      "<leader>sl",
+      function() require("persistence").load({ last = true }) end,
+      desc = "Restore Last Session"
+    },
+    {
+      "<leader>ss",
+      function() require("persistence").stop() end,
+      desc = "Don't Save Current Session"
+    },
     -- treesitter
     {
       "<leader>T",
@@ -613,21 +641,6 @@ function M.config()
       "<leader>q",
       "<cmd>confirm q<CR>",
       desc = "Quit",
-    },
-    {
-      "<leader>qd",
-      function() require("persistence").stop() end,
-      desc = "Don't Save Current Session"
-    },
-    {
-      "<leader>ql",
-      function() require("persistence").load({ last = true }) end,
-      desc = "Restore Last Session"
-    },
-    {
-      "<leader>qs",
-      function() require("persistence").load() end,
-      desc = "Restore Session"
     },
     -- wrap
     {
