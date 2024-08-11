@@ -135,13 +135,13 @@ function M.config()
       end,
     },
     sources = {
-      { name = "nvim_lsp" },
       { name = "buffer" },
       { name = "calc" },
       { name = "cmp_tabnine" },
       { name = "crates" },
       { name = "emoji" },
       { name = "luasnip" },
+      { name = "nvim_lsp" },
       { name = "nvim_lua" },
       { name = "path" },
       { name = "treesitter" },
@@ -157,7 +157,7 @@ function M.config()
         selection_order = "top_down",
       },
       docs = {
-        auto_open = false,
+        auto_open = true,
       },
     },
     window = {

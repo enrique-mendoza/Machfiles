@@ -18,6 +18,7 @@ function M.config()
       formatting.prettier,
       formatting.black,
       formatting.shfmt,
+      formatting.google_java_format,
 
       -- diagnostics.shellcheck,
 
