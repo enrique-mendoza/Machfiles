@@ -135,6 +135,7 @@ function M.config()
       end,
     },
     sources = {
+      { name = "nvim_lsp" },
       { name = "buffer" },
       { name = "calc" },
       { name = "cmp_tabnine" },

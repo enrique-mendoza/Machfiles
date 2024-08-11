@@ -51,8 +51,7 @@ function M.config()
   local mode = {
     "mode",
     icons_enabled = true,
-    icon = icons.misc.Neovim,
-    draw_empty = true
+    fmt = function() return icons.misc.Neovim end, -- function(res) return res:sub(1,1) end -- get first mode char
   }
 
   require("lualine").setup {
