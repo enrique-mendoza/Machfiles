@@ -574,9 +574,14 @@ function M.config()
       desc = "Restore Session"
     },
     {
+      "<leader>sd",
+      "<cmd>Autosession delete<CR>",
+      desc = "Delete Session"
+    },
+    {
       "<leader>sf",
       function() require("persistence").select() end,
-      desc = "Find Session"
+      desc = "Select Session"
     },
     {
       "<leader>sl",
