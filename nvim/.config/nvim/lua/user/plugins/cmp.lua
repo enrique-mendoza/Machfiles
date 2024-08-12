@@ -108,17 +108,26 @@ function M.config()
         "s",
       }),
     },
+    completion = {
+      ---@usage The minimum length of a word to complete on.
+      keyword_length = 1,
+    },
     formatting = {
       fields = { "kind", "abbr", "menu" },
       format = function(entry, vim_item)
         vim_item.kind = icons.kind[vim_item.kind]
         vim_item.menu = ({
-          nvim_lsp = "",
-          nvim_lua = "",
-          luasnip = "",
-          buffer = "",
-          path = "",
-          emoji = "",
+          nvim_lsp = "(LSP)",
+          emoji = "(Emoji)",
+          path = "(Path)",
+          calc = "(Calc)",
+          cmp_tabnine = "(Tabnine)",
+          vsnip = "(Snippet)",
+          luasnip = "(Snippet)",
+          buffer = "(Buffer)",
+          tmux = "(TMUX)",
+          copilot = "(Copilot)",
+          treesitter = "(TreeSitter)",
         })[entry.source.name]
 
         if entry.source.name == "emoji" then
@@ -135,16 +144,35 @@ function M.config()
       end,
     },
     sources = {
+      { name = "copilot" },
+      {
+        name = "nvim_lsp",
+        entry_filter = function(entry, ctx)
+          local kind = require("cmp.types.lsp").CompletionItemKind[entry:get_kind()]
+          if kind == "Snippet" and ctx.prev_context.filetype == "java" then
+            return false
+          end
+
+          if ctx.prev_context.filetype == "markdown" then
+            return true
+          end
+
+          if kind == "Text" then
+            return false
+          end
+
+          return true
+        end,
+      },
+      { name = "path" },
+      { name = "luasnip" },
+      { name = "cmp_tabnine" },
+      { name = "nvim_lua" },
       { name = "buffer" },
       { name = "calc" },
-      { name = "cmp_tabnine" },
-      { name = "crates" },
       { name = "emoji" },
-      { name = "luasnip" },
-      { name = "nvim_lsp" },
-      { name = "nvim_lua" },
-      { name = "path" },
       { name = "treesitter" },
+      { name = "crates" },
       { name = "tmux" },
     },
     confirm_opts = {
