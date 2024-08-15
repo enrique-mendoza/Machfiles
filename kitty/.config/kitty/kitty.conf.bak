@@ -182,10 +182,10 @@ font_features none
 #: suffix px for pixels or % for percentage of original value. No
 #: suffix means use pts. For example::
 
-# modify_font underline_position 150%
-# modify_font underline_thickness 1.05
+modify_font underline_position 150%
+modify_font underline_thickness 1.05
 #:     modify_font strikethrough_position 2px
-# modify_font cell_height 110%
+modify_font cell_height 110%
 
 #: Additionally, you can modify the size of the cell in which each
 #: font glyph is rendered and the baseline at which the glyph is
@@ -274,7 +274,7 @@ font_features none
 #: }}}
 
 #: Cursor customization {{{
-cursor #f5e0dc 
+# cursor #c0caf5
 
 #: Default cursor color. If set to the special value none the cursor
 #: will be rendered with a "reverse video" effect. It's color will be
@@ -283,7 +283,7 @@ cursor #f5e0dc
 #: program running in the terminal sets a cursor color, this takes
 #: precedence. Also, the cursor colors are modified if the cell
 #: background and foreground colors have very low contrast.
-cursor_text_color #1e1e2e 
+# cursor_text_color #1a1b26
 
 #: The color of text under the cursor. If you want it rendered with
 #: the background color of the cell underneath instead, use the
@@ -401,9 +401,7 @@ mouse_hide_wait -1.0
 #: typing text. Disabled by default on macOS as getting it to work
 #: robustly with the ever-changing sea of bugs that is Cocoa is too
 #: much effort.
-
-url_color #f5e0dc 
-
+# url_color #0087bd
 url_style curly
 
 #: The color and style for highlighting URLs on mouse-over. url_style
@@ -875,14 +873,14 @@ placement_strategy center
 #: this option. Using a value of center means the cell area will be
 #: placed centrally. A value of top-left means the padding will be
 #: only at the bottom and right edges.
-active_border_color #b4befe
+# active_border_color #00ff00
 
 #: The color for the border of the active window. Set this to none to
 #: not draw borders around the active window.
-inactive_border_color #6c7086
+# inactive_border_color #cccccc
 
 #: The color for the border of inactive windows.
-bell_border_color #f9e2af
+# bell_border_color #ff5a00
 
 #: The color for the border of inactive windows in which a bell has
 #: occurred.
@@ -1111,16 +1109,15 @@ active_tab_title_template "{fmt.fg._1a1b26}{fmt.bg._7aa2f7}  {index}:{f'{titl
 
 #: Template to use for active tabs. If not specified falls back to
 #: tab_title_template.
-
-active_tab_foreground   #16161e
-active_tab_background   #7aa2f7
+# active_tab_foreground   #16161e
+# active_tab_background   #7aa2f7
 active_tab_font_style   bold-italic
-inactive_tab_foreground #545c72
-inactive_tab_background #292e42
+# inactive_tab_foreground #545c72
+# inactive_tab_background #292e42
 inactive_tab_font_style normal
 
 #: Tab bar colors and styles.
-tab_bar_background none
+# tab_bar_background none
 
 #: Background color for the tab bar. Defaults to using the terminal
 #: background color.
@@ -1135,8 +1132,8 @@ tab_bar_background none
 #: }}}
 
 #: Color scheme {{{
-foreground #cdd6f4
-background #1e1e2e
+# foreground #c0caf5
+# background #1a1b26
 
 #: The foreground and background colors.
 
@@ -1218,8 +1215,8 @@ dim_opacity 0.75
 
 #: How much to dim text that has the DIM/FAINT attribute set. One
 #: means no dimming and zero means fully dimmed (i.e. invisible).
-selection_foreground #1e1e2e
-selection_background #f5e0dc
+# selection_foreground #c0caf5
+# selection_background #33467c
 
 #: The foreground and background colors for text selected with the
 #: mouse. Setting both of these to none will cause a "reverse video"
@@ -1234,62 +1231,64 @@ selection_background #f5e0dc
 #: The 256 terminal colors. There are 8 basic colors, each color has a
 #: dull and bright version, for the first 16 colors. You can set the
 #: remaining 240 colors as color16 to color255.
+# color0 #15161e
+# color8 #414868
 
-# black
-color0 #45475a
-color8 #585b70
+#: black
+# color1 #f7768e
+# color9 #f7768e
 
-# red
-color1 #f38ba8
-color9 #f38ba8
+#: red
+# color2 #9ece6a
+# color10 #9ece6a
 
-# green
-color2  #a6e3a1
-color10 #a6e3a1
+#: green
+# color3 #e0af68
+# color11 #e0af68
 
-# yellow
-color3  #f9e2af
-color11 #f9e2af
+#: yellow
+# color4 #7aa2f7
+# color12 #7aa2f7
 
-# blue
-color4  #89b4fa
-color12 #89b4fa
+#: blue
+# color5 #bb9af7
+# color13 #bb9af7
 
-# magenta
-color5  #f5c2e7
-color13 #f5c2e7
+#: magenta
+# color6 #7dcfff
+# color14 #7dcfff
 
-# cyan
-color6  #94e2d5
-color14 #94e2d5
+#: cyan
+# color7 #a9b1d6
+# color15 #c0caf5
 
-# white
-color7  #bac2de
-color15 #a6adc8
+#: extended colors
+# color16 #ff9e64
+# color17 #db4b4b
 
 #: white
 
-mark1_foreground #1e1e2e
+# mark1_foreground black
 
 #: Color for marks of type 1
 
-mark1_background #b4befe
+# mark1_background #98d3cb
 
 #: Color for marks of type 1 (light steel blue)
 
-mark2_foreground #1e1e2e
+# mark2_foreground black
 
 #: Color for marks of type 2
 
-mark2_background #cba6f7
+# mark2_background #f2dcd3
 
 #: Color for marks of type 1 (beige)
 
-mark3_foreground #1e1e2e
+# mark3_foreground black
 
 #: Color for marks of type 3
 
-mark3_background #74c7ec
+# mark3_background #f274bc
 
 #: Color for marks of type 3 (violet)
 
@@ -1463,7 +1462,7 @@ update_check_interval 24
 #: builds do not do update checking. Changing this option by reloading
 #: the config is not supported.
 
-startup_session launch.conf
+startup_session none
 
 #: Path to a session file to use for all kitty instances. Can be
 #: overridden by using the kitty --session =none command line option
@@ -1592,14 +1591,14 @@ term xterm-kitty
 #: }}}
 
 #: OS specific tweaks {{{
-wayland_titlebar_color system
+# wayland_titlebar_color system
 
 #: The color of the kitty window's titlebar on Wayland systems with
 #: client side window decorations such as GNOME. A value of system
 #: means to use the default system color, a value of background means
 #: to use the background color of the currently active window and
 #: finally you can use an arbitrary color, such as #12af59 or red.
-macos_titlebar_color system
+# macos_titlebar_color system
 
 #: The color of the kitty window's titlebar on macOS. A value of
 #: system means to use the default system color, light or dark can
@@ -2463,3 +2462,15 @@ map cmd+q quit
 #: }}}
 
 #: }}}
+
+# BEGIN_KITTY_THEME
+# Catppuccin-Mocha
+include current-theme.conf
+# END_KITTY_THEME
+
+# Tab bar colors
+active_tab_foreground   #11111b
+active_tab_background   #cba6f7
+inactive_tab_foreground #cdd6f4
+inactive_tab_background #181825
+tab_bar_background      none
