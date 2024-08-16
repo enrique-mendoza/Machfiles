@@ -661,7 +661,7 @@ function M.config()
       desc = "Rain",
       hidden = true,
     },
-    -- celullar
+    -- zen-mode
     {
       "<leader>z",
       "<cmd>ZenMode<CR>",
