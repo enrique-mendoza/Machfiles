@@ -80,7 +80,6 @@ let g:WhichKeyDesc_prev_tab = "<leader>< Previous Tab"
 let g:WhichKeyDesc_next_tab = "<leader>> Next Tab"
 let g:WhichKeyDesc_close_editor = "<leader>c Close Buffer"
 let g:WhichKeyDesc_explorer = "<leader>e Explorer"
-let g:WhichKeyDesc_search_everywhere = "<leader>f Find"
 let g:WhichKeyDesc_split_horizontally = "<leader>h Split Horizontally"
 let g:WhichKeyDesc_open = "<leader>o Open File"
 let g:WhichKeyDesc_split_vertically = "<leader>v Split Vertically"
@@ -94,7 +93,6 @@ map <leader>, <Action>(PrevSplitter)
 map <leader>. <Action>(NextSplitter)
 map <leader>c <Action>(CloseEditor)
 nnoremap <leader>e :NERDTree<CR>
-map <leader>f <Action>(SearchEverywhere)
 map <leader>h <Action>(SplitHorizontally)
 map <leader>o <Action>(OpenFile)
 map <leader>v <Action>(SplitVertically)
@@ -103,7 +101,7 @@ map <leader>z <action>(Unsplit)
 
 "" Buffers: descriptions and maps ---------------------
 
-let g:WhichKeyDesc_buffers_editors = "<leader>b Buffers & Editors"
+let g:WhichKeyDesc_buffers_editors = "<leader>b Buffers"
 
 let g:WhichKeyDesc_close_all_editors = "<leader>ba Close All Editors"
 let g:WhichKeyDesc_close_all_editors_but_active = "<leader>bc Close Others Editors"
@@ -125,7 +123,7 @@ map <leader>br <Action>(ReopenClosedTab)
 
 "" Debug: descriptions and maps ---------------------
 
-let g:WhichKeyDesc_debug = "<leader>d Debug"
+let g:WhichKeyDesc_debug = "<leader>d  Debug"
 
 let g:WhichKeyDesc_remove_all_breakpoints = "<leader>dR Remove All Breakpoints"
 let g:WhichKeyDesc_step_into = "<leader>di Step Into"
@@ -147,11 +145,27 @@ map <leader>ds <Action>(Debug)
 map <leader>dt <Action>(ToggleLineBreakpoint)
 map <leader>du <Action>(StepOut)
 
+"" Find: descriptions and maps ---------------------
+
+let g:WhichKeyDesc_search = "<leader>f Find"
+
+let g:WhichKeyDesc_find = "<leader>fc In File"
+let g:WhichKeyDesc_search_everywhere = "<leader>ff Everywhere"
+let g:WhichKeyDesc_find_in_path = "<leader>fp In Path"
+let g:WhichKeyDesc_switcher = "<leader>fs Switcher"
+let g:WhichKeyDesc_find_usages = "<leader>fu Usages"
+
+map <leader>fc <Action>(Find)
+map <leader>ff <Action>(SearchEverywhere)
+map <leader>fp <Action>(FindInPath)
+map <leader>fs <Action>(Switcher)
+map <leader>fu <Action>(FindUsages)
+
 "" Git: descriptions and maps ---------------------
 
-let g:WhichKeyDesc_git = "<leader>g Git"
+let g:WhichKeyDesc_git = "<leader>g  Git"
 
-let g:WhichKeyDesc_editor_gutter_vcs_popup_menu = "<leader>gB Git Blame"
+let g:WhichKeyDesc_editor_gutter_vcs_popup_menu = "<leader>gB  Git Blame"
 let g:WhichKeyDesc_git_compare_with_branch = "<leader>gC Compare With Branch"
 let g:WhichKeyDesc_vcs_show_tabbed_file_history = "<leader>gH File History"
 let g:WhichKeyDesc_git_push_up_to_commit = "<leader>gP Push"
@@ -195,17 +209,33 @@ map <leader>gz <Action>(Git.Reset)
 
 "" IntelliJ IDEA: descriptions and maps ---------------------
 
-let g:WhichKeyDesc_intellij = "<leader>i IntelliJ IDEA"
+let g:WhichKeyDesc_run_options = "<leader>i Intellij IDEA"
 
+let g:WhichKeyDesc_activate_database_tool_window = "<leader>ib Database Tool"
+let g:WhichKeyDesc_choose_run_configuration = "<leader>ic Run Configuration"
+let g:WhichKeyDesc_activate_debug_tool_window = "<leader>id Debug Tool"
+let g:WhichKeyDesc_run = "<leader>ir Run"
 let g:WhichKeyDesc_show_project_structure_settings = "<leader>ip Project Structure Settings"
 let g:WhichKeyDesc_show_settings = "<leader>is Settings"
+let g:WhichKeyDesc_activate_unit_tests_tool_window = "<leader>iu Unit Tests Tool"
+let g:WhichKeyDesc_navbar_tool_bar = "<leader>iw Run Widget"
+let g:WhichKeyDesc_stop = "<leader>ix Stop"
+let g:WhichKeyDesc_activate_run_tool_window = "<leader>iz Run Tool"
 
-map <leader>is <Action>(ShowSettings)
+map <leader>ib <Action>(ActivateDatabaseToolWindow)
+map <Leader>ic <Action>(ChooseRunConfiguration)
+map <leader>id <Action>(ActivateDebugToolWindow)
 map <leader>ip <Action>(ShowProjectStructureSettings)
+map <leader>ir <Action>(Run)
+map <leader>is <Action>(ShowSettings)
+map <Leader>iu <Action>(ActivateUnitTestsToolWindow)
+map <leader>ix <Action>(Stop)
+map <Leader>iw <Action>(NavBarToolBar)
+map <leader>iz <Action>(ActivateRunToolWindow)
 
-"" Java Development: descriptions and maps ---------------------
+"" Java: descriptions and maps ---------------------
 
-let g:WhichKeyDesc_java = "<leader>j Java Development"
+let g:WhichKeyDesc_java = "<leader>j Java"
 
 let g:WhichKeyDesc_maven_download_all_sources = "<leader>jA Maven Download All Sources"
 let g:WhichKeyDesc_maven_download_run_build = "<leader>jR Maven Run Build"
@@ -263,7 +293,7 @@ map <leader>lu <Action>(ShowUsages)
 
 "" Bookmarks: descriptions and maps ---------------------
 
-let g:WhichKeyDesc_mark = "<leader>m Mark"
+let g:WhichKeyDesc_mark = "<leader>m Bookmarks"
 
 let g:WhichKeyDesc_goto_next_bookmark = "<leader>mn Next Bookmark"
 let g:WhichKeyDesc_goto_previous_bookmark = "<leader>mp Previous Bookmark"
@@ -295,67 +325,27 @@ map <leader>pi <Action>(GotoImplementation)
 map <leader>ps <Action>(GotoSymbol)
 map <leader>pt <Action>(GotoTest)
 
-"" Run Configuration: descriptions and maps ---------------------
-
-let g:WhichKeyDesc_run_options = "<leader>r Configuration & Tools"
-
-let g:WhichKeyDesc_activate_database_tool_window = "<leader>rb Database Tool"
-let g:WhichKeyDesc_choose_run_configuration = "<leader>rc Run Configuration"
-let g:WhichKeyDesc_activate_debug_tool_window = "<leader>rd Debug Tool"
-let g:WhichKeyDesc_run = "<leader>rr Run"
-let g:WhichKeyDesc_stop = "<leader>rs Stop"
-let g:WhichKeyDesc_activate_unit_tests_tool_window = "<leader>ru Unit Tests Tool"
-let g:WhichKeyDesc_navbar_tool_bar = "<leader>rw Run Widget"
-let g:WhichKeyDesc_activate_run_tool_window = "<leader>rx Run Tool"
-
-map <leader>rb <Action>(ActivateDatabaseToolWindow)
-map <Leader>rc <Action>(ChooseRunConfiguration)
-map <leader>rd <Action>(ActivateDebugToolWindow)
-map <leader>rr <Action>(Run)
-map <leader>rs <Action>(Stop)
-map <Leader>rw <Action>(NavBarToolBar)
-map <Leader>ru <Action>(ActivateUnitTestsToolWindow)
-map <leader>rx <Action>(ActivateRunToolWindow)
-
-"" Search: descriptions and maps ---------------------
-
-let g:WhichKeyDesc_search = "<leader>s Search"
-
-let g:WhichKeyDesc_find = "<leader>sf In File"
-let g:WhichKeyDesc_find_in_path = "<leader>sp In Path"
-let g:WhichKeyDesc_switcher = "<leader>ss Switcher"
-let g:WhichKeyDesc_find_usages = "<leader>su Usages"
-
-map <leader>sf <Action>(Find)
-map <leader>sp <Action>(FindInPath)
-map <leader>ss <Action>(Switcher)
-map <leader>su <Action>(FindUsages)
-
 "" UI: descriptions and maps ---------------------
 
 let g:WhichKeyDesc_ui_toggles = "<leader>u UI"
 
 let g:WhichKeyDesc_change_color_schema = "<leader>uc Colorscheme & Others"
+let g:WhichKeyDesc_distraction_free_mode = "<leader>uf Distraction Free Mode"
+let g:WhichKeyDesc_zen_mode = "<leader>uz Zen Mode"
 let g:WhichKeyDesc_view_status_bar = "<leader>us Toggle Status Bar"
 let g:WhichKeyDesc_view_tool_buttons = "<leader>ut Toggle Tool Buttons"
 
 map <leader>uc <Action>(QuickChangeScheme)
 map <leader>us <Action>(ViewStatusBar)
 map <leader>ut <Action>(ViewToolButtons)
+map <leader>uf <Action>(ToggleDistractionFreeMode)
+map <leader>uz <Action>(ToggleZenMode)
 
-"" View Modes: descriptions and maps ---------------------
-
-let g:WhichKeyDesc_view_modes = "<leader>w View Mode"
-
-let g:WhichKeyDesc_distraction_free_mode = "<leader>wf Distraction Free Mode"
-let g:WhichKeyDesc_zen_mode = "<leader>wz Zen Mode"
-
-map <leader>wf <Action>(ToggleDistractionFreeMode)
-map <leader>wz <Action>(ToggleZenMode)
+"" Extract & Introduce: descriptions and maps ---------------------
 
 let g:WhichKeyDesc_extract_actions = "<leader>x Extract & Introduce"
 
-let g:WhichKeyDesc_inline = "<leader>xa Inline"
+let g:WhichKeyDesc_inline = "<leader>xa  Inline"
 let g:WhichKeyDesc_extract_class = "<leader>xc Extract Class"
 let g:WhichKeyDesc_introduce_field = "<leader>xf Introduce Field"
 let g:WhichKeyDesc_extract_interface = "<leader>xi Extract Interface"
