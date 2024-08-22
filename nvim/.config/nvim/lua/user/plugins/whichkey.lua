@@ -351,6 +351,11 @@ function M.config()
       }
     },
     {
+      "<leader>gf",
+      "<cmd>Fugit2<cr>",
+      desc = "Git Fugit2",
+    },
+    {
       "<leader>gg",
       "<cmd>Neogit<CR>",
       desc = "Neogit",
