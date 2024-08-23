@@ -1,9 +1,9 @@
-local M = require("user.themes.darkplus")
+local M = require("user.themes.catppuccin")
 
 function M.config()
-  require("darkplus").setup({})
+  require("catppuccin").setup({})
 
-  vim.cmd.colorscheme "darkplus"
+  vim.cmd.colorscheme "catppuccin"
 end
 
 return M
