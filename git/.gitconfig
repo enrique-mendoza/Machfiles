@@ -44,8 +44,10 @@
   root = ~/.ghq
 [github]
   user = enrique-mendoza
+[merge]
+  ff = false
 [pull]
-  ff = true
+  ff = false
 [push]
   default = simple
 [user]
