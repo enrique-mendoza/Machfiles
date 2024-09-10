@@ -79,7 +79,7 @@ function M.config()
     "lua_ls",
     "marksman",
     "pyright",
-    "tsserver",
+    "vtsls",
   }
 
   vim.diagnostic.config {

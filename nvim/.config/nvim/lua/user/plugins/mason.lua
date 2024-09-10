@@ -16,7 +16,7 @@ M.execs = {
   "jsonls",
   "lua_ls",
   "pyright",
-  "tsserver",
+  "vtsls",
 }
 
 M.dap_execs = {
