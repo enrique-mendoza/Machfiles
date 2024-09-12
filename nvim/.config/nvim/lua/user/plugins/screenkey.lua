@@ -13,7 +13,7 @@ function M.config()
       anchor = "SE",
       width = 40,
       height = 3,
-      border = "single",
+      border = "rounded",
       title = "Screenkey",
       title_pos = "center",
       style = "minimal",
