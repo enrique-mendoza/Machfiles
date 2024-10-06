@@ -505,10 +505,34 @@ function M.config()
     },
     -- nohlsearch 
     {
-      "<leader>n",
+      "<leader>N",
       "<cmd>nohlsearch<CR>",
       desc = "NOHL",
       hidden = true,
+    },
+    -- notes
+    {
+      "<leader>n",
+      icon = {
+        icon = "󰠮 ",
+        color = "azure",
+      },
+      group = "Notes",
+    },
+    {
+      "<leader>nf",
+      "<cmd>Notes find<cr>",
+      desc = "Find notes by title"
+    },
+    {
+      "<leader>ng",
+      "<cmd>Notes get<cr>",
+      desc = "Get a list of all notes"
+    },
+    {
+      "<leader>nw",
+      "<cmd>Notes write<cr>",
+      desc = "Write a new note"
     },
     -- nav
     {

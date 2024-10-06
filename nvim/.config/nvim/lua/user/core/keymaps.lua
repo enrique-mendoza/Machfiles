@@ -25,7 +25,18 @@ keymap("n", "g#", "g#zz", opts)
 keymap("v", "<", "<gv", opts)
 keymap("v", ">", ">gv", opts)
 
+keymap("v", "J", ":m '>+1<CR>gv=gv")
+keymap("v", "K", ":m '<-2<CR>gv=gv")
+
+keymap("n", "n", "nzzzv")
+keymap("n", "N", "Nzzzv")
+
+keymap("n", "d", '"_d')
+keymap("v", "d", '"_d')
+
 keymap("x", "p", [["_dP]])
+
+keymap({"n", "v"}, "<leader>y", '"+y')
 
 keymap("n", "<RightMouse>", "<cmd>:popup mousemenu<CR>")
 keymap("n", "<Tab>", "<cmd>:popup mousemenu<CR>")
