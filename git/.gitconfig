@@ -35,6 +35,8 @@
   ignorecase = false
 [credential]
   helper = store
+[diff]
+  submodule = log
 [filter "lfs"]
   clean = git-lfs clean -- %f
   process = git-lfs filter-process
@@ -50,6 +52,8 @@
   ff = true
 [push]
   default = simple
+[status]
+  submoduleSummary = true
 [user]
   email = luis.mendoza@infotec.mx
   name = Enrique Mendoza
