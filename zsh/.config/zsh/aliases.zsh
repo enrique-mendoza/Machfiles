@@ -43,3 +43,7 @@ alias lpps="pacman -Qet | awk '{print $1}'"
 
 # get top process eating cpu
 alias pscpu="ps auxf | sort -nr -k 3 | head -5"
+
+# pomodoro
+alias wo="pomodoro 'work'"
+alias br="pomodoro 'break'"

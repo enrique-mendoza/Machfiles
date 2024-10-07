@@ -63,9 +63,10 @@ rehash_precmd() {
 }
 
 # Sourcing of local files
-source "$HOME/.config/zsh/aliases.zsh"
 source "$HOME/.config/zsh/exports.zsh"
 source "$HOME/.config/zsh/completion.zsh"
+source "$HOME/.config/zsh/aliases.zsh"
+source "$HOME/.config/zsh/scripts/pomodoro.zsh"
 source ~/.config/zsh/themes/catppuccin_mocha-zsh-syntax-highlighting.zsh
 
 # neofetch
