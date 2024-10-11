@@ -323,6 +323,7 @@ tiling_drag modifier titlebar
 exec_always --no-startup-id ~/.config/i3/scripts/i3_autostart
 exec_always "setxkbmap -option 'grp:alt_shift_toggle' -layout us,latam"
 exec_always "xset dpms 84600 0 84600"
+exec_always "gpg-connect-agent reloadagent /bye"
 
 ## The --no-startup-id parameter disables startup-notification support for this particular exec command.
 ## With startup-notification, i3 can make sure that a window appears on the workspace on which you used the exec command.
