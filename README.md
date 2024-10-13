@@ -1,6 +1,8 @@
 <h1 id="top" align="center">Machfiles 🐶</h1>
 
-![preview](./.screenshots/preview.png)
+![preview](./.screenshots/arch.png)
+
+![preview](./.screenshots/archcraft.png)
 
 ## Installation
 
