@@ -39,10 +39,14 @@ alias mcu="history | awk '{print $2}' | sort | uniq -c | sort -nr | head -10"
 alias lg='lazygit'
 
 # list packages
-alias lpps="pacman -Qet | awk '{print $1}'"
+alias pacpack="pacman -Qet | awk '{print $1}'"
 
 # get top process eating cpu
-alias pscpu="ps auxf | sort -nr -k 3 | head -5"
+alias eatcpu="ps auxf | sort -nr -k 3 | head -5"
+
+# password manager
+alias pmc="pass show -c"
+alias pms="pass show"
 
 # pomodoro
 alias wo="pomodoro 'work'"
