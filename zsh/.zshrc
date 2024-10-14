@@ -69,6 +69,5 @@ source "$HOME/.config/zsh/scripts/pomodoro.zsh"
 source "$HOME/.config/zsh/themes/catppuccin_mocha-zsh-syntax-highlighting.zsh"
 source "$HOME/.config/zsh/aliases.zsh"
 
-eval `ttysvr logo -i 300`
-
+# eval `ttysvr logo -i 300`
 # neofetch
