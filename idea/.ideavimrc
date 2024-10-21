@@ -158,6 +158,7 @@ let g:WhichKeyDesc_search_everywhere = "<leader>fe  Everywhere"
 let g:WhichKeyDesc_find = "<leader>fF  In File"
 let g:WhichKeyDesc_goto_file = "<leader>ff  File"
 let g:WhichKeyDesc_goto_implementation = "<leader>fi  Implementation"
+let g:WhichKeyDesc_goto_endpoints = "<leader>fk  Endpoint"
 let g:WhichKeyDesc_open_file = "<leader>fo  Project"
 let g:WhichKeyDesc_find_in_path = "<leader>fp  In Path"
 let g:WhichKeyDesc_switcher = "<leader>fr  Recent File"
@@ -172,6 +173,7 @@ map <leader>fe <Action>(SearchEverywhere)
 map <leader>fF <Action>(Find)
 map <leader>ff <Action>(GotoFile)
 map <leader>fi <Action>(GotoImplementation)
+map <leader>fk <Action>(GotoUrlAction)
 map <leader>fo <Action>(OpenFile)
 map <leader>fp <Action>(FindInPath)
 map <leader>fr <Action>(Switcher)
