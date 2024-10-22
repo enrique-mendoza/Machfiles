@@ -58,7 +58,7 @@ print_status() {
             fi
         done
     else
-        echo "%{F$POWER_OFF}%{T2}%{T-} %{F-}Power: off"
+        echo "%{F$POWER_OFF}%{T2}%{T-} Power: off%{F-}"
     fi
 }
 

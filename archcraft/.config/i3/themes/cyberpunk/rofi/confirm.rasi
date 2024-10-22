@@ -6,10 +6,6 @@
 configuration {
 	modi:                       "drun";
     show-icons:                 false;
-    display-drun:               " Apps";
-    display-run:                "";
-    display-filebrowser:        "";
-    display-window:             "";
 	drun-display-format:        "{name} [<span weight='light' size='small'><i>({generic})</i></span>]";
 	window-format:              "{w} · {c} · {t}";
 }
@@ -52,18 +48,18 @@ USE_ICON=NO
 window {
     /* properties for window widget */
     transparency:                "real";
-    location:                    north;
-    anchor:                      north;
+    location:                    northeast;
+    anchor:                      northeast;
     fullscreen:                  false;
-    width:                       265px;
-    x-offset:                    0px;
-    y-offset:                    0px;
+    width:                       200px;
+    x-offset:                    -35px;
+    y-offset:                    36px;
 
     /* properties for all widgets */
     enabled:                     true;
     margin:                      0px;
     padding:                     0px;
-    border:                      2px 2px 0px 2px;
+    border:                      0px 2px 2px 2px;
     border-radius:               0px;
     border-color:                @border-colour;
     cursor:                      "default";
@@ -80,7 +76,15 @@ mainbox {
     border-radius:               0px 0px 0px 0px;
     border-color:                @border-colour;
     background-color:            transparent;
-    children:                    [ "textbox-prompt-colon", "prompt", "listview" ];
+    children:                    [ "info-box", "listview" ];
+    orientation:                 vertical;
+}
+
+info-box {
+    background-color:            transparent;
+    spacing:                     5px;
+    expand:                      false;
+    children:                    [ "textbox-prompt-colon", "prompt" ];
     orientation:                 horizontal;
 }
 
@@ -100,7 +104,7 @@ inputbar {
 
 prompt {
     enabled:                     true;
-    padding:                     4px 8px;
+    padding:                     4px 6px;
     border:                      0px;
     border-radius:               0px;
     border-color:                @border-colour;
@@ -110,8 +114,8 @@ prompt {
 textbox-prompt-colon {
     enabled:                     true;
     expand:                      false;
-    str:                         "";
-    padding:                     4px 8px;
+    str:                         "";
+    padding:                     4px 6px;
     border:                      0px;
     border-radius:               0px;
     border-color:                @border-colour;
@@ -121,7 +125,7 @@ textbox-prompt-colon {
 entry {
     enabled:                     true;
     expand:                      false;
-    padding:                     4px 8px;
+    padding:                     4px 6px;
     width:                       250px;
     border-radius:               0px;
     background-color:            @alternate-background;
@@ -136,11 +140,12 @@ entry {
 /*****----- Listview -----*****/
 listview {
     enabled:                     true;
-    lines:                       100;
+    lines:                       2;
+    columns:                     1;
     cycle:                       false;
     dynamic:                     true;
     scrollbar:                   false;
-    layout:                      horizontal;
+    layout:                      vertical;
     reverse:                     false;
     fixed-height:                true;
     fixed-columns:               true;
@@ -167,7 +172,7 @@ element {
     enabled:                     true;
     spacing:                     10px;
     margin:                      0px;
-    padding:                     4px 8px;
+    padding:                     4px 6px;
     border:                      0px solid;
     border-radius:               0px;
     border-color:                @border-colour;
@@ -223,7 +228,7 @@ element-text {
     highlight:                   inherit;
     cursor:                      inherit;
     vertical-align:              0.5;
-    horizontal-align:            0.0;
+    horizontal-align:            0;
 }
 
 /*****----- Mode Switcher -----*****/

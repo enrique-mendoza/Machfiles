@@ -13,9 +13,9 @@ window {
     fullscreen:                  false;
     width:                       350px;
     x-offset:                    0px;
-    y-offset:                    0px;
+    y-offset:                    36px;
     padding:                     5px;
-    border:                      2px 2px 0px 2px;
+    border:                      0px 2px 2px 2px;
     border-radius:               0px;
     border-color:                @selected;
     background-color:            @background;
@@ -45,22 +45,22 @@ dummy {
 textbox-prompt-colon {
     enabled:                     true;
     expand:                      false;
-    str:                         "";
-    padding:                     4px 8px;
+    str:                         "";
+    padding:                     4px 6px;
     border-radius:               0px;
     background-color:            @active;
     text-color:                  @background;
 }
 prompt {
     enabled:                     true;
-    padding:                     4px 8px;
+    padding:                     4px 6px;
     border-radius:               0px;
     background-color:            @selected;
     text-color:                  @background;
 }
 entry {
     enabled:                     true;
-    padding:                     4px 8px;
+    padding:                     4px 6px;
     border-radius:               0px;
     background-color:            @background-alt;
     text-color:                  inherit;

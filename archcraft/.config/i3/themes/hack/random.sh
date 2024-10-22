@@ -112,33 +112,67 @@ apply_rofi() {
 
 # Terminal ----------------------------------
 apply_terminal() {
-	# alacritty : colors
-	cat > ${PATH_TERM}/colors.toml <<- _EOF_
-		## Colors configuration
-		[colors.primary]
-		background = "${background}"
-		foreground = "${foreground}"
-		
-		[colors.normal]
-		black   = "${color0}"
-		red     = "${color1}"
-		green   = "${color2}"
-		yellow  = "${color3}"
-		blue    = "${color4}"
-		magenta = "${color5}"
-		cyan    = "${color6}"
-		white   = "${color7}"
-		
-		[colors.bright]
-		black   = "${color8}"
-		red     = "${color9}"
-		green   = "${color10}"
-		yellow  = "${color11}"
-		blue    = "${color12}"
-		magenta = "${color13}"
-		cyan    = "${color14}"
-		white   = "${color15}"
-	_EOF_
+	if [[ -f "$PATH_TERM/colors.toml" ]]; then
+		# alacritty : colors
+		cat > ${PATH_TERM}/colors.toml <<- _EOF_
+			## Colors configuration
+			[colors.primary]
+			background = "${background}"
+			foreground = "${foreground}"
+			
+			[colors.normal]
+			black   = "${color0}"
+			red     = "${color1}"
+			green   = "${color2}"
+			yellow  = "${color3}"
+			blue    = "${color4}"
+			magenta = "${color5}"
+			cyan    = "${color6}"
+			white   = "${color7}"
+			
+			[colors.bright]
+			black   = "${color8}"
+			red     = "${color9}"
+			green   = "${color10}"
+			yellow  = "${color11}"
+			blue    = "${color12}"
+			magenta = "${color13}"
+			cyan    = "${color14}"
+			white   = "${color15}"
+		_EOF_
+	fi
+
+	if [[ -f "$PATH_I3WM/kitty/colors.conf" ]]; then
+		# kitty : colors
+		cat > ${PATH_I3WM}/kitty/colors.conf <<- _EOF_
+			## Colors configuration
+			background ${background}
+			foreground ${foreground}
+			selection_background ${foreground}
+			selection_foreground ${background}
+			cursor ${foreground}
+			
+			color0 ${color0}
+			color8 ${color8}
+			color1 ${color1}
+			color9 ${color9}
+			color2 ${color2}
+			color10 ${color10}
+			color3 ${color3}
+			color11 ${color11}
+			color4 ${color4}
+			color12 ${color12}
+			color5 ${color5}
+			color13 ${color13}
+			color6 ${color6}
+			color14 ${color14}
+			color7 ${color7}
+			color15 ${color15}
+		_EOF_
+
+		# reload kitty config
+		kill -SIGUSR1 $(pidof kitty)
+	fi
 }
 
 # Dunst -------------------------------------

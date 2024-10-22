@@ -10,6 +10,7 @@ DIR="$HOME/.config/hypr"
 ## Directories ------------------------------
 PATH_ALAC="$DIR/alacritty"
 PATH_FOOT="$DIR/foot"
+PATH_KITY="$DIR/kitty"
 PATH_MAKO="$DIR/mako"
 PATH_ROFI="$DIR/rofi"
 PATH_WAYB="$DIR/waybar"
@@ -151,6 +152,39 @@ apply_foot() {
 	_EOF_
 }
 
+## Kitty ---------------------------------
+apply_kitty() {
+	# kitty : colors
+	cat > ${PATH_KITY}/colors.conf <<- _EOF_
+		## Colors configuration
+		background ${background}
+		foreground ${foreground}
+		selection_background ${foreground}
+		selection_foreground ${background}
+		cursor ${foreground}
+		
+		color0 ${color0}
+		color8 ${color8}
+		color1 ${color1}
+		color9 ${color9}
+		color2 ${color2}
+		color10 ${color10}
+		color3 ${color3}
+		color11 ${color11}
+		color4 ${color4}
+		color12 ${color12}
+		color5 ${color5}
+		color13 ${color13}
+		color6 ${color6}
+		color14 ${color14}
+		color7 ${color7}
+		color15 ${color15}
+	_EOF_
+
+	# reload kitty config
+	kill -SIGUSR1 $(pidof kitty)
+}
+
 ## Mako --------------------------------------
 apply_mako() {
 	# mako : config
@@ -286,6 +320,7 @@ fi
 apply_wallpaper
 apply_alacritty
 apply_foot
+apply_kitty
 apply_mako
 apply_rofi
 apply_waybar

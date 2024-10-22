@@ -24,7 +24,7 @@ color13='#c979d7'
 color14='#5cdff0'
 color15='#fdf6e3'
 
-accent='#7EAAAA'
+accent='#9BBFBF'
 light_value='0.05'
 dark_value='0.30'
 
@@ -33,7 +33,7 @@ wdir="$( cd "$( dirname "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )"
 wallpaper="$wdir/wallpaper"
 
 # Polybar
-polybar_font='Iosevka Nerd Font:size=10;3'
+polybar_font='Iosevka:size=10;3'
 
 # Rofi
 rofi_font='Iosevka 10'
@@ -45,13 +45,13 @@ terminal_font_size='10'
 
 # Geany
 geany_colors='mountain.conf'
-geany_font='JetBrains Mono 10'
+geany_font='JetBrainsMono Nerd Font 10'
 
 # Appearance
 gtk_font='Noto Sans 9'
 gtk_theme='Kripton'
 icon_theme='Zafiro'
-cursor_theme='Fluent-Dark'
+cursor_theme='Fluentt-Dark'
 
 # Dunst
 dunst_width='300'
@@ -65,10 +65,10 @@ dunst_separator='2'
 # Picom
 picom_backend='glx'
 picom_corner='0'
-picom_shadow_r='14'
-picom_shadow_o='0.30'
-picom_shadow_x='-12'
-picom_shadow_y='-12'
+picom_shadow_r='20'
+picom_shadow_o='0.60'
+picom_shadow_x='-20'
+picom_shadow_y='-20'
 picom_blur_method='none'
 picom_blur_strength='0'
 

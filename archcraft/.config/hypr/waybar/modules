@@ -103,11 +103,10 @@
         "format": "",
     },
     "clock#2": {
-		    "interval": 60,
+		"interval": 60,
         "tooltip-format": "<big>{:%B %Y}</big>\n<tt><small>{calendar}</small></tt>",
         "format": "{:%I:%M %p}",
-        "format-alt": "{:%a %b %d, %G}",
-        "timezone": "America/Mexico_City"
+        "format-alt": "{:%a %b %d, %G}"
     },
 
 	// waybar-cpu
@@ -315,9 +314,8 @@
          //    "10": "ﳴ",
          //    "urgent": "",
          //    "focused": "",
-         //    "default": "" // alt: 
+         //    "default": ""
          //},
-
          "format-icons": {
           "urgent": "",
             "active": "",
@@ -332,7 +330,7 @@
         "spacing": 10
     },
 
-	// language
+  // language
     "hyprland/language": {
          "format": ""
     },           	

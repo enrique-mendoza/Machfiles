@@ -6,7 +6,6 @@
 configuration {
 	modi:                       "drun";
     show-icons:                 false;
-    display-drun:               "Applications";
 	drun-display-format:        "{name}";
 }
 
@@ -75,7 +74,7 @@ prompt {
 textbox-prompt-colon {
     enabled:                     true;
     expand:                      false;
-    str:                         " System";
+    str:                         " System";
     padding:                     12px;
     border-radius:               16px;
     background-color:            @selected;

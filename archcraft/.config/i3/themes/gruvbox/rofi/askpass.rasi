@@ -45,10 +45,10 @@ dummy {
 textbox-prompt-colon {
     enabled:                     true;
     expand:                      false;
-    str:                         "";
-    padding:                     10px 13px;
+    str:                         "";
+    padding:                     10px 12px;
     border-radius:               10px;
-    background-color:            @active;
+    background-color:            @urgent;
     text-color:                  @background;
 }
 prompt {

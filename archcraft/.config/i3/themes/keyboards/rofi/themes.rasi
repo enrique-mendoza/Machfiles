@@ -75,7 +75,7 @@ prompt {
 textbox-prompt-colon {
     enabled:                     true;
     expand:                      false;
-    str:                         " Style";
+    str:                         " Style";
     padding:                     12px;
     border-radius:               16px;
     background-color:            @selected;

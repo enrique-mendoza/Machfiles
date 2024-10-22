@@ -6,7 +6,7 @@
 ## Font size in points.
 size = 13
 
-# When true, Alacritty will use a custom built-in font for box drawing characters and powerline symbols.
+## When true, Alacritty will use a custom built-in font for box drawing characters and powerline symbols.
 builtin_box_drawing = true
 
 ## Font collections.
@@ -14,7 +14,7 @@ builtin_box_drawing = true
 # family = "Cascadia Code"
 # family = "CaskaydiaCove NF"
 # family = "CaskaydiaMono NF"
-# family = "Comic Code Ligatures Regular"
+# family = "Comic Code Ligatures" 
 # family = "ComicShannsMono NerdFont"
 # family = "CommitMono NerdFont"
 # family = "FiraCode Nerd Font Mono"

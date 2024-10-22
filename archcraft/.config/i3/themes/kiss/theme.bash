@@ -42,7 +42,7 @@ polybar_font='JetBrains Mono:size=10;3'
 
 # Rofi
 rofi_font='Iosevka 10'
-rofi_icon='Zafiro'
+rofi_icon='Zafiro-Dark'
 
 # Terminal
 terminal_font_name='JetBrainsMono Nerd Font'
@@ -50,7 +50,7 @@ terminal_font_size='10'
 
 # Geany
 geany_colors='metallic-bottle.conf'
-geany_font='JetBrains Mono 10'
+geany_font='JetBrainsMono Nerd Font 10'
 
 # Appearance
 gtk_font='Noto Sans 9'
@@ -70,10 +70,10 @@ dunst_separator='2'
 # Picom
 picom_backend='glx'
 picom_corner='0'
-picom_shadow_r='14'
-picom_shadow_o='0.30'
-picom_shadow_x='-12'
-picom_shadow_y='-12'
+picom_shadow_r='20'
+picom_shadow_o='0.60'
+picom_shadow_x='-20'
+picom_shadow_y='-20'
 picom_blur_method='none'
 picom_blur_strength='0'
 

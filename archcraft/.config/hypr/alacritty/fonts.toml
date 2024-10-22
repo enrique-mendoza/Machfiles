@@ -6,7 +6,7 @@
 ## Font size in points.
 size = 13
 
-# When true, Alacritty will use a custom built-in font for box drawing characters and powerline symbols.
+## When true, Alacritty will use a custom built-in font for box drawing characters and powerline symbols.
 builtin_box_drawing = true
 
 ## Font collections.
@@ -14,7 +14,7 @@ builtin_box_drawing = true
 # family = "Cascadia Code"
 # family = "CaskaydiaCove NF"
 # family = "CaskaydiaMono NF"
-# family = "Comic Code Ligatures Regular"
+# family = "Comic Code Ligatures" 
 # family = "ComicShannsMono NerdFont"
 # family = "CommitMono NerdFont"
 # family = "FiraCode Nerd Font Mono"
@@ -28,19 +28,19 @@ builtin_box_drawing = true
 
 ## Normal font family.
 [font.normal]
-family = "Comic Code Ligatures"
+family = "JetBrainsMono Nerd Font"
 
 ## If the family is not specified, it will fall back to the value specified for the normal font.
 [font.bold]
-family = "Comic Code Ligatures"
+family = "JetBrainsMono Nerd Font"
 
 ## If the family is not specified, it will fall back to the value specified for the normal font.
 [font.italic]
-family = "Comic Code Ligatures"
+family = "JetBrainsMono Nerd Font"
 
 ## If the family is not specified, it will fall back to the value specified for the normal font.
 [font.bold_italic]
-family = "Comic Code Ligatures"
+family = "JetBrainsMono Nerd Font"
 
 ## Offset is the extra space around each character.
 ## 'y' can be thought of as modifying the line spacing, and 'x' as modifying the letter spacing.
